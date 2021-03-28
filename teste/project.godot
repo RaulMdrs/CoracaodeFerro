@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Teste"
+run/main_scene="res://Teste.tscn"
 config/icon="res://icon.png"
 
 [input]
