@@ -1,3 +1,33 @@
 [gd_scene format=2]
 
 [node name="Jogo" type="Node2D"]
+
+[node name="GoToTesteForça" type="Button" parent="."]
+margin_left = 32.3008
+margin_top = 81.2724
+margin_right = 230.301
+margin_bottom = 243.272
+text = "Força"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoToTesteAgilidade" type="Button" parent="."]
+margin_left = 402.666
+margin_top = 11.4375
+margin_right = 600.666
+margin_bottom = 173.438
+text = "Agilidade"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoToTesteVelocidade" type="Button" parent="."]
+margin_left = 791.801
+margin_top = 65.3984
+margin_right = 989.801
+margin_bottom = 227.398
+text = "Agilidade"
+__meta__ = {
+"_edit_use_anchors_": false
+}
