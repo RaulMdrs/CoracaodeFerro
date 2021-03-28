@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GoToTesteInteligencia.gd" type="Script" id=1]
 
 [node name="Jogo" type="Node2D"]
 
@@ -31,3 +33,15 @@ text = "Agilidade"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GoToTesteInteligencia" type="Button" parent="."]
+margin_left = 791.801
+margin_top = 65.3984
+margin_right = 989.801
+margin_bottom = 227.398
+text = "Agilidade"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GoToTesteInteligencia" to="GoToTesteInteligencia" method="_on_GoToTesteInteligencia_pressed"]

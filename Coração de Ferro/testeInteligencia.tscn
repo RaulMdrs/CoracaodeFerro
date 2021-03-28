@@ -1,3 +1,14 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/spr_grid_puzzle.png" type="Texture" id=1]
+[ext_resource path="res://Assets/spr_player_puzzle.png" type="Texture" id=2]
 
 [node name="testeInteligencia" type="Node2D"]
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 28, 4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="play" type="Sprite" parent="."]
+texture = ExtResource( 2 )
