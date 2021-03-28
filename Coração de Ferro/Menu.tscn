@@ -1,12 +1,30 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sair.gd" type="Script" id=1]
+[ext_resource path="res://Iniciar.gd" type="Script" id=2]
 
 [node name="Menu" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 340.388
-margin_top = 83.6995
-margin_right = 608.388
-margin_bottom = 132.7
+[node name="Iniciar" type="Button" parent="."]
+margin_left = 33.2449
+margin_top = 116.387
+margin_right = 218.245
+margin_bottom = 178.387
+text = "Iniciar"
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sair" type="Button" parent="."]
+margin_left = 722.025
+margin_top = 514.725
+margin_right = 990.025
+margin_bottom = 563.725
+text = "Sair"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Iniciar" to="Iniciar" method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="Sair" to="Sair" method="_on_Sair_pressed"]
