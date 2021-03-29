@@ -7,6 +7,8 @@ var gravidade = 30
 var forca = 10
 var inteligencia = 10
 
+func addForca(var f):
+	forca = forca + f
 
 func _physics_process(delta):
 	if Input.is_action_pressed("right"):
@@ -32,3 +34,9 @@ func _physics_process(delta):
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	
 	velocidade.x = lerp(velocidade.x,0,0.1)
+
+
+
+func _on_caixaController_tree_exiting():
+	addForca(5)
+	print("adicionei forca")

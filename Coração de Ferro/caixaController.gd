@@ -1,18 +1,23 @@
 extends Node2D
 
 var caixas = 0
+var iniciadas = false
 
-func iniciar_caixas():
-	if $caixa1._init():
-		caixas = caixas + 1
-	if $caixa2._init():
-		caixas = caixas + 1
 
-func _physics_process(delta):
+func _on_Fogo_body_entered(body):
 	
-	if $caixa1.is_queued_for_deletion():
-		caixas = caixas - 1
+	body.queue_free()
+	caixas = caixas - 1
 	
 	if caixas == 0:
-		pass 
 		
+		
+		get_tree().change_scene("res://Jogo.tscn")
+
+
+func _on_caixa1_ready():
+	caixas = caixas + 1
+
+
+func _on_caixa2_ready():
+	caixas = caixas + 1
