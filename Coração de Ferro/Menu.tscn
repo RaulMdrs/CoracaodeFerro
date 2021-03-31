@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sair.gd" type="Script" id=1]
 [ext_resource path="res://Iniciar.gd" type="Script" id=2]
+[ext_resource path="res://BackgrountMenu.png" type="Texture" id=3]
 
 [node name="Menu" type="Node2D"]
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513.248, 299.886 )
+scale = Vector2( 1.02354, 1.20869 )
+texture = ExtResource( 3 )
+
 [node name="Iniciar" type="Button" parent="."]
-margin_left = 33.2449
-margin_top = 116.387
-margin_right = 218.245
-margin_bottom = 178.387
+margin_left = 325.949
+margin_top = 234.034
+margin_right = 510.95
+margin_bottom = 296.034
 text = "Iniciar"
 script = ExtResource( 2 )
 __meta__ = {
@@ -17,10 +23,10 @@ __meta__ = {
 }
 
 [node name="Sair" type="Button" parent="."]
-margin_left = 722.025
-margin_top = 514.725
-margin_right = 990.025
-margin_bottom = 563.725
+margin_left = 327.318
+margin_top = 320.682
+margin_right = 511.318
+margin_bottom = 389.682
 text = "Sair"
 script = ExtResource( 1 )
 __meta__ = {

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var velocidade = Vector2(0,0)
-var speed = 200
+var speed = 350
 var forcaPulo = -900
 var gravidade = 30
 var forca = 10
@@ -40,3 +40,4 @@ func _physics_process(delta):
 func _on_caixaController_tree_exiting():
 	addForca(5)
 	print("adicionei forca")
+
