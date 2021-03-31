@@ -19,7 +19,7 @@ func _on_Timer_timeout():
 	var spawnInstance = spawnerReference.instance()
 	
 	get_parent().add_child(spawnInstance)
-	spawnInstance.set_pos(50, 50)
+	spawnInstance.set_global_transform(get_global_transform())
 	
 	timerNode.set_wait_time(rand_range(minTime, maxTime))
 	timerNode.start()
