@@ -26,5 +26,17 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GoToTesteInteligencia" type="Button" parent="."]
+margin_left = 432.975
+margin_top = 255.173
+margin_right = 630.975
+margin_bottom = 417.173
+text = "Teste Inteligencia"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="GoToTesteForça" to="GoToTesteForça" method="_on_GoToTesteFora_pressed"]
 [connection signal="pressed" from="GoToTesteAgilidade" to="GoToTesteAgilidade" method="_on_GoToTesteAgilidade_pressed"]
+[connection signal="pressed" from="GoToTesteInteligencia" to="GoToTesteInteligencia" method="_on_GoToTesteInteligencia_pressed"]
