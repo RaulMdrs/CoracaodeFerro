@@ -1,7 +1,7 @@
 extends Node2D
 
 var game_end = false
-var level_total_moves = [12,8,5]
+var level_total_moves = [200,8,5]
 var actual_level = 1
 var moves = level_total_moves[actual_level-1]
 
