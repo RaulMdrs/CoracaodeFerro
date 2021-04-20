@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/download.png-9b44f4e3e595d41c5322254d347d794e.stex"
+path="res://.import/bakcup.png-8c480cf080b6b9f41059dc275d6df9d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/download.png"
-dest_files=[ "res://.import/download.png-9b44f4e3e595d41c5322254d347d794e.stex" ]
+source_file="res://Assets/bakcup.png"
+dest_files=[ "res://.import/bakcup.png-8c480cf080b6b9f41059dc275d6df9d2.stex" ]
 
 [params]
 

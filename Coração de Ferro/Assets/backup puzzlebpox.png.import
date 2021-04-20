@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/download.png-9b44f4e3e595d41c5322254d347d794e.stex"
+path="res://.import/backup puzzlebpox.png-dd4f62fdef884cd70571eb9405d62487.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/download.png"
-dest_files=[ "res://.import/download.png-9b44f4e3e595d41c5322254d347d794e.stex" ]
+source_file="res://Assets/backup puzzlebpox.png"
+dest_files=[ "res://.import/backup puzzlebpox.png-dd4f62fdef884cd70571eb9405d62487.stex" ]
 
 [params]
 
