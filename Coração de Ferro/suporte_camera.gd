@@ -2,26 +2,21 @@ extends Sprite
 
 export (NodePath) var luz_camera
 export (NodePath) var Area2d
+export (NodePath) var timerPath
 
 onready var luz_camera_2 = get_node(luz_camera)
 onready var area2d_2 = get_node(Area2d)
-
-export (NodePath) var timerPath
 onready var timerNode = get_node(timerPath)
-
-export (float) var minTime
-export (float) var maxTime
 
 var ligada = true
 
 func _ready():
-	timerNode.set_wait_time(rand_range(minTime, maxTime))
+	timerNode.set_wait_time(2)
 	timerNode.start()
-	
 	
 func _on_Timer_timeout():
 	
-	if(ligada == true):
+	if ligada:
 		luz_camera_2.set_indexed("Enabled", false)
 		area2d_2.get_child(4).set_indexed("Monitoring", false)
 		ligada = false
@@ -31,7 +26,7 @@ func _on_Timer_timeout():
 		ligada = true
 	
 	
-	timerNode.set_wait_time(rand_range(minTime, maxTime))
+	timerNode.set_wait_time(2)
 	timerNode.start()
 
 
