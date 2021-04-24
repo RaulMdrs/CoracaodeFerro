@@ -40,4 +40,3 @@ func _physics_process(delta):
 func _on_caixaController_tree_exiting():
 	addForca(5)
 	print("adicionei forca")
-
