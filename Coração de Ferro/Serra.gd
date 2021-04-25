@@ -1,12 +1,13 @@
 extends RigidBody2D
 
-export (NodePath) var ponto1
-export (NodePath) var ponto2
+export (NodePath) var sprite
+onready var sprite2 = get_node(sprite)
 
-onready var ponto1Node = get_node(ponto1)
-onready var ponto2Node = get_node(ponto2)
-
+func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
+	print("bati punheta")
+	
+	if body.name == "Player":
+		get_tree().change_scene("res://Fase_1.tscn")
+	
 func _physics_process(delta):
-	
-	
-	
+	sprite2.set_rotation_degrees(50)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Assets/Tiles Sci fi/Tile (6).png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tiles Sci fi/Tile (7).png" type="Texture" id=2]
@@ -37,6 +37,7 @@
 [ext_resource path="res://gerenciador_fase.gd" type="Script" id=35]
 [ext_resource path="res://suporte_camera.gd" type="Script" id=36]
 [ext_resource path="res://Timer_f.gd" type="Script" id=37]
+[ext_resource path="res://Serra.tscn" type="PackedScene" id=38]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -977,5 +978,8 @@ script = ExtResource( 35 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Serra" parent="." instance=ExtResource( 38 )]
+position = Vector2( 643.226, 388.365 )
 [connection signal="timeout" from="suporte_camera/Timer" to="suporte_camera" method="_on_Timer_timeout"]
 [connection signal="body_shape_entered" from="suporte_camera/camera_pivot/area_luz" to="gerenciador_fase" method="_on_Area2D_body_shape_entered"]
