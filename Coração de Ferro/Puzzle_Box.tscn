@@ -5,7 +5,7 @@
 [ext_resource path="res://Puzzle_Box.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 7.1875 )
+extents = Vector2( 13.2572, 13.2421 )
 
 [node name="Box" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 32, 32 )
-scale = Vector2( 4.5, 4.5 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
