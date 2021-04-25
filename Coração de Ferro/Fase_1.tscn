@@ -846,6 +846,13 @@ color = Color( 0.854902, 0.780392, 0.160784, 1 )
 energy = 2.0
 shadow_enabled = true
 
+[node name="lampada11" type="Light2D" parent="."]
+position = Vector2( 1184.2, -37 )
+texture = ExtResource( 32 )
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
 [node name="lampada2" type="Light2D" parent="."]
 position = Vector2( 224, -37 )
 texture = ExtResource( 32 )
@@ -915,7 +922,7 @@ scale = Vector2( 0.0591178, 0.0523197 )
 texture = ExtResource( 34 )
 script = ExtResource( 36 )
 luz_camera = NodePath("camera_pivot/luz_camera")
-Area2d = NodePath("camera_pivot/Area2D")
+Area2d = NodePath("camera_pivot/area_luz")
 timerPath = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="suporte_camera"]
@@ -949,12 +956,12 @@ color = Color( 0.937255, 0.0392157, 0.0392157, 1 )
 energy = 3.48
 shadow_enabled = true
 
-[node name="Area2D" type="Area2D" parent="suporte_camera/camera_pivot"]
+[node name="area_luz" type="Area2D" parent="suporte_camera/camera_pivot"]
 position = Vector2( -33141.5, 12822.8 )
 rotation = -0.474509
 scale = Vector2( 16.9154, 19.1133 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suporte_camera/camera_pivot/Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suporte_camera/camera_pivot/area_luz"]
 position = Vector2( 1.25522, 0.414246 )
 polygon = PoolVector2Array( 2051.19, 205.676, 1969.44, 353.188, 1877.01, 276.385, 1869.85, 177.071 )
 one_way_collision = true
@@ -971,4 +978,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="timeout" from="suporte_camera/Timer" to="suporte_camera" method="_on_Timer_timeout"]
-[connection signal="body_shape_entered" from="suporte_camera/camera_pivot/Area2D" to="gerenciador_fase" method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_entered" from="suporte_camera/camera_pivot/area_luz" to="gerenciador_fase" method="_on_Area2D_body_shape_entered"]
