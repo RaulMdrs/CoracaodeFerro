@@ -1,13 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Puzzle_Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Puzzle_Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Puzzle_Wall.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Puzzle_Box.gd" type="Script" id=4]
+[ext_resource path="res://Assets/tutorial_wasd_arrows.png" type="Texture" id=4]
 [ext_resource path="res://Puzzle_Box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Puzzle_Spot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Puzzle_Spot.gd" type="Script" id=7]
 [ext_resource path="res://Game.gd" type="Script" id=8]
+[ext_resource path="res://tutorial_wasd_puzzle.gd" type="Script" id=9]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 8 )
@@ -17,8 +21,7 @@ anchor_mode = 0
 current = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 192, 64 )
-script = ExtResource( 1 )
+position = Vector2( 192, 256 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
 position = Vector2( 8, 8 )
@@ -27,50 +30,29 @@ cast_to = Vector2( 0, 16 )
 [node name="Group_Walls" type="Node2D" parent="."]
 position = Vector2( 256, -64 )
 
-[node name="Wall" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 64 )
-
-[node name="Wall2" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 640, 64 )
-
-[node name="Wall3" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 576, 64 )
-
 [node name="Wall4" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 512, 64 )
-
-[node name="Wall17" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 640, 256 )
-
-[node name="Wall48" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 576, 256 )
+position = Vector2( 320, 320 )
 
 [node name="Wall49" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 512, 320 )
+position = Vector2( 320, 384 )
 
 [node name="Wall50" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 448, 384 )
+position = Vector2( 320, 448 )
 
 [node name="Wall51" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 448, 512 )
-
-[node name="Wall52" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 640, 384 )
+position = Vector2( 320, 512 )
 
 [node name="Wall53" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 384, 128 )
+position = Vector2( 320, 192 )
 
 [node name="Wall54" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( 320, 128 )
 
 [node name="Wall55" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 256, 192 )
-
-[node name="Wall5" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 448, 64 )
+position = Vector2( 256, 128 )
 
 [node name="Wall6" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 384, 64 )
+position = Vector2( 320, 256 )
 
 [node name="Wall7" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( 320, 64 )
@@ -88,34 +70,16 @@ position = Vector2( 128, 64 )
 position = Vector2( 64, 64 )
 
 [node name="Wall12" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 0, 64 )
+position = Vector2( 0, 128 )
 
 [node name="Wall13" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( -64, 64 )
+position = Vector2( 64, 128 )
 
 [node name="Wall16" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( -256, 64 )
+position = Vector2( -192, 128 )
 
 [node name="Wall14" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( -128, 64 )
-
-[node name="Wall18" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 576 )
-
-[node name="Wall19" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 640, 576 )
-
-[node name="Wall20" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 576, 576 )
-
-[node name="Wall21" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 512, 576 )
-
-[node name="Wall22" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 448, 576 )
-
-[node name="Wall23" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 384, 576 )
+position = Vector2( -128, 128 )
 
 [node name="Wall24" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( 320, 576 )
@@ -142,7 +106,7 @@ position = Vector2( -192, 576 )
 position = Vector2( -64, 576 )
 
 [node name="Wall15" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( -192, 64 )
+position = Vector2( -64, 128 )
 
 [node name="Wall32" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( -128, 576 )
@@ -171,62 +135,44 @@ position = Vector2( -256, 192 )
 [node name="Wall40" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( -256, 128 )
 
-[node name="Wall41" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 128 )
-
-[node name="Wall42" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 192 )
-
-[node name="Wall43" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 256 )
-
-[node name="Wall44" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 320 )
-
-[node name="Wall45" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 384 )
-
-[node name="Wall46" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 448 )
-
-[node name="Wall47" parent="Group_Walls" instance=ExtResource( 3 )]
-position = Vector2( 704, 512 )
-
 [node name="Spots" type="Node2D" parent="."]
 position = Vector2( 48, 16 )
 
-[node name="Spot" parent="Spots" instance=ExtResource( 6 )]
-position = Vector2( 848, 368 )
-script = ExtResource( 7 )
-
 [node name="Spot2" parent="Spots" instance=ExtResource( 6 )]
-position = Vector2( 848, 48 )
+position = Vector2( 400, 240 )
 script = ExtResource( 7 )
 
 [node name="Boxes" type="Node2D" parent="."]
 position = Vector2( -16, -16 )
 
-[node name="Box" parent="Boxes" groups=[
-"box_type_1",
-] instance=ExtResource( 5 )]
-position = Vector2( 656, 336 )
-script = ExtResource( 4 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Boxes/Box"]
-position = Vector2( 8, 8 )
-cast_to = Vector2( 0, 16 )
-
 [node name="Box2" parent="Boxes" groups=[
 "box_type_1",
 ] instance=ExtResource( 5 )]
-position = Vector2( 656, 144 )
-script = ExtResource( 4 )
+position = Vector2( 336, 272 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Boxes/Box2"]
 position = Vector2( 8, 8 )
 cast_to = Vector2( 0, 16 )
 
-[node name="WinDialog" type="AcceptDialog" parent="."]
+[node name="Ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Remaining_Moves" type="Label" parent="Ui"]
+margin_right = 216.0
+margin_bottom = 29.0
+rect_scale = Vector2( 1.052, 1.426 )
+custom_fonts/font = ExtResource( 1 )
+text = "PASSOS RESTANTES: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinDialog" type="AcceptDialog" parent="Ui"]
 margin_left = 16.0
 margin_right = 168.0
 margin_bottom = 75.0
@@ -238,9 +184,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LoseDialog" type="AcceptDialog" parent="."]
+[node name="LoseDialog" type="AcceptDialog" parent="Ui"]
 margin_left = 16.0
-margin_right = 168.0
+margin_right = 189.0
 margin_bottom = 75.0
 rect_scale = Vector2( 0.880001, 0.92 )
 window_title = "Sem movimentos :("
@@ -250,32 +196,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Level_Counter" type="Label" parent="."]
-margin_left = -39.8661
-margin_top = -36.8695
-margin_right = 6.1339
-margin_bottom = -22.8695
-rect_scale = Vector2( 0.454761, 0.480002 )
-text = "Level 1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Remaining_Moves" type="Label" parent="."]
-margin_left = -40.0064
-margin_top = -29.0123
-margin_right = 97.9936
-margin_bottom = -15.0123
-rect_scale = Vector2( 0.494756, 0.560001 )
-text = "PASSOS RESTANTES: 0"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="body_entered" from="Spots/Spot" to="Spots/Spot" method="_on_Spot_body_entered"]
-[connection signal="body_exited" from="Spots/Spot" to="Spots/Spot" method="_on_Spot_body_exited"]
+[node name="tutorial" type="Sprite" parent="."]
+position = Vector2( 832, 276 )
+texture = ExtResource( 4 )
+vframes = 2
+script = ExtResource( 9 )
 [connection signal="body_entered" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_entered"]
 [connection signal="body_exited" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_exited"]
-[connection signal="confirmed" from="WinDialog" to="." method="_on_WinDialog_confirmed"]
-[connection signal="confirmed" from="WinDialog" to="." method="_on_AcceptDialog_confirmed"]
-[connection signal="confirmed" from="LoseDialog" to="." method="_on_LoseDialog_confirmed"]
-[connection signal="confirmed" from="LoseDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="confirmed" from="Ui/WinDialog" to="." method="_on_WinDialog_confirmed"]
+[connection signal="confirmed" from="Ui/LoseDialog" to="." method="_on_LoseDialog_confirmed"]
