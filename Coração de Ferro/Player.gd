@@ -7,6 +7,7 @@ var gravidade = 30
 var forca = 10
 var inteligencia = 10
 
+
 func addForca(var f):
 	forca = forca + f
 
