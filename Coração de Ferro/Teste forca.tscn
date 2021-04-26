@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Assets/WorldTiles/tileYellow_05.png" type="Texture" id=1]
 [ext_resource path="res://Assets/WorldTiles/tileYellow_11.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Assets/download.png" type="Texture" id=18]
 [ext_resource path="res://Button.gd" type="Script" id=19]
 [ext_resource path="res://caixaController.gd" type="Script" id=20]
+[ext_resource path="res://Serra.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -471,6 +472,9 @@ script = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Serra" parent="." instance=ExtResource( 21 )]
+position = Vector2( 141.366, 486.899 )
 [connection signal="body_entered" from="Fogo" to="caixaController" method="_on_Fogo_body_entered"]
 [connection signal="tree_exiting" from="caixaController" to="Player" method="_on_caixaController_tree_exiting"]
 [connection signal="ready" from="caixaController/caixa1" to="caixaController" method="_on_caixa1_ready"]
