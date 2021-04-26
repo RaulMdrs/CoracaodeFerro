@@ -1016,6 +1016,5 @@ shadow_enabled = true
 [node name="AreaDeMorteImediata" parent="." instance=ExtResource( 40 )]
 position = Vector2( 1149.79, 523.244 )
 scale = Vector2( 14, 1 )
-faseScene = null
 [connection signal="timeout" from="suporte_camera/Timer" to="suporte_camera" method="_on_Timer_timeout"]
 [connection signal="body_shape_entered" from="suporte_camera/camera_pivot/area_luz" to="gerenciador_fase" method="_on_Area2D_body_shape_entered"]

@@ -12,6 +12,9 @@ polygon = PoolVector2Array( -478.908, 509.799, -501.849, 1255.49, -478.908, 505.
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 luz_camera = NodePath("camera_pivot/luz_camera")
 Area2d = NodePath("camera_pivot/area_luz")
 timerPath = NodePath("Timer")
