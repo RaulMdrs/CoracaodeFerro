@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Assets/Tiles Sci fi/Tile (6).png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tiles Sci fi/Tile (7).png" type="Texture" id=2]
@@ -32,11 +32,7 @@
 [ext_resource path="res://Assets/Tiles Sci fi/ahsbf .png" type="Texture" id=30]
 [ext_resource path="res://Assets/Tiles Sci fi/BGTile (1).png" type="Texture" id=31]
 [ext_resource path="res://Assets/Luz/light.png" type="Texture" id=32]
-[ext_resource path="res://Assets/camera.png" type="Texture" id=33]
-[ext_resource path="res://Assets/suporte_camera.png" type="Texture" id=34]
 [ext_resource path="res://gerenciador_fase.gd" type="Script" id=35]
-[ext_resource path="res://suporte_camera.gd" type="Script" id=36]
-[ext_resource path="res://Timer_f.gd" type="Script" id=37]
 [ext_resource path="res://Assets/petrobos_logo.png" type="Texture" id=38]
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=39]
 [ext_resource path="res://AreaDeMorteImediata.tscn" type="PackedScene" id=40]
@@ -838,10 +834,6 @@ points = PoolVector2Array( 64, 16, 0, 16, 0, 0, 64, 0 )
 } ]
 29/z_index = 0
 
-[sub_resource type="OccluderPolygon2D" id=28]
-resource_local_to_scene = true
-polygon = PoolVector2Array( 0.013916, -0.318481, -3.6394, -38.1074, 0.410645, -0.309906, 35.0792, -14.0492 )
-
 [node name="Fase_1" type="Node2D"]
 
 [node name="Békiground" type="TileMap" parent="."]
@@ -871,57 +863,6 @@ texture = ExtResource( 38 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 229.601, 370.392 )
-
-[node name="suporte_camera" type="Sprite" parent="."]
-position = Vector2( 2085.64, 187.47 )
-scale = Vector2( 0.0591178, 0.0523197 )
-texture = ExtResource( 34 )
-script = ExtResource( 36 )
-luz_camera = NodePath("camera_pivot/luz_camera")
-Area2d = NodePath("camera_pivot/area_luz")
-timerPath = NodePath("Timer")
-
-[node name="Timer" type="Timer" parent="suporte_camera"]
-wait_time = 0.98
-one_shot = true
-script = ExtResource( 37 )
-__meta__ = {
-"_editor_description_": ""
-}
-
-[node name="camera_pivot" type="Position2D" parent="suporte_camera"]
-position = Vector2( 58.8398, 158.288 )
-rotation = 6.4362
-
-[node name="camera" type="Sprite" parent="suporte_camera/camera_pivot"]
-position = Vector2( -104.863, 286.517 )
-texture = ExtResource( 33 )
-
-[node name="mascara de luz" type="LightOccluder2D" parent="suporte_camera/camera_pivot"]
-position = Vector2( -462.461, 450.615 )
-rotation = -3.05023
-scale = Vector2( 16.9157, 19.1129 )
-occluder = SubResource( 28 )
-
-[node name="luz_camera" type="Light2D" parent="suporte_camera/camera_pivot"]
-position = Vector2( -485.391, 484.688 )
-scale = Vector2( 16.9154, 19.1133 )
-texture = ExtResource( 32 )
-texture_scale = 1.04
-color = Color( 0.937255, 0.0392157, 0.0392157, 1 )
-energy = 3.48
-shadow_enabled = true
-
-[node name="area_luz" type="Area2D" parent="suporte_camera/camera_pivot"]
-position = Vector2( -33141.5, 12822.8 )
-rotation = -0.474509
-scale = Vector2( 16.9154, 19.1133 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suporte_camera/camera_pivot/area_luz"]
-position = Vector2( 1.25522, 0.414246 )
-polygon = PoolVector2Array( 2051.19, 205.676, 1969.44, 353.188, 1877.01, 276.385, 1869.85, 177.071 )
-one_way_collision = true
-one_way_collision_margin = 128.0
 
 [node name="gerenciador_fase" type="Control" parent="."]
 margin_left = 35.2734
@@ -1016,5 +957,3 @@ shadow_enabled = true
 [node name="AreaDeMorteImediata" parent="." instance=ExtResource( 40 )]
 position = Vector2( 1149.79, 523.244 )
 scale = Vector2( 14, 1 )
-[connection signal="timeout" from="suporte_camera/Timer" to="suporte_camera" method="_on_Timer_timeout"]
-[connection signal="body_shape_entered" from="suporte_camera/camera_pivot/area_luz" to="gerenciador_fase" method="_on_Area2D_body_shape_entered"]

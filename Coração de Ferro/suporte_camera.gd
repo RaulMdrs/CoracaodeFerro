@@ -29,3 +29,8 @@ func _on_Timer_timeout():
 	
 	timerNode.set_wait_time(2)
 	timerNode.start()
+
+
+func _on_area_luz_body_shape_entered(body_id, body, body_shape, area_shape):
+	if(body.name == "Player"):
+		get_tree().reload_current_scene()

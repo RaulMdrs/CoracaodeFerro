@@ -232,7 +232,7 @@ position = Vector2( 516.147, 39.0105 )
 position = Vector2( 516.147, 39.0105 )
 
 [node name="Spawner6" parent="." instance=ExtResource( 10 )]
-position = Vector2( 516.147, 39.0105 )
+position = Vector2( 516.147, 43.7673 )
 
 [node name="Return" type="Button" parent="."]
 margin_left = 40.4543
