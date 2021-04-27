@@ -683,7 +683,14 @@ texture = ExtResource( 5 )
 [node name="suporte_camera" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5412.72, 55.2402 )
 rotation = -0.261799
+<<<<<<< HEAD
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+=======
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+>>>>>>> 9579b132d6c209a1f4e8b6fc4dfd431b810cc225

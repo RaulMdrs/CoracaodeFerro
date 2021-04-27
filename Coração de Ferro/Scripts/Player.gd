@@ -39,9 +39,12 @@ func _physics_process(delta):
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):
 		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
 	
+<<<<<<< HEAD
 	if (Input.is_action_pressed("passar_fase")):
 		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
 	
+=======
+>>>>>>> 9579b132d6c209a1f4e8b6fc4dfd431b810cc225
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	
 	velocidade.x = lerp(velocidade.x,0,0.1)

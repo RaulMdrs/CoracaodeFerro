@@ -7,6 +7,15 @@
 [ext_resource path="res://Cenas/Puzzle_Spot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=8]
+<<<<<<< HEAD:Coração de Ferro/Cenas/testeInteligencia-3.tscn
+=======
+
+
+
+
+
+
+>>>>>>> 9579b132d6c209a1f4e8b6fc4dfd431b810cc225:Coração de Ferro/testeInteligencia-3.tscn
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
