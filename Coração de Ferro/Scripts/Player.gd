@@ -15,6 +15,11 @@ func get_PlayerEntered():
 func addForca(var f):
 	forca = forca + f
 
+func _input(event):
+	event = Input.is_action_just_pressed("passar_fase")
+	if (event):
+		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
+
 func _physics_process(delta):
 	if Input.is_action_pressed("right"):
 		velocidade.x = speed
@@ -38,6 +43,8 @@ func _physics_process(delta):
 	
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):
 		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
+		
+	
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	

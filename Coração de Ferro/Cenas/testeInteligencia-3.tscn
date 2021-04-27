@@ -8,18 +8,13 @@
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=8]
 
-
-
-
-
-
-
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0, 64 )
 script = ExtResource( 8 )
+cont = "4"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -358.018, 23.3837 )
