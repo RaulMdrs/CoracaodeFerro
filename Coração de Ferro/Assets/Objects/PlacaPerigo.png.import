@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_puzzle_wall_2.png-8641f318956c4ceb1d4e04202abb193e.stex"
+path="res://.import/PlacaPerigo.png-f200df80bbd955968bdc525e16b3aa25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spr_puzzle_wall_2.png"
-dest_files=[ "res://.import/spr_puzzle_wall_2.png-8641f318956c4ceb1d4e04202abb193e.stex" ]
+source_file="res://Assets/Objects/PlacaPerigo.png"
+dest_files=[ "res://.import/PlacaPerigo.png-f200df80bbd955968bdc525e16b3aa25.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

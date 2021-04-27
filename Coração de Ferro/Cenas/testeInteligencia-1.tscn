@@ -1,0 +1,213 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/tutorial_wasd_arrows.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Puzzle_Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/Puzzle_Spot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Puzzle_Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Puzzle_Box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=6]
+[ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/tutorial_wasd_puzzle.gd" type="Script" id=9]
+[ext_resource path="res://Assets/tutorial undo e restart.png" type="Texture" id=10]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 7 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+cont = "2"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 256 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, 16 )
+
+[node name="Group_Walls" type="Node2D" parent="."]
+position = Vector2( 256, -64 )
+
+[node name="Wall4" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 320 )
+
+[node name="Wall49" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 384 )
+
+[node name="Wall50" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 448 )
+
+[node name="Wall51" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 512 )
+
+[node name="Wall53" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 192 )
+
+[node name="Wall54" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 128 )
+
+[node name="Wall55" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 256, 128 )
+
+[node name="Wall6" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 256 )
+
+[node name="Wall7" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 64 )
+
+[node name="Wall8" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 256, 64 )
+
+[node name="Wall9" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 192, 64 )
+
+[node name="Wall10" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 128, 64 )
+
+[node name="Wall11" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 64, 64 )
+
+[node name="Wall12" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 0, 128 )
+
+[node name="Wall13" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 64, 128 )
+
+[node name="Wall16" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -192, 128 )
+
+[node name="Wall14" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -128, 128 )
+
+[node name="Wall24" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 320, 576 )
+
+[node name="Wall25" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 256, 576 )
+
+[node name="Wall26" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 192, 576 )
+
+[node name="Wall27" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 128, 576 )
+
+[node name="Wall28" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 64, 576 )
+
+[node name="Wall29" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( 0, 576 )
+
+[node name="Wall30" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -192, 576 )
+
+[node name="Wall31" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -64, 576 )
+
+[node name="Wall15" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -64, 128 )
+
+[node name="Wall32" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -128, 576 )
+
+[node name="Wall33" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 576 )
+
+[node name="Wall34" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 512 )
+
+[node name="Wall35" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 448 )
+
+[node name="Wall36" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 384 )
+
+[node name="Wall37" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 320 )
+
+[node name="Wall38" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 256 )
+
+[node name="Wall39" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 192 )
+
+[node name="Wall40" parent="Group_Walls" instance=ExtResource( 4 )]
+position = Vector2( -256, 128 )
+
+[node name="Spots" type="Node2D" parent="."]
+position = Vector2( 48, 16 )
+
+[node name="Spot2" parent="Spots" instance=ExtResource( 3 )]
+position = Vector2( 400, 240 )
+script = ExtResource( 8 )
+
+[node name="Boxes" type="Node2D" parent="."]
+position = Vector2( -16, -16 )
+
+[node name="Box2" parent="Boxes" groups=[
+"box_type_1",
+] instance=ExtResource( 5 )]
+position = Vector2( 336, 272 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Boxes/Box2"]
+position = Vector2( 8, 8 )
+cast_to = Vector2( 0, 16 )
+
+[node name="Ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Remaining_Moves" type="Label" parent="Ui"]
+margin_right = 216.0
+margin_bottom = 29.0
+rect_scale = Vector2( 1.052, 1.426 )
+custom_fonts/font = ExtResource( 7 )
+text = "PASSOS RESTANTES: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinDialog" type="AcceptDialog" parent="Ui"]
+margin_left = 16.0
+margin_right = 168.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.880001, 0.92 )
+window_title = "Nível Concluído!"
+dialog_text = "Clique para avançar
+para a próxima fase."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoseDialog" type="AcceptDialog" parent="Ui"]
+margin_left = 16.0
+margin_right = 189.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.880001, 0.92 )
+window_title = "Sem movimentos :("
+dialog_text = "Clique para recomeçar
+o nível."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tutorial undo e restart" type="Sprite" parent="."]
+position = Vector2( 830.502, 418.461 )
+texture = ExtResource( 10 )
+
+[node name="tutorial" type="Sprite" parent="."]
+position = Vector2( 832, 192 )
+texture = ExtResource( 1 )
+vframes = 2
+script = ExtResource( 9 )
+[connection signal="body_entered" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_entered"]
+[connection signal="body_exited" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_exited"]
+[connection signal="confirmed" from="Ui/WinDialog" to="." method="_on_WinDialog_confirmed"]
+[connection signal="confirmed" from="Ui/LoseDialog" to="." method="_on_LoseDialog_confirmed"]

@@ -6,7 +6,7 @@ var forcaPulo = -900
 var gravidade = 30
 var forca = 10
 var inteligencia = 10
-export (int) var cont
+export (String) var cont
 var playerEntered = false
 
 func get_PlayerEntered():
@@ -37,13 +37,10 @@ func _physics_process(delta):
 		velocidade.y = forcaPulo
 	
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):
-		#var aux = cont
-		#cont = cont + 1
-		get_tree().change_scene("res://testeInteligencia-" + cont + ".tscn")
+		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
+	
 	if (Input.is_action_pressed("passar_fase")):
-		#var aux = cont
-		#cont = cont + 1
-		get_tree().change_scene("res://testeInteligencia-" + cont + ".tscn")
+		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	

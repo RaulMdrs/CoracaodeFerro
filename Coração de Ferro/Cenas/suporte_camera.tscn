@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/suporte_camera.png" type="Texture" id=1]
+[ext_resource path="res://Assets/camera.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Luz/light.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/suporte_camera.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Timer_f.gd" type="Script" id=5]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+resource_local_to_scene = true
+polygon = PoolVector2Array( 0.013916, -0.318481, -3.6394, -38.1074, 0.410645, -0.309906, 35.0792, -14.0492 )
+
+[node name="suporte_camera" type="Sprite"]
+scale = Vector2( 0.0591178, 0.0523197 )
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+luz_camera = NodePath("camera_pivot/luz_camera")
+Area2d = NodePath("camera_pivot/area_luz")
+timerPath = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.98
+one_shot = true
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="camera_pivot" type="Position2D" parent="."]
+position = Vector2( 58.8398, 158.288 )
+rotation = 6.4362
+
+[node name="camera" type="Sprite" parent="camera_pivot"]
+position = Vector2( -104.863, 286.517 )
+texture = ExtResource( 2 )
+
+[node name="mascara de luz" type="LightOccluder2D" parent="camera_pivot"]
+position = Vector2( -462.461, 450.615 )
+rotation = -3.05023
+scale = Vector2( 16.9157, 19.1129 )
+occluder = SubResource( 1 )
+
+[node name="luz_camera" type="Light2D" parent="camera_pivot"]
+position = Vector2( -485.391, 484.688 )
+scale = Vector2( 16.9154, 19.1133 )
+texture = ExtResource( 3 )
+texture_scale = 1.04
+color = Color( 0.937255, 0.0392157, 0.0392157, 1 )
+energy = 3.48
+shadow_enabled = true
+
+[node name="area_luz" type="Area2D" parent="camera_pivot"]
+position = Vector2( -33141.5, 12822.8 )
+rotation = -0.474509
+scale = Vector2( 16.9154, 19.1133 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="camera_pivot/area_luz"]
+position = Vector2( 1.25522, 0.414246 )
+polygon = PoolVector2Array( 2051.19, 205.676, 1969.44, 353.188, 1877.01, 276.385, 1869.85, 177.071 )
+one_way_collision = true
+one_way_collision_margin = 128.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_shape_entered" from="camera_pivot/area_luz" to="." method="_on_area_luz_body_shape_entered"]
