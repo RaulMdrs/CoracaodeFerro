@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sair.gd" type="Script" id=1]
-[ext_resource path="res://Iniciar.gd" type="Script" id=2]
-[ext_resource path="res://BackgrountMenu.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Sair.gd" type="Script" id=1]
+[ext_resource path="res://Assets/BackgrountMenu.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Iniciar.gd" type="Script" id=3]
 
 [node name="Menu" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 513.248, 299.886 )
 scale = Vector2( 1.02354, 1.20869 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="Iniciar" type="Button" parent="."]
 margin_left = 325.949
@@ -17,7 +17,7 @@ margin_top = 234.034
 margin_right = 510.95
 margin_bottom = 296.034
 text = "Iniciar"
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
