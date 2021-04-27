@@ -40,6 +40,10 @@ func _physics_process(delta):
 		#var aux = cont
 		#cont = cont + 1
 		get_tree().change_scene("res://testeInteligencia-" + cont + ".tscn")
+	if (Input.is_action_pressed("passar_fase")):
+		#var aux = cont
+		#cont = cont + 1
+		get_tree().change_scene("res://testeInteligencia-" + cont + ".tscn")
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	

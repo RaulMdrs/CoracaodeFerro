@@ -672,7 +672,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -413.335, 354.652 )
+position = Vector2( -515.194, 354.652 )
 cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]
@@ -683,7 +683,7 @@ texture = ExtResource( 5 )
 [node name="suporte_camera" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5412.72, 55.2402 )
 rotation = -0.261799
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]

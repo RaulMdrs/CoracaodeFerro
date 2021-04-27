@@ -5,6 +5,7 @@ var moves = 50
 var level = 0
 var movments = [5,30,50]
 var spots
+export (String) var cont
 
 func _process(_delta): #escrita dos movimentos e contagem dos spots
 	#$Level_Counter.text = 'Level 1'
@@ -30,8 +31,7 @@ func check_end(): #verifica quando o player termina de se movimentar
 
 
 func _on_WinDialog_confirmed():  #acontece quanto da ok na caixa de vitoria
-	get_tree().reload_current_scene()
-
+	get_tree().change_scene("res://Cenas/Fase_" + cont + ".tscn")
 
 func _on_LoseDialog_confirmed(): #acontece quanto da ok na caixa de derrota
 	get_tree().reload_current_scene()
