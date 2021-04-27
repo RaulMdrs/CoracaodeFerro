@@ -20,7 +20,6 @@ func _on_Timer_timeout():
 		luz_camera_2.set_enabled(false)
 		area2d_2.set_monitoring(false)
 		ligada = false
-		print("Desliguei")
 	else:
 		luz_camera_2.set_enabled(true)
 		area2d_2.set_monitoring(true)
