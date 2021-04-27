@@ -7,22 +7,18 @@
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=5]
 [ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
-<<<<<<< HEAD:Coração de Ferro/Cenas/testeInteligencia-4.tscn
-=======
 
 
 
 
 
 
->>>>>>> 9579b132d6c209a1f4e8b6fc4dfd431b810cc225:Coração de Ferro/testeInteligencia-4.tscn
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 6 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
-cont = "5"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -118, 0 )

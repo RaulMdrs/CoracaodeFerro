@@ -95,10 +95,6 @@ tile_data = PoolIntArray( -65552, 6, 0, -65551, 7, 0, -65550, 6, 0, -65549, 7, 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -622.341, 1664.51 )
-<<<<<<< HEAD
-cont = "3"
-=======
->>>>>>> 9579b132d6c209a1f4e8b6fc4dfd431b810cc225
 
 [node name="Elevador" type="StaticBody2D" parent="."]
 position = Vector2( -607.114, 1773.5 )
