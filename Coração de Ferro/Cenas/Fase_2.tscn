@@ -250,6 +250,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma"]
 texture = ExtResource( 6 )
@@ -268,6 +269,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma2"]
 texture = ExtResource( 6 )
@@ -286,6 +288,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma3"]
 texture = ExtResource( 6 )
@@ -303,6 +306,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma4"]
 texture = ExtResource( 6 )
@@ -320,6 +324,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma6"]
 texture = ExtResource( 6 )
@@ -337,6 +342,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma7"]
 texture = ExtResource( 6 )
@@ -354,6 +360,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma5"]
 texture = ExtResource( 6 )
@@ -418,7 +425,7 @@ scale = Vector2( 19.5923, 2.1911 )
 [node name="AreaDeMorteImediata4" parent="Areas" instance=ExtResource( 12 )]
 position = Vector2( 5151.58, 737.299 )
 scale = Vector2( 22.3922, 2.1911 )
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]

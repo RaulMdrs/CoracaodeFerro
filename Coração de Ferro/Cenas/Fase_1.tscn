@@ -387,6 +387,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma"]
 texture = ExtResource( 6 )
@@ -405,6 +406,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma4"]
 texture = ExtResource( 6 )
@@ -423,6 +425,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma5"]
 texture = ExtResource( 6 )
@@ -441,6 +444,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma6"]
 texture = ExtResource( 6 )
@@ -459,6 +463,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma3"]
 texture = ExtResource( 6 )
@@ -477,6 +482,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
+child = 2
 
 [node name="Sprite" type="Sprite" parent="Plataformas/Plataforma2"]
 texture = ExtResource( 6 )
