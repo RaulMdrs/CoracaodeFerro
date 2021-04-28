@@ -671,7 +671,7 @@ texture_scale = 3.0
 color = Color( 0.854902, 0.780392, 0.160784, 1 )
 energy = 2.0
 shadow_enabled = true
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
