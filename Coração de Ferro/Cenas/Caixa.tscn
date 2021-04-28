@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/download.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Objects/Box.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Caixa.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29.3536, 30.432 )
+extents = Vector2( 33.1837, 33.8022 )
 
 [node name="Caixa" type="RigidBody2D"]
 mass = 3.09
