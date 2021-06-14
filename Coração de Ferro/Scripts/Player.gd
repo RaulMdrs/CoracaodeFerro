@@ -48,7 +48,7 @@ func _physics_process(delta):
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP)
 	
-	velocidade.x = lerp(velocidade.x,0,0.1)
+	velocidade.x = lerp(velocidade.x,0,1.0)
 
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
