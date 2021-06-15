@@ -8,6 +8,8 @@ var forca = 10
 var inteligencia = 10
 export (String) var cont
 var playerEntered = false
+var pulou = false
+var pulo = 0
 
 func get_PlayerEntered():
 	return playerEntered
@@ -25,20 +27,38 @@ func _physics_process(delta):
 		velocidade.x = speed
 		$AnimatedSprite.play("walk")
 		$AnimatedSprite.flip_h = false
+		
+		if(!get_child((3)).is_playing()):
+			get_child(3).play()
+		
+		
 	elif Input.is_action_pressed("left"):
 		velocidade.x = -speed
 		$AnimatedSprite.play("walk")
 		$AnimatedSprite.flip_h = true
+		
+		if(!get_child((3)).is_playing()):
+			get_child(3).play()
+		
 	else:
 		$AnimatedSprite.play("idle")
+		get_child(3).stop()
+		pulou = false
 	
 	if not is_on_floor():
 		$AnimatedSprite.play("jump")
+		get_child(3).stop()
+		
 	
 	velocidade.y = velocidade.y + gravidade
 	
 	
 	if Input.is_action_pressed("pular") and is_on_floor():
+		pulo = randi() % 2 + 4 # Returns random integer between 1 and 100
+
+		if(!get_child((pulo)).is_playing()):
+			get_child(pulo).play()
+			pulou = true
 		velocidade.y = forcaPulo
 	
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):

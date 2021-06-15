@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ÁCIDO.wav-1501d1077fa042d55cc25c6e5ac24fae.sample"
+
+[deps]
+
+source_file="res://Assets/FX/ÁCIDO.wav"
+dest_files=[ "res://.import/ÁCIDO.wav-1501d1077fa042d55cc25c6e5ac24fae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

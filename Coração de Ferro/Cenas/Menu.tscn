@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Sair.gd" type="Script" id=1]
 [ext_resource path="res://Assets/BackgrountMenu.png" type="Texture" id=2]
@@ -7,24 +7,25 @@
 [ext_resource path="res://Assets/steampunk-blueprint-4k-ultra-hd-wallpaper-background-image-steampunk-background-png-3840_2160.png" type="Texture" id=5]
 [ext_resource path="res://Cenas/Credito.gd" type="Script" id=6]
 [ext_resource path="res://Cenas/Voltar.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Fontes/karma/ot/karma future.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/Fontes/disposabledroid-bb/DisposableDroidBB_bld.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Assets/Fontes/mechanical/Mechanical.ttf" type="DynamicFontData" id=10]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 size = 50
-font_data = ExtResource( 10 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 50
-font_data = ExtResource( 10 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 50
+extra_spacing_char = 6
 font_data = ExtResource( 8 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "AnimacaoDescida"
+[sub_resource type="DynamicFont" id=2]
+size = 50
+extra_spacing_char = 5
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+extra_spacing_char = 5
+font_data = ExtResource( 8 )
+
+[sub_resource type="Animation" id=4]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -39,8 +40,7 @@ tracks/0/keys = {
 "values": [ Vector2( 512.827, -300 ), Vector2( 512.827, 300 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "AnimacaoSubida"
+[sub_resource type="Animation" id=5]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -55,23 +55,23 @@ tracks/0/keys = {
 "values": [ Vector2( 512.827, 300 ), Vector2( 512.827, -300 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 120
 font_data = ExtResource( 9 )
 
 [node name="Menu" type="Node2D"]
 
 [node name="MenuInicial" type="Sprite" parent="."]
-position = Vector2( 513.248, 299.886 )
+position = Vector2( 513.778, 299.356 )
 scale = Vector2( 1.02354, 1.20869 )
 texture = ExtResource( 2 )
 
 [node name="Iniciar" type="Button" parent="MenuInicial"]
-margin_left = -191.695
-margin_top = -75.1203
-margin_right = -6.69443
-margin_bottom = -13.1203
-custom_fonts/font = SubResource( 6 )
+margin_left = -188.0
+margin_top = -75.0
+margin_right = -21.0
+margin_bottom = -18.0
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -84,15 +84,15 @@ __meta__ = {
 }
 
 [node name="Credito" type="Button" parent="MenuInicial"]
-margin_left = -188.556
-margin_top = -20.1855
-margin_right = 60.444
-margin_bottom = 41.8145
-custom_fonts/font = SubResource( 5 )
+margin_left = -188.0
+margin_top = -30.0
+margin_right = 15.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "Creditos"
+text = "Créditos"
 flat = true
 align = 0
 script = ExtResource( 6 )
@@ -100,13 +100,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 animacao = NodePath("../../MenuCredito/AnimaçãoCreditos")
+botaoIniciar = NodePath("../Iniciar")
+botaoSair = NodePath("../Sair")
+botaoCredito = NodePath(".")
 
 [node name="Sair" type="Button" parent="MenuInicial"]
-margin_left = -188.633
-margin_top = 38.7309
-margin_right = -4.63284
-margin_bottom = 107.731
-custom_fonts/font = SubResource( 7 )
+margin_left = -188.0
+margin_top = 15.0
+margin_right = -83.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "Sair"
 flat = true
 align = 0
@@ -121,15 +127,15 @@ scale = Vector2( 0.26735, 0.278075 )
 texture = ExtResource( 5 )
 
 [node name="AnimaçãoCreditos" type="AnimationPlayer" parent="MenuCredito"]
-anims/AnimacaoDescida = SubResource( 2 )
-anims/AnimacaoSubida = SubResource( 3 )
+anims/AnimacaoDescida = SubResource( 4 )
+anims/AnimacaoSubida = SubResource( 5 )
 
 [node name="Voltar" type="Button" parent="MenuCredito"]
 margin_left = -456.326
 margin_top = 845.132
 margin_right = 29.6738
 margin_bottom = 1022.13
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.643137, 0.00784314, 0.00784314, 1 )
@@ -142,6 +148,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 animacao = NodePath("../AnimaçãoCreditos")
+botaoIniciar = NodePath("../../MenuInicial/Iniciar")
+botaoSair = NodePath("../../MenuInicial/Sair")
+botaoCredito = NodePath("../../MenuInicial/Credito")
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
