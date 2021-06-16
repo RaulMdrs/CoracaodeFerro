@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Sair.gd" type="Script" id=1]
 [ext_resource path="res://Assets/BackgrountMenu.png" type="Texture" id=2]
@@ -56,8 +56,14 @@ tracks/0/keys = {
 }
 
 [sub_resource type="DynamicFont" id=6]
-size = 120
+size = 150
 font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 100
+outline_size = 6
+outline_color = Color( 0.141176, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 8 )
 
 [node name="Menu" type="Node2D"]
 
@@ -122,7 +128,7 @@ __meta__ = {
 }
 
 [node name="MenuCredito" type="Sprite" parent="."]
-position = Vector2( 513.202, -299.625 )
+position = Vector2( 511.615, -298.127 )
 scale = Vector2( 0.26735, 0.278075 )
 texture = ExtResource( 5 )
 
@@ -131,10 +137,10 @@ anims/AnimacaoDescida = SubResource( 4 )
 anims/AnimacaoSubida = SubResource( 5 )
 
 [node name="Voltar" type="Button" parent="MenuCredito"]
-margin_left = -456.326
-margin_top = 845.132
-margin_right = 29.6738
-margin_bottom = 1022.13
+margin_left = -220.695
+margin_top = 817.947
+margin_right = 265.305
+margin_bottom = 994.945
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -151,6 +157,164 @@ animacao = NodePath("../AnimaçãoCreditos")
 botaoIniciar = NodePath("../../MenuInicial/Iniciar")
 botaoSair = NodePath("../../MenuInicial/Sair")
 botaoCredito = NodePath("../../MenuInicial/Credito")
+
+[node name="Programadores" type="Label" parent="MenuCredito"]
+margin_left = -1628.0
+margin_top = -845.0
+margin_right = -622.0
+margin_bottom = -733.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Programadores"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Programadores"]
+margin_left = -2.22406
+margin_top = 119.744
+margin_right = 1003.78
+margin_bottom = 231.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
+text = "Erick hasse
+Raul Medeiros
+Rodrigo Monteiro"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level Design - Plataforma" type="Label" parent="MenuCredito"]
+margin_left = -1629.42
+margin_top = -179.798
+margin_right = -623.415
+margin_bottom = -67.7983
+custom_fonts/font = SubResource( 7 )
+text = "level design plataforma"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Level Design - Plataforma"]
+margin_left = 3.7135
+margin_top = 119.744
+margin_right = 1009.71
+margin_bottom = 322.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
+text = "Raul Medeiros
+Rodrigo Monteiro"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level Design - Plataforma2" type="Label" parent="MenuCredito"]
+margin_left = -1644.38
+margin_top = 287.701
+margin_right = -638.376
+margin_bottom = 399.701
+custom_fonts/font = SubResource( 7 )
+text = "level design puzzles"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Level Design - Plataforma2"]
+margin_left = -2.22406
+margin_top = 119.744
+margin_right = 1003.78
+margin_bottom = 231.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
+text = "erick hasse"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Equipe de Som" type="Label" parent="MenuCredito"]
+margin_left = -449.843
+margin_top = -863.093
+margin_right = 556.157
+margin_bottom = -751.093
+custom_fonts/font = SubResource( 7 )
+text = "Equipe de som"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Equipe de Som"]
+margin_left = -2.22406
+margin_top = 119.744
+margin_right = 1003.78
+margin_bottom = 231.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
+text = "john souza
+frederico neutzliing
+pedro acauan
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Tester" type="Label" parent="MenuCredito"]
+margin_left = -451.258
+margin_top = -197.891
+margin_right = 554.742
+margin_bottom = -85.8911
+custom_fonts/font = SubResource( 7 )
+text = "Game tester"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Game Tester"]
+margin_left = -2.22406
+margin_top = 119.744
+margin_right = 1003.78
+margin_bottom = 231.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
+text = "henrique souza
+larissa medeiros"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arte" type="Label" parent="MenuCredito"]
+margin_left = -466.22
+margin_top = 269.609
+margin_right = 539.78
+margin_bottom = 381.609
+custom_fonts/font = SubResource( 7 )
+text = "arte "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuCredito/Arte"]
+margin_left = -2.22406
+margin_top = 119.744
+margin_right = 1003.78
+margin_bottom = 231.744
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
+text = "gabriela alkimin"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )

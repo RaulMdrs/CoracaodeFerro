@@ -696,6 +696,7 @@ rotation = -0.261799
 position = Vector2( -0.561829, 10.1136 )
 stream = ExtResource( 17 )
 autoplay = true
+max_distance = 100000.0
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
