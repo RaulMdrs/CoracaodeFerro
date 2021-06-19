@@ -66,7 +66,7 @@ func _physics_process(delta):
 		
 	
 	
-	velocidade = move_and_slide(velocidade, Vector2.UP)
+	velocidade = move_and_slide(velocidade, Vector2.UP, false)
 	
 	velocidade.x = lerp(velocidade.x,0,1.0)
 
