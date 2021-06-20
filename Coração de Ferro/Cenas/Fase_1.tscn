@@ -18,13 +18,13 @@
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Assets/player/platformChar_happy.png" type="Texture" id=19]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.3628, 46.6274 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 37.7148, 128.064 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 resource_name = "animacao texto"
 length = 2.0
 tracks/0/type = "value"
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "sumir texto"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible_characters")
@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 31.9051, 31.95 )
 
 [node name="Fase_1" type="Node2D"]
@@ -336,7 +336,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril2"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril2"]
 scale = Vector2( 0.4, 0.4 )
@@ -349,7 +349,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril3"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril3"]
 scale = Vector2( 0.4, 0.4 )
@@ -362,7 +362,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril10"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril10"]
 scale = Vector2( 0.4, 0.4 )
@@ -376,7 +376,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril4"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril4"]
 scale = Vector2( 0.4, 0.4 )
@@ -389,7 +389,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril5"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril5"]
 scale = Vector2( 0.4, 0.4 )
@@ -402,7 +402,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril6"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril6"]
 scale = Vector2( 0.4, 0.4 )
@@ -416,7 +416,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril7"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril7"]
 scale = Vector2( 0.4, 0.4 )
@@ -430,7 +430,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril8"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril8"]
 scale = Vector2( 0.4, 0.4 )
@@ -444,7 +444,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barris/Barril9"]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Barris/Barril9"]
 scale = Vector2( 0.4, 0.4 )
@@ -464,7 +464,7 @@ animacao = NodePath("../Texto/AnimationPlayer")
 [node name="Area2D" type="Area2D" parent="PortaFim/Controller"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PortaFim/Controller/Area2D"]
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="Texto" type="Label" parent="PortaFim"]
 margin_left = -955.656
@@ -480,8 +480,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PortaFim/Texto"]
-"anims/animacao texto" = SubResource( 8 )
-"anims/sumir texto" = SubResource( 9 )
+"anims/animacao texto" = SubResource( 3 )
+"anims/sumir texto" = SubResource( 4 )
 
 [node name="PortaFechadaInicio" type="Sprite" parent="."]
 position = Vector2( -512.369, 373.897 )
@@ -519,13 +519,13 @@ position = Vector2( 156.683, 391.708 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo Teste"]
 position = Vector2( 0, 18.8775 )
-shape = SubResource( 10 )
+shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Inimigo Teste"]
 position = Vector2( 0.445404, 13.4975 )
 scale = Vector2( 0.735624, 0.712975 )
 texture = ExtResource( 19 )
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]

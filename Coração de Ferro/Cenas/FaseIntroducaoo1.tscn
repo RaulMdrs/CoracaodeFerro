@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cenas/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/PortaAnimada.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/SpawnarPlayer.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_bottom = 1
+extra_spacing_char = 8
+extra_spacing_space = 2
+font_data = ExtResource( 6 )
+
+[node name="FaseIntroducaoo1" type="Node2D"]
+
+[node name="Békiground" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray(  )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 589824, 14, 0, 589825, 14, 0, 589826, 14, 0, 589827, 14, 0, 589828, 14, 0, 589829, 14, 0, 589830, 14, 0 )
+
+[node name="PortaAnimada" parent="." instance=ExtResource( 3 )]
+position = Vector2( 253.301, 503.461 )
+waitTime = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 250.655, 514.873 )
+current = true
+zoom = Vector2( 1.7, 1.7 )
+
+[node name="SpawnarPlayer" type="Position2D" parent="."]
+position = Vector2( 253.301, 524.461 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 5 )
+spawnScene = ExtResource( 4 )
+
+[node name="GerenFaseIntro1" type="Node" parent="."]
+
+[node name="direcaoOficina" type="Sprite" parent="."]
+position = Vector2( -237.962, 213.268 )
+texture = ExtResource( 7 )
+
+[node name="Oficina" type="Sprite" parent="."]
+position = Vector2( -502.863, 2.245 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Oficina"]
+margin_left = -132.724
+margin_top = -32.0
+margin_right = 267.276
+margin_bottom = 54.0
+custom_fonts/normal_font = SubResource( 1 )
+tab_size = 0
+text = "Oficina"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
