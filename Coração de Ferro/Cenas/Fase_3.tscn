@@ -20,6 +20,7 @@
 [ext_resource path="res://Assets/Objects/Switch (2).png" type="Texture" id=18]
 [ext_resource path="res://Assets/Objects/Barrel (1).png" type="Texture" id=19]
 [ext_resource path="res://Assets/Objects/Box.png" type="Texture" id=20]
+[ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=21]
 
 [sub_resource type="TileSet" id=1]
 0/name = "BGTile (7).png 0"
@@ -93,10 +94,10 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 64.6105, 9.44604 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=19]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -111,10 +112,10 @@ tracks/0/keys = {
 "values": [ Vector2( -607.114, 1773.5 ), Vector2( -607.114, 430 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 32.1134, 10 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 length = 7.0
 loop = true
 tracks/0/type = "value"
@@ -130,7 +131,7 @@ tracks/0/keys = {
 "values": [ Vector2( 144, 40 ), Vector2( -500, 40 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 length = 7.0
 loop = true
 tracks/0/type = "value"
@@ -146,26 +147,10 @@ tracks/0/keys = {
 "values": [ Vector2( 500, 40 ), Vector2( 1300, 40 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 31.8141, 14.5146 )
 
-[sub_resource type="Animation" id=14]
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2002.98, 415.872 ), Vector2( 2605.85, 417.15 ) ]
-}
-
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -181,7 +166,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2733.07, 312.972 ), Vector2( 3402.95, 312.972 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=14]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -197,7 +182,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=15]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -213,7 +198,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=16]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -229,7 +214,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 69.561, 47.6389 )
 
 [node name="Fase_3" type="Node2D"]
@@ -308,7 +293,7 @@ __meta__ = {
 texture = ExtResource( 17 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -607.114, 1665.68 )
+position = Vector2( -604.666, 1682.7 )
 cont = "3"
 
 [node name="Elevador" type="StaticBody2D" parent="."]
@@ -325,10 +310,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevador"]
 position = Vector2( 0, -39.1624 )
-shape = SubResource( 8 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevador"]
-anims/movimento = SubResource( 9 )
+anims/movimento = SubResource( 19 )
 
 [node name="Robos" type="Node2D" parent="."]
 position = Vector2( 374.595, 144.123 )
@@ -347,10 +332,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Robos/RoboObservador"]
 position = Vector2( 0.420441, 22.2838 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Robos/RoboObservador"]
-anims/movimento = SubResource( 11 )
+anims/movimento = SubResource( 9 )
 
 [node name="suporte_camera" parent="Robos/RoboObservador" instance=ExtResource( 7 )]
 position = Vector2( -59.5609, 13.7244 )
@@ -379,10 +364,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Robos/RoboObservador2"]
 position = Vector2( 0.420441, 22.2838 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Robos/RoboObservador2"]
-anims/movimento = SubResource( 12 )
+anims/movimento = SubResource( 10 )
 
 [node name="suporte_camera" parent="Robos/RoboObservador2" instance=ExtResource( 7 )]
 position = Vector2( -59.2402, 14.8245 )
@@ -407,24 +392,11 @@ scale = Vector2( 54.3189, -1.59594 )
 
 [node name="Plataformas" type="Node2D" parent="."]
 
-[node name="Plataforma" type="StaticBody2D" parent="Plataformas"]
-position = Vector2( 2002.98, 415.872 )
-scale = Vector2( 2.56, 1 )
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-child = 2
-
-[node name="Sprite" type="Sprite" parent="Plataformas/Plataforma"]
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma"]
-position = Vector2( 0, -17.009 )
-shape = SubResource( 13 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Plataforma"]
-anims/movimento = SubResource( 14 )
+[node name="MovePlatform" parent="Plataformas" instance=ExtResource( 21 )]
+position = Vector2( 1982.87, 416.435 )
+scale = Vector2( 1.28, 1 )
+move_to = Vector2( 500, 0 )
+speed = 1.5
 
 [node name="Plataforma2" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 5322.06, 415.872 )
@@ -438,7 +410,7 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma2"]
 position = Vector2( 0, -17.009 )
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="Plataforma3" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 5673.8, 312.972 )
@@ -452,7 +424,7 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma3"]
 position = Vector2( 0, -17.009 )
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="Serras" type="Node2D" parent="."]
 
@@ -464,7 +436,7 @@ child = 1
 position = Vector2( 3278.59, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControladorSerra"]
-anims/movimento = SubResource( 15 )
+anims/movimento = SubResource( 13 )
 
 [node name="ControlerDoubleSerra" type="Node2D" parent="Serras"]
 position = Vector2( 4379.12, 363.172 )
@@ -488,7 +460,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra"]
-anims/movimento = SubResource( 16 )
+anims/movimento = SubResource( 14 )
 
 [node name="ControlerDoubleSerra2" type="Node2D" parent="Serras"]
 position = Vector2( 5323.42, 376.147 )
@@ -511,7 +483,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra2"]
-anims/movimento = SubResource( 17 )
+anims/movimento = SubResource( 15 )
 
 [node name="ControlerDoubleSerra3" type="Node2D" parent="Serras"]
 position = Vector2( 5672.1, 285.462 )
@@ -534,7 +506,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra3"]
-anims/movimento = SubResource( 18 )
+anims/movimento = SubResource( 16 )
 
 [node name="Caixa" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4767.46, 541.905 )
@@ -552,7 +524,7 @@ texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botao"]
 position = Vector2( 0, -25.6863 )
-shape = SubResource( 19 )
+shape = SubResource( 17 )
 
 [node name="Barris" type="Node" parent="."]
 
@@ -593,8 +565,8 @@ texture = ExtResource( 18 )
 position = Vector2( -1338.22, 1496.43 )
 scale = Vector2( 0.37, 0.416667 )
 texture = ExtResource( 20 )
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
 [connection signal="body_shape_entered" from="botao" to="Porta" method="_on_botao_body_shape_entered"]
