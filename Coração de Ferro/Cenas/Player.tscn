@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/player/platformChar_walk2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/player/platformChar_idle.png" type="Texture" id=2]
@@ -9,6 +9,12 @@
 [ext_resource path="res://Assets/FX/PULO 1.wav" type="AudioStream" id=7]
 [ext_resource path="res://Assets/FX/PULO 2.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/FX/PULO 3.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/player/platformChar_shooting1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/player/platformChar_shooting2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/player/platformChar_shooting3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/player/platformChar_shooting4.png" type="Texture" id=13]
+[ext_resource path="res://Assets/player/platformChar_falling.png" type="Texture" id=14]
+[ext_resource path="res://Assets/player/platformChar_shooting5.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,6 +32,16 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "tiro",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -40,7 +56,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "idle"
+animation = "fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.707123, 14.8492 )
@@ -61,3 +77,7 @@ stream = ExtResource( 8 )
 
 [node name="Pulo3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 9 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 7.11694, 25.4712 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

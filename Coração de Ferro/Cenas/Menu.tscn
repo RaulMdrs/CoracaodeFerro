@@ -153,8 +153,8 @@ __meta__ = {
 }
 
 [node name="MenuCredito" type="Sprite" parent="."]
-position = Vector2( 0, -22 )
-scale = Vector2( 0.681848, 0.710469 )
+position = Vector2( -2.66971, -22 )
+scale = Vector2( 0.685408, 0.710469 )
 texture = ExtResource( 5 )
 
 [node name="AnimaçãoCreditos" type="AnimationPlayer" parent="MenuCredito"]
@@ -262,6 +262,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label3" type="Label" parent="MenuCredito/Level Design - Plataforma2"]
+margin_left = 784.127
+margin_top = 46.5587
+margin_right = 1184.13
+margin_bottom = 121.559
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
+text = "erick hasse"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Equipe de Som" type="Label" parent="MenuCredito"]
 margin_left = 100.0
 margin_top = -400.0
@@ -316,9 +329,9 @@ __meta__ = {
 }
 
 [node name="Arte" type="Label" parent="MenuCredito"]
-margin_left = 100.0
+margin_left = 98.6157
 margin_top = 75.0
-margin_right = 500.0
+margin_right = 498.616
 margin_bottom = 150.0
 custom_fonts/font = SubResource( 8 )
 text = "arte "
@@ -328,10 +341,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="MenuCredito/Arte"]
-margin_left = -70.0
-margin_top = 65.0
-margin_right = 480.0
-margin_bottom = 140.0
+margin_left = -74.153
+margin_top = 122.126
+margin_right = 475.847
+margin_bottom = 197.126
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "gabriela alkimin"

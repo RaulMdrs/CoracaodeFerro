@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platformChar_idle.png-4f992a6acdb9741a64fa64a5c37d3f30.stex"
+path="res://.import/tiro2.png-990c99ccbb53c83ab7390ab378a56619.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/platformChar_idle.png"
-dest_files=[ "res://.import/platformChar_idle.png-4f992a6acdb9741a64fa64a5c37d3f30.stex" ]
+source_file="res://Assets/tiro/tiro2.png"
+dest_files=[ "res://.import/tiro2.png-990c99ccbb53c83ab7390ab378a56619.stex" ]
 
 [params]
 
