@@ -495,7 +495,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4821.55, 443.497 )
+position = Vector2( -433.069, 402.44 )
 cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]
@@ -525,13 +525,23 @@ texture = ExtResource( 19 )
 [node name="AudioAcido_1" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 1149.79, 530.872 )
 stream = ExtResource( 6 )
+volume_db = -6.199
 autoplay = true
 max_distance = 1000.0
 
 [node name="AudioAcido_2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 3326.12, 597.141 )
 stream = ExtResource( 6 )
+volume_db = -11.02
 autoplay = true
+max_distance = 1750.0
+
+[node name="AudioAcido_3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 6772.23, 2184.75 )
+stream = ExtResource( 6 )
+volume_db = -23.417
+autoplay = true
+max_distance = 450.0
 
 [node name="MusicaFaase" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )

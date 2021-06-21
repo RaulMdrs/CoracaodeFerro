@@ -80,7 +80,7 @@ one_way_collision_margin = 128.0
 [node name="CameraSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 pitch_scale = 1.2
-max_distance = 500.0
+max_distance = 600.0
 
 [node name="AnimationCamera" type="AnimationPlayer" parent="."]
 anims/MooveCamera = SubResource( 2 )
