@@ -442,7 +442,7 @@ shadow_enabled = true
 [node name="lampada4" type="Light2D" parent="Luzes"]
 position = Vector2( 288.1, 23 )
 texture = ExtResource( 13 )
-texture_scale = 3.2012
+texture_scale = 3.48111
 color = Color( 0.854902, 0.780392, 0.160784, 1 )
 energy = 0.74
 shadow_enabled = true
