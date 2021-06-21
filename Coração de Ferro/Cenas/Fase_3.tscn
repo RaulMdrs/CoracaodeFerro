@@ -315,6 +315,8 @@ shape = SubResource( 8 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevador"]
 anims/movimento = SubResource( 9 )
 
+[node name="ElevadorSFX" type="AudioStreamPlayer2D" parent="Elevador"]
+
 [node name="Robos" type="Node2D" parent="."]
 position = Vector2( 374.595, 144.123 )
 
@@ -565,8 +567,8 @@ texture = ExtResource( 18 )
 position = Vector2( -1338.22, 1496.43 )
 scale = Vector2( 0.37, 0.416667 )
 texture = ExtResource( 20 )
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
 [connection signal="body_shape_entered" from="botao" to="Porta" method="_on_botao_body_shape_entered"]
