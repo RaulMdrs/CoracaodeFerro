@@ -38,6 +38,7 @@ waitTime = 1
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 10 )]
 position = Vector2( 4880.89, -6.03619 )
+cont2 = "1"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 250.655, 514.873 )
@@ -49,6 +50,7 @@ position = Vector2( 253.301, 524.461 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 5 )
 spawnScene = ExtResource( 4 )
+count = "1"
 
 [node name="GerenFaseIntro1" type="Node" parent="."]
 

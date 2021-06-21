@@ -15,6 +15,9 @@ var is_attacking = false
 
 const TIRO = preload("res://Cenas/Tiro.tscn")
 
+func setCount(var count):
+	cont = count
+
 func get_PlayerEntered():
 	return playerEntered
 
@@ -97,7 +100,7 @@ func _physics_process(delta):
 		velocidade.y = forcaPulo
 	
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):
-		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
+		passarFase()
 	
 	
 	
@@ -106,7 +109,8 @@ func _physics_process(delta):
 	velocidade.x = lerp(velocidade.x,0,1.0)
 	
 
-
+func passarFase():
+	get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
