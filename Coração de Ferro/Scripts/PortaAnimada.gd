@@ -3,6 +3,8 @@ extends AnimatedSprite
 export (NodePath) var timerPath
 export (int) var waitTime
 
+export (String) var numero
+
 onready var waitTime2 = waitTime
 onready var timerNode = get_node(timerPath)
 
@@ -12,6 +14,8 @@ func _ready():
 	if(waitTime2 > 0):
 		timerNode.set_wait_time(waitTime2)
 		timerNode.start()
+	
+	$Label.text = numero
 
 
 func _on_contadorPorta_timeout():
@@ -21,9 +25,11 @@ func _on_contadorPorta_timeout():
 		cont = cont + 1
 		timerNode.set_wait_time(waitTime2)
 		timerNode.start()
+		$Label.text = " "
 	elif(cont == 1):
 		play("trancada")
 		cont = cont + 1
 		timerNode.set_wait_time(waitTime2)
 		timerNode.start()
+		$Label.text = numero
 	

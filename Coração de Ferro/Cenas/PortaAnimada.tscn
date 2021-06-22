@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/DoorUnlocked.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/DoorOpen.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/PortaAnimada.gd" type="Script" id=4]
+[ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "trancada",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
 "name": "aberta",
@@ -15,11 +21,6 @@ animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": false,
 "name": "destrancada",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "trancada",
 "speed": 5.0
 } ]
 
@@ -31,4 +32,16 @@ script = ExtResource( 4 )
 timerPath = NodePath("contadorPorta")
 
 [node name="contadorPorta" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = -94.5165
+margin_top = -83.4091
+margin_right = -28.4815
+margin_bottom = -38.4091
+rect_scale = Vector2( 4.64, 4.64 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="contadorPorta" to="." method="_on_contadorPorta_timeout"]

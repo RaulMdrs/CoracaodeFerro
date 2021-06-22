@@ -583,7 +583,7 @@ texture = ExtResource( 20 )
 position = Vector2( 1317.36, -228.78 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 20 )
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]

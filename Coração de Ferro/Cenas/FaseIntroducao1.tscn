@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
@@ -12,21 +12,22 @@
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Cenas/Porta.tscn" type="PackedScene" id=13]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 90
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 5
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 100
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -42,17 +43,20 @@ tile_data = PoolIntArray( -1310724, 17, 0, -1310723, 17, 0, -1310722, -161061271
 
 [node name="Portas" type="Node2D" parent="."]
 
-[node name="Porta" type="Sprite" parent="Portas"]
-position = Vector2( -509.079, 504.609 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 3 )
+[node name="Porta" parent="Portas" instance=ExtResource( 13 )]
+numero = "636"
 
 [node name="Porta2" type="Sprite" parent="Portas"]
 position = Vector2( -1159.91, 504.609 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 
+[node name="Porta10" parent="Portas" instance=ExtResource( 13 )]
+position = Vector2( 511.688, 504.609 )
+numero = "638"
+
 [node name="Porta3" type="Sprite" parent="Portas"]
+visible = false
 position = Vector2( 511.688, 504.609 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
@@ -88,11 +92,11 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
 
 [node name="numero" type="Label" parent="Portas"]
-margin_left = 213.223
+margin_left = 214.483
 margin_top = 367.515
-margin_right = 303.223
+margin_right = 304.483
 margin_bottom = 428.515
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "637"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -103,7 +107,7 @@ margin_left = 463.532
 margin_top = 370.883
 margin_right = 556.532
 margin_bottom = 431.883
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "638"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,7 +118,7 @@ margin_left = -556.786
 margin_top = 373.127
 margin_right = -464.786
 margin_bottom = 434.127
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "636"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -125,7 +129,7 @@ margin_left = -1201.08
 margin_top = 373.874
 margin_right = -1107.08
 margin_bottom = 434.874
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "635"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -136,7 +140,7 @@ margin_left = 965.132
 margin_top = 372.807
 margin_right = 1057.13
 margin_bottom = 433.807
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "639"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -147,7 +151,7 @@ margin_left = 1498.71
 margin_top = 373.294
 margin_right = 1588.71
 margin_bottom = 434.294
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "640"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -158,7 +162,7 @@ margin_left = 2068.67
 margin_top = 375.982
 margin_right = 2148.67
 margin_bottom = 436.982
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "641"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -169,7 +173,7 @@ margin_left = 2801.11
 margin_top = 371.696
 margin_right = 2891.11
 margin_bottom = 432.696
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "642"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -180,7 +184,7 @@ margin_left = 3113.03
 margin_top = 368.522
 margin_right = 3203.03
 margin_bottom = 429.522
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "643"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -191,7 +195,7 @@ margin_left = 3547.36
 margin_top = 375.269
 margin_right = 3633.36
 margin_bottom = 436.269
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "644"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -202,7 +206,7 @@ margin_left = 4762.15
 margin_top = -194.449
 margin_right = 4943.15
 margin_bottom = -133.449
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "OFICINA"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -211,6 +215,7 @@ __meta__ = {
 [node name="PortaAnimada" parent="." instance=ExtResource( 8 )]
 position = Vector2( 253.301, 503.461 )
 waitTime = 1
+numero = "637"
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 11 )]
 position = Vector2( 4874.16, -7.71799 )
@@ -248,7 +253,7 @@ margin_left = -107.394
 margin_top = -30.9501
 margin_right = 214.606
 margin_bottom = 95.0499
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Oficina"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -274,7 +279,7 @@ margin_top = -31.1836
 margin_right = 527.28
 margin_bottom = 94.8164
 rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Zona de descarte"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -300,7 +305,7 @@ margin_top = -32.1004
 margin_right = 532.69
 margin_bottom = 67.8996
 rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Sala de descanso"
 __meta__ = {
 "_edit_use_anchors_": false
