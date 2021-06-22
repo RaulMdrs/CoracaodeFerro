@@ -494,7 +494,7 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 109.209, 372.71 )
+position = Vector2( 6397.73, 2034.54 )
 cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]
@@ -508,7 +508,8 @@ rotation = -0.261799
 animar = true
 
 [node name="Inimigo Teste" parent="." instance=ExtResource( 19 )]
-position = Vector2( 286.599, 394.817 )
+position = Vector2( 6266.07, 2038.89 )
+speed = 100
 
 [node name="AudioAcido_1" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 1149.79, 530.872 )
@@ -569,7 +570,7 @@ texture = ExtResource( 20 )
 position = Vector2( 1317.36, -228.78 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 20 )
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
