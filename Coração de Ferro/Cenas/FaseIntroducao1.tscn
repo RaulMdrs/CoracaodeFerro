@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Cenas/Porta.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/GerenFaseIntro1.gd" type="Script" id=14]
 [ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.wav" type="AudioStream" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -231,6 +232,11 @@ text = "644"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Portas"]
+stream = ExtResource( 16 )
+volume_db = -17.219
+autoplay = true
 
 [node name="PortaAnimada" parent="." instance=ExtResource( 8 )]
 position = Vector2( 255, 505 )
