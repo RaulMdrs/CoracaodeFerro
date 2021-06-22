@@ -29,9 +29,9 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "fall",
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 15 ) ],
@@ -39,9 +39,9 @@ animations = [ {
 "name": "tiro",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "walk",
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -89,11 +89,21 @@ max_distance = 500.0
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 7.11694, 25.4712 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -19.0215
-margin_top = -60.7352
-margin_right = 20.9785
-margin_bottom = -25.7352
+[node name="Control" type="Control" parent="."]
+margin_left = -509.0
+margin_top = -295.0
+margin_right = 515.0
+margin_bottom = 303.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = -166.766
+margin_top = -57.7412
+margin_right = -126.766
+margin_bottom = -18.7412
+rect_scale = Vector2( 1.04, 1 )
 custom_fonts/font = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
