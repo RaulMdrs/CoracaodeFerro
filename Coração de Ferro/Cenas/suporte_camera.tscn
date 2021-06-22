@@ -45,7 +45,7 @@ __meta__ = {
 
 [node name="camera_pivot" type="Position2D" parent="."]
 position = Vector2( 58.8398, 158.288 )
-rotation = 6.42456
+rotation = 6.4362
 
 [node name="camera" type="Sprite" parent="camera_pivot"]
 position = Vector2( -104.863, 286.517 )

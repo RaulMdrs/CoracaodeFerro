@@ -38,10 +38,10 @@ font_data = ExtResource( 4 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 337.029, 361.52 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 233.643, 240.912 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 15 )
 
@@ -251,13 +251,13 @@ __meta__ = {
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 11 )]
 position = Vector2( 4874.16, -7.71799 )
-cont2 = "1"
+fase2 = "FaseIntroducao2"
 
 [node name="numero11" type="Label" parent="PortaFimFase"]
-margin_left = -110.0
-margin_top = -130.0
-margin_right = 71.0
-margin_bottom = -69.0
+margin_left = -112.378
+margin_top = -194.217
+margin_right = 68.6216
+margin_bottom = -133.217
 custom_fonts/font = SubResource( 1 )
 text = "OFICINA"
 __meta__ = {
@@ -402,12 +402,12 @@ speed = 1.0
 [node name="MovePlatform11" parent="Plataformas" instance=ExtResource( 10 )]
 position = Vector2( -450, -550 )
 move_to = Vector2( -800, 0 )
-speed = 1.0
+speed = 2.0
 
 [node name="MovePlatform12" parent="Plataformas" instance=ExtResource( 10 )]
 position = Vector2( -1325, -700 )
-move_to = Vector2( 800, 0 )
-speed = 1.0
+move_to = Vector2( 850, 0 )
+speed = 2.0
 
 [node name="TutorialPulo" type="Area2D" parent="."]
 position = Vector2( 1525, 215 )
@@ -427,7 +427,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialAndar"]
 position = Vector2( -490, 250 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
 script = ExtResource( 14 )
@@ -437,7 +437,7 @@ margin_left = 670.125
 margin_top = 181.932
 margin_right = 1350.12
 margin_bottom = 251.932
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "Aperte \"Espaço\" para pular"
 percent_visible = 0.0
 __meta__ = {
@@ -449,7 +449,7 @@ margin_left = -173.422
 margin_top = 204.407
 margin_right = 665.578
 margin_bottom = 274.407
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "Aperte \"A\" e \"D\" para se movimentar"
 percent_visible = 0.0
 __meta__ = {
