@@ -68,18 +68,22 @@ func _physics_process(delta):
 		
 	
 	if Input.is_action_just_pressed("ui_focus_next") && is_attacking == false:
-		if is_on_floor():
-			velocidade.x = 0
-		is_attacking = true
-		if is_on_floor():
-			$AnimatedSprite.play("tiro")
-		var tiro = TIRO.instance()
-		if sign($Position2D.position.x) == 1:
-			tiro.set_tiro_direction(1)
-		else:
-			tiro.set_tiro_direction(-1)
-		get_parent().add_child(tiro)
-		tiro.position = $Position2D.global_position
+		if energia >= 10:
+			energia -= 10
+			if is_on_floor():
+				velocidade.x = 0
+			is_attacking = true
+			if is_on_floor():
+				$AnimatedSprite.play("tiro")
+			
+			
+			var tiro = TIRO.instance()
+			if sign($Position2D.position.x) == 1:
+				tiro.set_tiro_direction(1)
+			else:
+				tiro.set_tiro_direction(-1)
+			get_parent().add_child(tiro)
+			tiro.position = $Position2D.global_position
 	
 	
 	velocidade.y = velocidade.y + gravidade
@@ -106,7 +110,8 @@ func _physics_process(delta):
 	
 	if velocidade.x != 0:
 		energia -= 0.01
-		$Label.text = str(energia)
+	
+	$Label.text = str(energia)
 	
 	velocidade.x = lerp(velocidade.x,0,1.0)
 	
