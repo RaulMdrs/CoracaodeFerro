@@ -542,7 +542,7 @@ shadow_enabled = true
 stream = ExtResource( 16 )
 volume_db = -26.172
 autoplay = true
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
+[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
