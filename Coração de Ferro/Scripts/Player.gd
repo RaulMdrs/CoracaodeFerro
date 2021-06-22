@@ -4,12 +4,12 @@ var velocidade = Vector2(0,0)
 var speed = 350
 var forcaPulo = -900
 var gravidade = 30
-var forca = 10
-var inteligencia = 10
 export (String) var cont
 var playerEntered = false
 var pulou = false
 var pulo = 0
+
+var energia = 50
 
 var is_attacking = false
 
@@ -21,8 +21,6 @@ func setCount(var count):
 func get_PlayerEntered():
 	return playerEntered
 
-func addForca(var f):
-	forca = forca + f
 
 func _input(event):
 	event = Input.is_action_just_pressed("passar_fase")
@@ -106,8 +104,20 @@ func _physics_process(delta):
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP, false)
 	
+	if velocidade.x != 0:
+		energia -= 0.01
+		$Label.text = str(energia)
+	
 	velocidade.x = lerp(velocidade.x,0,1.0)
 	
+
+
+func adicionarEnergia(var num):
+	if (energia+num) >100:
+		energia = 100
+	else:
+		energia += num
+	print_debug(energia)
 
 func passarFase():
 	get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")

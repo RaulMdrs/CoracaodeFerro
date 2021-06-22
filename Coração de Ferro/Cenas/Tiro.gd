@@ -26,7 +26,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_Tiro_body_entered(body):
 	if(body.get_name() != "Player" && body.is_in_group("inimigo")):
 		print_debug("acertei um inimigo")
-		body.queue_free()
+		body.dead()
 		queue_free()
 	elif(body.get_name() != "Player"):
 		print_debug("acertei a parede")
