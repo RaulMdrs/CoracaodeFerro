@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Cenas/Puzzle_Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Puzzle_Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Musicas/Fase_das_Caixas_CoraçãoDeFerro.wav" type="AudioStream" id=4]
 [ext_resource path="res://Cenas/Puzzle_Box.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Cenas/Puzzle_Spot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
@@ -188,6 +189,12 @@ o nível."
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -19.974
+pitch_scale = 0.9
+autoplay = true
 [connection signal="body_entered" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_entered"]
 [connection signal="body_exited" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_exited"]
 [connection signal="body_entered" from="Spots/Spot3" to="Spots/Spot3" method="_on_Spot_body_entered"]

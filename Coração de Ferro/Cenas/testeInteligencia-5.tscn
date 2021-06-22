@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Cenas/Puzzle_Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Puzzle_Spot.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=5]
 [ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Musicas/Fase_das_Caixas_CoraçãoDeFerro.wav" type="AudioStream" id=8]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 6 )
@@ -27,6 +28,17 @@ position = Vector2( 192, 192 )
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
 position = Vector2( 8, 8 )
 cast_to = Vector2( 0, 16 )
+
+[node name="Spots" type="Node2D" parent="."]
+position = Vector2( 48, 16 )
+
+[node name="Spot2" parent="Spots" instance=ExtResource( 2 )]
+position = Vector2( 80, 112 )
+script = ExtResource( 7 )
+
+[node name="Spot3" parent="Spots" instance=ExtResource( 2 )]
+position = Vector2( 272, 176 )
+script = ExtResource( 7 )
 
 [node name="Group_Walls" type="Node2D" parent="."]
 position = Vector2( 256, -64 )
@@ -121,17 +133,6 @@ position = Vector2( -256, 192 )
 [node name="Wall40" parent="Group_Walls" instance=ExtResource( 3 )]
 position = Vector2( -256, 128 )
 
-[node name="Spots" type="Node2D" parent="."]
-position = Vector2( 48, 16 )
-
-[node name="Spot2" parent="Spots" instance=ExtResource( 2 )]
-position = Vector2( 80, 112 )
-script = ExtResource( 7 )
-
-[node name="Spot3" parent="Spots" instance=ExtResource( 2 )]
-position = Vector2( 272, 176 )
-script = ExtResource( 7 )
-
 [node name="Boxes" type="Node2D" parent="."]
 position = Vector2( -16, -16 )
 
@@ -194,6 +195,12 @@ o nível."
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -19.285
+pitch_scale = 0.9
+autoplay = true
 [connection signal="body_entered" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_entered"]
 [connection signal="body_exited" from="Spots/Spot2" to="Spots/Spot2" method="_on_Spot_body_exited"]
 [connection signal="body_entered" from="Spots/Spot3" to="Spots/Spot3" method="_on_Spot_body_entered"]
