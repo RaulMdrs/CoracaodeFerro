@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Sair.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Backgrounds/BackgroundMenuRaul.png" type="Texture" id=2]
+[ext_resource path="res://Assets/WhatsApp Image 2021-06-02 at 11.37.32.jpeg" type="Texture" id=2]
 [ext_resource path="res://Scripts/Iniciar.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Musicas/MenuMusic - Coração de ferro.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Backgrounds/steampunk-blueprint-4k-ultra-hd-wallpaper-background-image-steampunk-background-png-3840_2160.png" type="Texture" id=5]
@@ -11,28 +11,28 @@
 [ext_resource path="res://Assets/Fontes/disposabledroid-bb/DisposableDroidBB_bld.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="DynamicFont" id=1]
-size = 150
+size = 90
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 6
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 150
+size = 90
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 5
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 150
+size = 90
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 5
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 150
+size = 95
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
@@ -81,15 +81,15 @@ font_data = ExtResource( 8 )
 position = Vector2( 512.827, -300 )
 
 [node name="MenuInicial" type="Sprite" parent="."]
-position = Vector2( -19.0557, 582.133 )
-scale = Vector2( 0.545757, 0.557454 )
+position = Vector2( -0.36792, 598.151 )
+scale = Vector2( 0.814154, 0.86227 )
 texture = ExtResource( 2 )
 
 [node name="Iniciar" type="Button" parent="MenuInicial"]
-margin_left = -41.0
-margin_top = -195.0
-margin_right = 366.0
-margin_bottom = -38.0
+margin_left = -609.785
+margin_top = -178.773
+margin_right = -202.785
+margin_bottom = -21.7735
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -103,10 +103,10 @@ __meta__ = {
 }
 
 [node name="Credito" type="Button" parent="MenuInicial"]
-margin_left = -41.0
-margin_top = -50.0
-margin_right = 479.0
-margin_bottom = 107.0
+margin_left = -608.97
+margin_top = -67.4394
+margin_right = -88.9702
+margin_bottom = 89.5606
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -124,10 +124,10 @@ botaoSair = NodePath("../Sair")
 botaoCredito = NodePath(".")
 
 [node name="Sair" type="Button" parent="MenuInicial"]
-margin_left = -41.0
-margin_top = 95.0
-margin_right = 222.0
-margin_bottom = 252.0
+margin_left = 386.116
+margin_top = 203.126
+margin_right = 649.116
+margin_bottom = 360.126
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.615686, 0.615686, 0.615686, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
@@ -141,12 +141,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MenuInicial"]
-margin_left = -41.0
-margin_top = -377.0
-margin_right = 1181.0
-margin_bottom = -186.0
+margin_left = -608.97
+margin_top = -308.663
+margin_right = 613.03
+margin_bottom = -117.663
 custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
+custom_colors/font_color = Color( 0.74902, 0.113725, 0.113725, 1 )
 text = "coração de ferro"
 __meta__ = {
 "_edit_use_anchors_": false
