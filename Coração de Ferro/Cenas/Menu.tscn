@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Sair.gd" type="Script" id=1]
 [ext_resource path="res://Assets/WhatsApp Image 2021-06-02 at 11.37.32.jpeg" type="Texture" id=2]
 [ext_resource path="res://Scripts/Iniciar.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Musicas/MenuMusic - Coração de ferro.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Musicas/MenuMusic - Coração de ferro.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Backgrounds/steampunk-blueprint-4k-ultra-hd-wallpaper-background-image-steampunk-background-png-3840_2160.png" type="Texture" id=5]
 [ext_resource path="res://Cenas/Credito.gd" type="Script" id=6]
 [ext_resource path="res://Cenas/Voltar.gd" type="Script" id=7]

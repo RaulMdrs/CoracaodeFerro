@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ÁCIDO.ogg-65c8eb6eb814bd8192a0faf4965684eb.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/ÁCIDO.ogg"
+dest_files=[ "res://.import/ÁCIDO.ogg-65c8eb6eb814bd8192a0faf4965684eb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

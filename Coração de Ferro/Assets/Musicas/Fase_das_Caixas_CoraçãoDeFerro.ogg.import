@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fase_das_Caixas_CoraçãoDeFerro.ogg-00d9fa2b4fee4979f83c9203275d90f4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musicas/Fase_das_Caixas_CoraçãoDeFerro.ogg"
+dest_files=[ "res://.import/Fase_das_Caixas_CoraçãoDeFerro.ogg-00d9fa2b4fee4979f83c9203275d90f4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MenuMusic - Coração de ferro.ogg-d2cc027ed4ccd5aa4cae220dc671ab93.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musicas/MenuMusic - Coração de ferro.ogg"
+dest_files=[ "res://.import/MenuMusic - Coração de ferro.ogg-d2cc027ed4ccd5aa4cae220dc671ab93.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

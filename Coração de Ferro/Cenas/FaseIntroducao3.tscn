@@ -16,7 +16,7 @@
 [ext_resource path="res://Cenas/GerenFaseIntro1.gd" type="Script" id=14]
 [ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=18]
 
 [sub_resource type="DynamicFont" id=1]

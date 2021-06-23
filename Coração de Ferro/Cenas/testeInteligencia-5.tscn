@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=5]
 [ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Musicas/Fase_das_Caixas_CoraçãoDeFerro.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Musicas/Fase_das_Caixas_CoraçãoDeFerro.ogg" type="AudioStream" id=8]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 6 )

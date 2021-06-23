@@ -14,8 +14,8 @@
 [ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Luz/light.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Assets/FX/ÁCIDO.wav" type="AudioStream" id=15]
-[ext_resource path="res://Assets/Musicas/Bounce - Coração de ferro.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/FX/ÁCIDO.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Musicas/Bounce - Coração de ferro.ogg" type="AudioStream" id=16]
 [ext_resource path="res://Cenas/Pilha.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=18]
 
@@ -209,7 +209,7 @@ scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 289.856, 522.817 )
+position = Vector2( 4475.93, 630.297 )
 cont = "2"
 
 [node name="Plataformas" type="Node" parent="."]

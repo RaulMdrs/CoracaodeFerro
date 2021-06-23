@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PULO 3.ogg-c779bae3008cc2b75df6e53ad869e28d.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/PULO 3.ogg"
+dest_files=[ "res://.import/PULO 3.ogg-c779bae3008cc2b75df6e53ad869e28d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -4,9 +4,6 @@
 [ext_resource path="res://Cenas/Caixa.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Timer.gd" type="Script" id=3]
 
-
-
-
 [node name="Spawner" type="Position2D"]
 position = Vector2( 965.868, 0 )
 script = ExtResource( 1 )
@@ -22,5 +19,5 @@ maxTime = 1.568
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 script = ExtResource( 3 )
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]

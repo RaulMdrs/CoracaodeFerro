@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Elevador-UP.ogg-de6874487a8616e7c0aec46113b91756.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/Elevador-UP.ogg"
+dest_files=[ "res://.import/Elevador-UP.ogg-de6874487a8616e7c0aec46113b91756.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

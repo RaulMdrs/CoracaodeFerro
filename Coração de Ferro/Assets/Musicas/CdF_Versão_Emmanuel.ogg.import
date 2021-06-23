@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CdF_Versão_Emmanuel.ogg-2d243955c3851afb634ffb6cd2615821.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg"
+dest_files=[ "res://.import/CdF_Versão_Emmanuel.ogg-2d243955c3851afb634ffb6cd2615821.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
