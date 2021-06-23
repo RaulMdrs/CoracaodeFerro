@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.wav" type="AudioStream" id=17]
+[ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=18]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -464,6 +465,18 @@ text = "Zona de descarte"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AreaDeMorteImediata" parent="." instance=ExtResource( 18 )]
+position = Vector2( -1184, 928 )
+scale = Vector2( 10.9105, 1.90275 )
+
+[node name="AreaDeMorteImediata2" parent="." instance=ExtResource( 18 )]
+position = Vector2( -2272, 1312 )
+scale = Vector2( 10.9105, 1.90275 )
+
+[node name="AreaDeMorteImediata3" parent="." instance=ExtResource( 18 )]
+position = Vector2( -4360, 1368 )
+scale = Vector2( 35.9505, 1.90275 )
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra2" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
