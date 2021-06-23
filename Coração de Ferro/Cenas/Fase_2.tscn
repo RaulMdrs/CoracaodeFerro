@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
@@ -8,52 +8,15 @@
 [ext_resource path="res://Assets/Tiles Sci fi/Tile (12).png" type="Texture" id=6]
 [ext_resource path="res://Scripts/Plataforma.gd" type="Script" id=7]
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scripts/botao_porta_fim.gd" type="Script" id=9]
+[ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Objects/Switch (2).png" type="Texture" id=10]
-[ext_resource path="res://Assets/Fontes/disposabledroid-bb/DisposableDroidBB_bld.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Luz/light.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/FX/ÁCIDO.wav" type="AudioStream" id=15]
 [ext_resource path="res://Assets/Musicas/Bounce - Coração de ferro.wav" type="AudioStream" id=16]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.01123, 3.81448 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 44
-font_data = ExtResource( 11 )
-
-[sub_resource type="Animation" id=3]
-resource_name = "animacao texto"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible_characters")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "sumir texto"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible_characters")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
+[ext_resource path="res://Cenas/Pilha.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 32.6615, 16.76 )
@@ -216,6 +179,10 @@ texture = ExtResource( 13 )
 color = Color( 1, 0, 0, 1 )
 energy = 5.0
 
+[node name="PortaFimFase" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7553.94, 1340.06 )
+fase2 = "testeInteligencia-4"
+
 [node name="AudioAcido" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 707.968, 661.673 )
 rotation = -0.785398
@@ -239,42 +206,6 @@ texture = ExtResource( 1 )
 position = Vector2( -250.845, 92.0757 )
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 10 )
-
-[node name="Porta_fim" type="Sprite" parent="."]
-position = Vector2( 7552.22, 1349.93 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 1 )
-
-[node name="botao_porta_fim" type="Sprite" parent="."]
-position = Vector2( 7496.91, 1375.59 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 10 )
-script = ExtResource( 9 )
-animacao = NodePath("texto/AnimationPlayer")
-
-[node name="Area2D" type="Area2D" parent="botao_porta_fim"]
-scale = Vector2( 17.48, 33.64 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="botao_porta_fim/Area2D"]
-shape = SubResource( 1 )
-
-[node name="texto" type="Label" parent="botao_porta_fim"]
-margin_left = -1339.66
-margin_top = -603.827
-margin_right = -881.66
-margin_bottom = -559.827
-grow_horizontal = 2
-rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 2 )
-text = "Aperte \"E\" para hackear"
-percent_visible = 0.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="botao_porta_fim/texto"]
-"anims/animacao texto" = SubResource( 3 )
-"anims/sumir texto" = SubResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 288.82, 517.505 )
@@ -542,7 +473,10 @@ shadow_enabled = true
 stream = ExtResource( 16 )
 volume_db = -26.172
 autoplay = true
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_entered" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
-[connection signal="body_shape_exited" from="botao_porta_fim/Area2D" to="botao_porta_fim" method="_on_Area2D_body_shape_exited"]
+
+[node name="Pilha" parent="." instance=ExtResource( 17 )]
+position = Vector2( 4831.73, 662.535 )
+energia = 2
+
+[node name="Enemy" parent="." instance=ExtResource( 18 )]
+position = Vector2( 5881.08, 385.349 )

@@ -16,10 +16,7 @@ func _input(event):
 	event = Input.is_action_just_pressed("passar_fase")
 		
 	if(event):
-		if(int(cont) > 3):
-			get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
-		else:
-			get_tree().change_scene("res://Cenas/Fase_" + cont + ".tscn")
+		get_tree().change_scene("res://Cenas/" + cont + ".tscn")
 	
 
 func check_end(): #verifica quando o player termina de se movimentar
@@ -41,10 +38,8 @@ func check_end(): #verifica quando o player termina de se movimentar
 
 func _on_WinDialog_confirmed():  #acontece quanto da ok na caixa de vitoria
 	#get_tree().change_scene("res://Cenas/Fase_" + cont + ".tscn")
-	if(int(cont) > 3):
-		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
-	else:
-		get_tree().change_scene("res://Cenas/Fase_" + cont + ".tscn")
+	get_tree().change_scene("res://Cenas/" + cont + ".tscn")
+
 
 func _on_LoseDialog_confirmed(): #acontece quanto da ok na caixa de derrota
 	get_tree().reload_current_scene()

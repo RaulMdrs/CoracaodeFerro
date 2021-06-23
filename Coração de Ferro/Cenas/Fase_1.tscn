@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
@@ -13,8 +13,7 @@
 [ext_resource path="res://Assets/petrobos_logo.png" type="Texture" id=11]
 [ext_resource path="res://Cenas/PortaAnimada.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/gerenciador_fase.gd" type="Script" id=13]
-[ext_resource path="res://Scripts/botao_porta_fim.gd" type="Script" id=14]
-[ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Musicas/Bounce - Coração de ferro.wav" type="AudioStream" id=17]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=18]
@@ -24,40 +23,6 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.3628, 46.6274 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 37.7148, 128.064 )
-
-[sub_resource type="Animation" id=3]
-resource_name = "animacao texto"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible_characters")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "sumir texto"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible_characters")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
 
 [node name="Fase_1" type="Node2D"]
 position = Vector2( 0, 1 )
@@ -451,39 +416,6 @@ shape = SubResource( 1 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 8 )
 
-[node name="PortaFim" type="Sprite" parent="."]
-position = Vector2( 7292.08, 2018.66 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 9 )
-
-[node name="Controller" type="Sprite" parent="PortaFim"]
-position = Vector2( -237.857, 103.008 )
-texture = ExtResource( 7 )
-script = ExtResource( 14 )
-animacao = NodePath("../Texto/AnimationPlayer")
-
-[node name="Area2D" type="Area2D" parent="PortaFim/Controller"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PortaFim/Controller/Area2D"]
-shape = SubResource( 2 )
-
-[node name="Texto" type="Label" parent="PortaFim"]
-margin_left = -955.656
-margin_top = -306.387
-margin_right = -683.656
-margin_bottom = -271.387
-rect_scale = Vector2( 2.6315, 3.29767 )
-custom_fonts/font = ExtResource( 15 )
-text = "Aperte \"E\" para hackear"
-percent_visible = 0.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PortaFim/Texto"]
-"anims/animacao texto" = SubResource( 3 )
-"anims/sumir texto" = SubResource( 4 )
-
 [node name="PortaFechadaInicio" type="Sprite" parent="."]
 position = Vector2( -512.369, 373.897 )
 scale = Vector2( 0.3, 0.3 )
@@ -493,6 +425,10 @@ texture = ExtResource( 9 )
 position = Vector2( 221.134, 90.0488 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
+
+[node name="PortaFimFase" parent="." instance=ExtResource( 14 )]
+position = Vector2( 7302.06, 2043.63 )
+fase2 = "testeInteligencia-3"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2081.89, 211.171 )
@@ -573,13 +509,5 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 20 )
 
 [node name="Pilha" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2451.64, 469.28 )
-energia = 3
-
-[node name="Pilha2" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2589.7, 463.667 )
-energia = 3
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_entered" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_entered"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="Player" method="_on_Area2D_body_shape_exited"]
-[connection signal="body_shape_exited" from="PortaFim/Controller/Area2D" to="PortaFim/Controller" method="_on_Area2D_body_shape_exited"]
+position = Vector2( 5659.66, 148.058 )
+energia = 2

@@ -428,7 +428,7 @@ animar = true
 [node name="PortaFimFase" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1404.25, -2117.9 )
 animacao = NodePath("../../FaseIntroducao2/PortaFimFase/AnimationPlayer")
-fase2 = "Fase_1"
+fase2 = "testeInteligencia-1"
 
 [node name="textoDescanso2" type="Label" parent="PortaFimFase"]
 margin_left = -212.151
