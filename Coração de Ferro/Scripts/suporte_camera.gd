@@ -35,4 +35,5 @@ func _on_Timer_timeout():
 
 func _on_area_luz_body_shape_entered(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
-		get_tree().reload_current_scene()
+		body.Morrer()
+		#get_tree().reload_current_scene()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Objects/Switch (2).png" type="Texture" id=10]
+[ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Luz/light.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=14]
@@ -18,74 +19,74 @@
 [ext_resource path="res://Cenas/Pilha.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=18]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.6615, 16.76 )
 
+[sub_resource type="Animation" id=2]
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
 [sub_resource type="Animation" id=6]
-length = 7.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-
-[sub_resource type="Animation" id=7]
-length = 7.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-
-[sub_resource type="Animation" id=8]
-length = 7.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-
-[sub_resource type="Animation" id=9]
-length = 7.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-
-[sub_resource type="Animation" id=10]
 resource_name = "luzfalhando1"
 loop = true
 tracks/0/type = "value"
@@ -208,7 +209,7 @@ scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 288.82, 517.505 )
+position = Vector2( 289.856, 522.817 )
 cont = "2"
 
 [node name="Plataformas" type="Node" parent="."]
@@ -241,10 +242,10 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma4"]
 position = Vector2( -0.00115967, -15.1663 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Plataforma4"]
-anims/movimento = SubResource( 6 )
+anims/movimento = SubResource( 2 )
 
 [node name="Plataforma6" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 6429.36, 1066.2 )
@@ -259,10 +260,10 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma6"]
 position = Vector2( -0.00115967, -15.1663 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Plataforma6"]
-anims/movimento = SubResource( 7 )
+anims/movimento = SubResource( 3 )
 
 [node name="Plataforma7" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 6116.55, 1330.24 )
@@ -277,10 +278,10 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma7"]
 position = Vector2( -0.00115967, -15.1663 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Plataforma7"]
-anims/movimento = SubResource( 8 )
+anims/movimento = SubResource( 4 )
 
 [node name="Plataforma5" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 6426.62, 609.417 )
@@ -295,10 +296,10 @@ texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma5"]
 position = Vector2( -0.00115967, -15.1663 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Plataforma5"]
-anims/movimento = SubResource( 9 )
+anims/movimento = SubResource( 5 )
 
 [node name="Cameras" type="Node" parent="."]
 
@@ -379,7 +380,7 @@ energy = 0.74
 shadow_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Luzes/lampada4"]
-anims/luzfalhando1 = SubResource( 10 )
+anims/luzfalhando1 = SubResource( 6 )
 
 [node name="lampada6" type="Light2D" parent="Luzes"]
 position = Vector2( 1056, 23 )
@@ -480,3 +481,6 @@ energia = 2
 
 [node name="Enemy" parent="." instance=ExtResource( 18 )]
 position = Vector2( 5881.08, 385.349 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3758.88, 598.785 )

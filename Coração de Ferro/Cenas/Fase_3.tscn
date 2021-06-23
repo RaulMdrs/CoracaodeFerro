@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Cenas/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Cenas/Caixa.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Objects/botao_vermelho.png" type="Texture" id=14]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Objects/Barrel (1).png" type="Texture" id=19]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Frederico.wav" type="AudioStream" id=22]
@@ -54,10 +55,10 @@ tracks/0/keys = {
 "values": [ Vector2( 5282, 447 ), Vector2( 5282, 313 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 64.6105, 9.44604 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -72,10 +73,10 @@ tracks/0/keys = {
 "values": [ Vector2( -607.114, 1800 ), Vector2( -607.114, 430 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 32.1134, 10 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=7]
 length = 7.0
 loop = true
 tracks/0/type = "value"
@@ -91,7 +92,7 @@ tracks/0/keys = {
 "values": [ Vector2( 144, 40 ), Vector2( -500, 40 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=8]
 length = 7.0
 loop = true
 tracks/0/type = "value"
@@ -107,10 +108,10 @@ tracks/0/keys = {
 "values": [ Vector2( 500, 40 ), Vector2( 1300, 40 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 31.8141, 14.5146 )
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=10]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -126,7 +127,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2733.07, 312.972 ), Vector2( 3402.95, 312.972 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=11]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -142,7 +143,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=12]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -158,7 +159,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=13]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -174,7 +175,7 @@ tracks/0/keys = {
 "values": [ 0.0, 180.0, 360.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 69.561, 47.6389 )
 
 [node name="Fase_3" type="Node2D"]
@@ -224,10 +225,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevador"]
 position = Vector2( 0, -39.1624 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevador"]
-anims/movimento = SubResource( 9 )
+anims/movimento = SubResource( 5 )
 
 [node name="ElevadorSFX" type="AudioStreamPlayer2D" parent="Elevador"]
 stream = ExtResource( 23 )
@@ -251,10 +252,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Robos/RoboObservador"]
 position = Vector2( 0.420441, 22.2838 )
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Robos/RoboObservador"]
-anims/movimento = SubResource( 11 )
+anims/movimento = SubResource( 7 )
 
 [node name="suporte_camera" parent="Robos/RoboObservador" instance=ExtResource( 7 )]
 position = Vector2( -59.5609, 13.7244 )
@@ -283,10 +284,10 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Robos/RoboObservador2"]
 position = Vector2( 0.420441, 22.2838 )
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Robos/RoboObservador2"]
-anims/movimento = SubResource( 12 )
+anims/movimento = SubResource( 8 )
 
 [node name="suporte_camera" parent="Robos/RoboObservador2" instance=ExtResource( 7 )]
 position = Vector2( -59.2402, 14.8245 )
@@ -329,7 +330,7 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma2"]
 position = Vector2( 0, -17.009 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="Plataforma3" type="StaticBody2D" parent="Plataformas"]
 position = Vector2( 5673.8, 312.972 )
@@ -343,7 +344,7 @@ texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataformas/Plataforma3"]
 position = Vector2( 0, -17.009 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="Serras" type="Node2D" parent="."]
 
@@ -355,7 +356,7 @@ child = 1
 position = Vector2( 3278.59, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControladorSerra"]
-anims/movimento = SubResource( 14 )
+anims/movimento = SubResource( 10 )
 
 [node name="ControlerDoubleSerra" type="Node2D" parent="Serras"]
 position = Vector2( 4379.12, 363.172 )
@@ -379,7 +380,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra"]
-anims/movimento = SubResource( 15 )
+anims/movimento = SubResource( 11 )
 
 [node name="ControlerDoubleSerra2" type="Node2D" parent="Serras"]
 position = Vector2( 5323.42, 376.147 )
@@ -402,7 +403,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra2"]
-anims/movimento = SubResource( 16 )
+anims/movimento = SubResource( 12 )
 
 [node name="ControlerDoubleSerra3" type="Node2D" parent="Serras"]
 position = Vector2( 5672.1, 285.462 )
@@ -425,7 +426,7 @@ position = Vector2( -2908.22, -313.398 )
 position = Vector2( 2733.07, 312.972 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Serras/ControlerDoubleSerra3"]
-anims/movimento = SubResource( 17 )
+anims/movimento = SubResource( 13 )
 
 [node name="Caixa" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4767.46, 541.905 )
@@ -443,7 +444,7 @@ texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botao"]
 position = Vector2( 0, -25.6863 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="Barris" type="Node" parent="."]
 
@@ -474,4 +475,10 @@ autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -609.352, 1627.27 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3752.62, 459.457 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 16 )]
+position = Vector2( -610.146, 314.65 )
 [connection signal="body_shape_entered" from="botao" to="Porta" method="_on_botao_body_shape_entered"]

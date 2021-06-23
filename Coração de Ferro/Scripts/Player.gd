@@ -9,6 +9,8 @@ var playerEntered = false
 var pulou = false
 var pulo = 0
 
+var checkpoint = Vector2(0,0)
+
 var energia = 50
 
 var is_attacking = false
@@ -69,7 +71,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_focus_next") && is_attacking == false:
 		if energia >= 10:
-			energia -= 10
+			#energia -= 10
 			if is_on_floor():
 				velocidade.x = 0
 			is_attacking = true
@@ -108,8 +110,8 @@ func _physics_process(delta):
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP, false)
 	
-	if velocidade.x != 0:
-		energia -= 0.01
+	#if velocidade.x != 0:
+		#energia -= 0.01
 	
 	$Control.get_child(0).text ="Energia: " + str(energia)
 	
@@ -136,6 +138,14 @@ func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		playerEntered = false
 
+func Checkpoint():
+	checkpoint = position
+
+func Morrer():
+	if checkpoint == Vector2(0,0):
+		get_tree().reload_current_scene()
+	else:
+		position = checkpoint
 
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false

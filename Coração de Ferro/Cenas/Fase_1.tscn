@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Cenas/PortaAnimada.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/gerenciador_fase.gd" type="Script" id=13]
 [ext_resource path="res://Cenas/PortaFimFase.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Musicas/Bounce - Coração de ferro.wav" type="AudioStream" id=17]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=18]
@@ -431,7 +432,7 @@ position = Vector2( 7302.06, 2043.63 )
 fase2 = "testeInteligencia-3"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2081.89, 211.171 )
+position = Vector2( -510.625, 371.533 )
 cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]
@@ -511,3 +512,6 @@ texture = ExtResource( 20 )
 [node name="Pilha" parent="." instance=ExtResource( 21 )]
 position = Vector2( 5659.66, 148.058 )
 energia = 2
+
+[node name="Checkpoint" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4920.5, 536.112 )
