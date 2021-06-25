@@ -97,6 +97,7 @@ func _physics_process(delta):
 		velocidade.y = velocidade.y + 2
 	else:
 		velocidade.y = 0
+		Morrer()
 		#chamar game over
 	
 	
@@ -157,6 +158,7 @@ func Morrer():
 		get_tree().reload_current_scene()
 	else:
 		position = checkpoint
+		vivo = true
 
 func MorrerAcido():
 	vivo = false
