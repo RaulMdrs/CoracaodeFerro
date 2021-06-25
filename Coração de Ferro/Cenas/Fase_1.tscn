@@ -279,7 +279,7 @@ speed = 1.6
 [node name="AreasDaMorte" type="Node" parent="."]
 
 [node name="AreaDeMorteImediata" parent="AreasDaMorte" instance=ExtResource( 4 )]
-position = Vector2( 1149.79, 523.244 )
+position = Vector2( 1150.07, 538.851 )
 scale = Vector2( 14, 1 )
 
 [node name="AreaDeMorteImediata2" parent="AreasDaMorte" instance=ExtResource( 4 )]
@@ -432,7 +432,7 @@ position = Vector2( 7302.06, 2043.63 )
 fase2 = "testeInteligencia-3"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -510.625, 371.533 )
+position = Vector2( 938.847, 450.105 )
 cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]

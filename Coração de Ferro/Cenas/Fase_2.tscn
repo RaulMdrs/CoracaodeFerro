@@ -209,7 +209,7 @@ scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 10 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 289.853, 519.988 )
+position = Vector2( 3824.18, 491.447 )
 cont = "2"
 
 [node name="Plataformas" type="Node" parent="."]

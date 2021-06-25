@@ -17,7 +17,6 @@
 [ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=16]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 50
 outline_size = 4
