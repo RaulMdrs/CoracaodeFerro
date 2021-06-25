@@ -38,6 +38,7 @@ func check_end(): #verifica quando o player termina de se movimentar
 
 func _on_WinDialog_confirmed():  #acontece quanto da ok na caixa de vitoria
 	#get_tree().change_scene("res://Cenas/Fase_" + cont + ".tscn")
+	Globals.checkpointPosition = Vector2(0,0)
 	get_tree().change_scene("res://Cenas/" + cont + ".tscn")
 
 

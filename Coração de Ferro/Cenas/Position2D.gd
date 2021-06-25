@@ -10,12 +10,9 @@ onready var count2 = count
 
 var cont = 0
 
-func _ready():
-	if Globals.checkpointPosition != Vector2(0,0):
-		position = Globals.checkpointPosition
-
 func _on_PortaAnimada_animation_finished():
-	if cont == 0:
+	if(cont == 0):
+		Globals.checkpointPosition = position
 		var spawnInstance = spawnerReference.instance()
 		spawnInstance.set_position(Globals.checkpointPosition) 
 		spawnInstance.setCount(count2)
@@ -23,4 +20,4 @@ func _on_PortaAnimada_animation_finished():
 		cont = cont + 1
 		
 		
-
+	

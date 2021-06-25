@@ -4,9 +4,9 @@
 [ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Cenas/SpawnarPlayer.gd" type="Script" id=5]
+[ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Fontes/karma/ot/karma suture.otf" type="DynamicFontData" id=6]
-[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Cenas/SetSpawn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Cenas/PortaAnimada.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/TileMap.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=10]
@@ -238,9 +238,13 @@ stream = ExtResource( 16 )
 volume_db = -17.219
 autoplay = true
 
+[node name="SetSpawn" parent="." instance=ExtResource( 7 )]
+position = Vector2( 255.658, 518.499 )
+
+[node name="SpawnarPlayer" parent="." instance=ExtResource( 5 )]
+
 [node name="PortaAnimada" parent="." instance=ExtResource( 8 )]
 position = Vector2( 255, 505 )
-waitTime = 1
 numero = "637"
 
 [node name="numero3" type="Label" parent="PortaAnimada"]
@@ -273,13 +277,6 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 247.201, 507.918 )
 current = true
-
-[node name="SpawnarPlayer" type="Position2D" parent="."]
-position = Vector2( 253.301, 524.461 )
-scale = Vector2( 0.3, 0.3 )
-script = ExtResource( 5 )
-spawnScene = ExtResource( 7 )
-count = "1"
 
 [node name="Oficina" type="Sprite" parent="."]
 position = Vector2( 517.159, 307.713 )

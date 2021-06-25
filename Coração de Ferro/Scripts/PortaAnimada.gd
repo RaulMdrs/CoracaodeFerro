@@ -6,7 +6,8 @@ export (int) var waitTime
 export (String) var numero
 
 onready var waitTime2 = waitTime
-onready var timerNode = get_node(timerPath)
+onready var timerNode = $contadorPorta
+#onready var timerNode = get_node(timerPath)
 
 var cont = 0
 

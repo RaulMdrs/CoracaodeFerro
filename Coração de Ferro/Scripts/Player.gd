@@ -10,13 +10,16 @@ var pulou = false
 var pulo = 0
 var vivo = true
 var acidocont = 0
-var checkpoint = Vector2(0,0)
 
 var energia = 50
 
 var is_attacking = false
 
 const TIRO = preload("res://Cenas/Tiro.tscn")
+
+func _ready():
+	position = Globals.checkpointPosition
+
 
 func setCount(var count):
 	cont = count
@@ -149,16 +152,11 @@ func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		playerEntered = false
 
-func Checkpoint():
-	checkpoint = position
+func Checkpoint(pos):
+	Globals.checkpointPosition = pos
 
 func Morrer():
-	vivo = false
-	if checkpoint == Vector2(0,0):
 		get_tree().reload_current_scene()
-	else:
-		position = checkpoint
-		vivo = true
 
 func MorrerAcido():
 	vivo = false

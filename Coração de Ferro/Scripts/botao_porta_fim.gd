@@ -12,6 +12,7 @@ var playerEntered = false
 
 func _input(event):
 	if (event.is_action_pressed("selecionar") && playerEntered):
+		Globals.checkpointPosition = Vector2(0,0)
 		get_tree().change_scene("res://Cenas/" + fase + ".tscn")
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):

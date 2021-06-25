@@ -19,6 +19,10 @@ config/name="Coração De Ferro"
 run/main_scene="res://Cenas/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [input]
 
 right={

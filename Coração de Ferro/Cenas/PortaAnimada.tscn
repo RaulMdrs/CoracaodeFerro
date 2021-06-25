@@ -8,6 +8,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "aberta",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "trancada",
@@ -17,11 +22,6 @@ animations = [ {
 "loop": false,
 "name": "destrancada",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": false,
-"name": "aberta",
-"speed": 5.0
 } ]
 
 [node name="PortaAnimada" type="AnimatedSprite"]
@@ -30,6 +30,7 @@ frames = SubResource( 1 )
 animation = "destrancada"
 script = ExtResource( 4 )
 timerPath = NodePath("contadorPorta")
+waitTime = 1
 
 [node name="contadorPorta" type="Timer" parent="."]
 

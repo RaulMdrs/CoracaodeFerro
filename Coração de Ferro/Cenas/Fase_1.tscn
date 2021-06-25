@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/AreaDeMorteImediata.tscn" type="PackedScene" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/FX/ÁCIDO.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Objects/Switch (2).png" type="Texture" id=7]
 [ext_resource path="res://Assets/Objects/Barrel (2).png" type="Texture" id=8]
-[ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=9]
+[ext_resource path="res://Cenas/SetSpawn.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Luz/light.png" type="Texture" id=10]
 [ext_resource path="res://Assets/petrobos_logo.png" type="Texture" id=11]
 [ext_resource path="res://Cenas/PortaAnimada.tscn" type="PackedScene" id=12]
@@ -57,6 +57,20 @@ script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SetSpawn" parent="." instance=ExtResource( 9 )]
+position = Vector2( -505.026, 383.281 )
+
+[node name="SpawnarPlayer" parent="." instance=ExtResource( 1 )]
+position = Vector2( -504.683, 383.976 )
+
+[node name="PortaAnimada" parent="." instance=ExtResource( 12 )]
+position = Vector2( -505.447, 378.487 )
+
+[node name="Sprite" type="Sprite" parent="PortaAnimada"]
+position = Vector2( 198.06, 74.748 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
 
 [node name="Lâmpadas" type="Node" parent="."]
 
@@ -417,23 +431,9 @@ shape = SubResource( 1 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 8 )
 
-[node name="PortaFechadaInicio" type="Sprite" parent="."]
-position = Vector2( -512.369, 373.897 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 9 )
-
-[node name="Sprite" type="Sprite" parent="PortaFechadaInicio"]
-position = Vector2( 221.134, 90.0488 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 7 )
-
 [node name="PortaFimFase" parent="." instance=ExtResource( 14 )]
 position = Vector2( 7302.06, 2043.63 )
 fase2 = "testeInteligencia-3"
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 938.847, 450.105 )
-cont = "1"
 
 [node name="PlacaDePerigo" type="Sprite" parent="."]
 position = Vector2( 4303.45, 502.046 )
@@ -475,10 +475,6 @@ stream = ExtResource( 17 )
 volume_db = -30.0
 autoplay = true
 
-[node name="PortaAnimada" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7634.1, 1951.79 )
-scale = Vector2( 0.4, 0.4 )
-
 [node name="Barrel (1)" type="Sprite" parent="."]
 position = Vector2( 1031.94, -228.78 )
 scale = Vector2( 0.3, 0.3 )
@@ -513,5 +509,9 @@ texture = ExtResource( 20 )
 position = Vector2( 5659.66, 148.058 )
 energia = 2
 
+[node name="Checkpoint2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1345.1, 449.276 )
+
 [node name="Checkpoint" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4920.5, 536.112 )
+[connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]

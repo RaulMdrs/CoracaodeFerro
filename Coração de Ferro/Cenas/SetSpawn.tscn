@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/SetSpawn.gd" type="Script" id=1]
+
+[node name="SetSpawn" type="Position2D"]
+position = Vector2( -511.376, 384.868 )
+z_index = 50
+script = ExtResource( 1 )
