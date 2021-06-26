@@ -11,6 +11,7 @@ var pulo = 0
 var vivo = true
 var acidocont = 0
 
+
 var energia = 50
 
 var is_attacking = false
@@ -63,7 +64,6 @@ func _physics_process(delta):
 		if is_attacking == false && vivo:
 			$AnimatedSprite.play("idle")
 			get_child(3).stop()
-			pulou = false
 	
 	if not is_on_floor() && vivo:
 		if velocidade.y < 0:
@@ -103,17 +103,20 @@ func _physics_process(delta):
 		Morrer()
 		#chamar game over
 	
+	if is_on_floor():
+		pulou = false
 	
 	
 	
 	
-	if Input.is_action_pressed("pular") and is_on_floor() && vivo:
+	if Input.is_action_pressed("pular") and vivo and pulou == false:
+		pulou = true
+		print_debug("estou pulando")
 		if is_attacking == false:
 			pulo = randi() % 2 + 4 # Returns random integer between 1 and 100
-
+			
 		if(!get_child((pulo)).is_playing()):
 			get_child(pulo).play()
-			pulou = true
 		if vivo:
 			velocidade.y = forcaPulo
 	
