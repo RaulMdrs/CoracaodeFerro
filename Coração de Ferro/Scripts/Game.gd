@@ -12,11 +12,6 @@ func _process(_delta): #escrita dos movimentos e contagem dos spots
 	spots = $Spots.get_child_count()
 	$Ui/Remaining_Moves.text = 'MOVIMENTOS RESTANTES: ' + str(moves)
 	
-func _input(event):
-	event = Input.is_action_just_pressed("passar_fase")
-		
-	if(event):
-		get_tree().change_scene("res://Cenas/" + cont + ".tscn")
 	
 
 func check_end(): #verifica quando o player termina de se movimentar

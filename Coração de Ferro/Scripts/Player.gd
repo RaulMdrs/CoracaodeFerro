@@ -6,10 +6,10 @@ var forcaPulo = -900
 var gravidade = 30
 export (String) var cont
 var playerEntered = false
-var pulou = false
 var pulo = 0
 var vivo = true
 var acidocont = 0
+var contpulos = 0
 
 
 var energia = 50
@@ -20,6 +20,10 @@ const TIRO = preload("res://Cenas/Tiro.tscn")
 
 func _ready():
 	position = Globals.checkpointPosition
+	
+	match(Globals.dificuldade):
+		1: contpulos = 1
+		2: contpulos = 2
 
 
 func setCount(var count):
@@ -29,10 +33,7 @@ func get_PlayerEntered():
 	return playerEntered
 
 
-func _input(event):
-	event = Input.is_action_just_pressed("passar_fase")
-	if (event):
-		get_tree().change_scene("res://Cenas/testeInteligencia-" + cont + ".tscn")
+
 
 func _physics_process(delta):
 	if Input.is_action_pressed("right") && vivo:
@@ -104,14 +105,15 @@ func _physics_process(delta):
 		#chamar game over
 	
 	if is_on_floor():
-		pulou = false
+		match(Globals.dificuldade):
+			1: contpulos = 1
+			2: contpulos = 2
 	
 	
-	
-	
-	if Input.is_action_pressed("pular") and vivo and pulou == false:
-		pulou = true
-		print_debug("estou pulando")
+	if Input.is_action_just_pressed("pular") and vivo and contpulos > 0:
+		contpulos = contpulos - 1
+		#print_debug("estou pulando, tenho:" + str(contpulos) + " pulos")
+		
 		if is_attacking == false:
 			pulo = randi() % 2 + 4 # Returns random integer between 1 and 100
 			
