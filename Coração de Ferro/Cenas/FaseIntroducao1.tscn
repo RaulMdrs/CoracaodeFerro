@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Cenas/GerenFaseIntro1.gd" type="Script" id=14]
 [ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Scripts/Som.gd" type="Script" id=17]
+[ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=18]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -237,6 +239,7 @@ __meta__ = {
 stream = ExtResource( 16 )
 volume_db = -17.219
 autoplay = true
+script = ExtResource( 17 )
 
 [node name="SetSpawn" parent="." instance=ExtResource( 7 )]
 position = Vector2( 255.658, 518.499 )
@@ -453,6 +456,8 @@ percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PauseMenu" parent="." instance=ExtResource( 18 )]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
 [connection signal="body_shape_entered" from="TutorialPulo" to="gerenciadorFaseIntro1" method="_on_TutorialPulo_body_shape_entered"]
 [connection signal="body_shape_exited" from="TutorialPulo" to="gerenciadorFaseIntro1" method="_on_TutorialPulo_body_shape_exited"]

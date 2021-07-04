@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Serra.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Objects/Saw.png" type="Texture" id=2]
 [ext_resource path="res://Assets/FX/SERRA.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Som2D.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 119.0
@@ -59,6 +60,7 @@ stream = ExtResource( 3 )
 volume_db = -13.775
 autoplay = true
 max_distance = 600.0
+script = ExtResource( 4 )
 [connection signal="body_entered" from="." to="." method="_on_Serra_body_entered"]
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="ready" from="AnimationRotação" to="." method="_on_AnimationRotao_ready"]

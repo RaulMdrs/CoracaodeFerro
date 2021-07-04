@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Cenas/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://Assets/Objects/Barrel (1).png" type="Texture" id=19]
 [ext_resource path="res://Cenas/SetSpawn.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Cenas/MovePlatform.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scripts/Som2D.gd" type="Script" id=40]
+[ext_resource path="res://Scripts/Som.gd" type="Script" id=41]
 
 [sub_resource type="TileSet" id=1]
 0/name = "BGTile (7).png 0"
@@ -242,6 +245,7 @@ anims/movimento = SubResource( 5 )
 stream = ExtResource( 17 )
 volume_db = -16.53
 autoplay = true
+script = ExtResource( 40 )
 
 [node name="Robos" type="Node2D" parent="."]
 position = Vector2( 374.595, 144.123 )
@@ -480,7 +484,10 @@ texture = ExtResource( 19 )
 stream = ExtResource( 18 )
 volume_db = -22.04
 autoplay = true
+script = ExtResource( 41 )
 
 [node name="Checkpoint" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3752.62, 459.457 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 22 )]
 [connection signal="body_shape_entered" from="botao" to="Porta" method="_on_botao_body_shape_entered"]
