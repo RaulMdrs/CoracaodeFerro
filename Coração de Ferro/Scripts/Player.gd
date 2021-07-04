@@ -10,9 +10,7 @@ var pulo = 0
 var vivo = true
 var acidocont = 0
 var contpulos = 0
-
-
-var energia = 50
+var energia = 100
 
 var is_attacking = false
 
@@ -36,6 +34,8 @@ func get_PlayerEntered():
 
 
 func _physics_process(delta):
+	$Control/TextureProgress.value = energia
+	AtualizarBarraDeEnergia(energia)
 	if Input.is_action_pressed("right") && vivo:
 		if is_attacking == false || is_on_floor() == false:
 			velocidade.x = speed
@@ -76,7 +76,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_focus_next") && is_attacking == false && vivo:
 		if energia >= 10:
-			#energia -= 10
+			energia -= 10
 			if is_on_floor():
 				velocidade.x = 0
 			is_attacking = true
@@ -112,6 +112,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("pular") and vivo and contpulos > 0:
 		contpulos = contpulos - 1
+		energia -= 4
 		#print_debug("estou pulando, tenho:" + str(contpulos) + " pulos")
 		
 		if is_attacking == false:
@@ -129,8 +130,8 @@ func _physics_process(delta):
 	
 	velocidade = move_and_slide(velocidade, Vector2.UP, false)
 	
-	#if velocidade.x != 0:
-		#energia -= 0.01
+	if velocidade.x != 0:
+		energia -= 0.05
 	
 	#$Control.get_child(0).text ="Energia: " + str(energia)
 	
@@ -172,3 +173,16 @@ func MorrerAcido():
 
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
+
+func AtualizarBarraDeEnergia(energia):
+	if(energia<= 20):
+		$Control/TextureProgress.set_tint_progress(Color.red)
+	elif(energia<= 40):
+		$Control/TextureProgress.set_tint_progress(Color.orange)
+	elif(energia<= 60):
+		$Control/TextureProgress.set_tint_progress(Color.yellow)
+	elif(energia<= 80):
+		$Control/TextureProgress.set_tint_progress(Color.greenyellow)
+	elif(energia <= 100):
+		$Control/TextureProgress.set_tint_progress(Color.green)
+
