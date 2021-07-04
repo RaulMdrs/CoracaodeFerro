@@ -112,7 +112,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("pular") and vivo and contpulos > 0:
 		contpulos = contpulos - 1
-		energia -= 4
+		energia -= 2
 		#print_debug("estou pulando, tenho:" + str(contpulos) + " pulos")
 		
 		if is_attacking == false:
@@ -131,7 +131,7 @@ func _physics_process(delta):
 	velocidade = move_and_slide(velocidade, Vector2.UP, false)
 	
 	if velocidade.x != 0:
-		energia -= 0.05
+		energia -= 0.02
 	
 	#$Control.get_child(0).text ="Energia: " + str(energia)
 	

@@ -61,6 +61,195 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LampadasEmNode2d" type="Node2D" parent="."]
+visible = false
+position = Vector2( -1119.71, -43 )
+
+[node name="lampada1" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( -384.27, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada2" type="Light2D" parent="LampadasEmNode2d"]
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada3" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 383.878, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada4" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 767.933, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada5" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 1151.81, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada6" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 1535.86, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada7" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 1919.94, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada8" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 2303.67, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada9" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 2688.02, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada10" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 3071.77, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada11" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 3455.63, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada12" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 3840.55, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada13" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 4224.59, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada14" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 4607.78, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada15" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 4992.09, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada16" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 5375.96, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada17" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 5760.87, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada18" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 6144.92, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada19" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 7296.02, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada20" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 7679.88, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada21" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 8063.84, 0 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.854902, 0.780392, 0.160784, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada22" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 8255.82, 1857.87 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 0.776471, 0.878431, 0.976471, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="lampada23" type="Light2D" parent="LampadasEmNode2d"]
+position = Vector2( 7552.24, 1858.13 )
+texture = ExtResource( 10 )
+texture_scale = 1.74
+color = Color( 1, 0.372549, 0.341176, 1 )
+energy = 2.0
+shadow_enabled = true
+
+[node name="Lâmpadas" type="Node" parent="."]
+
 [node name="SetSpawn" parent="." instance=ExtResource( 9 )]
 position = Vector2( -505.026, 383.281 )
 
@@ -74,192 +263,6 @@ position = Vector2( -505.447, 378.487 )
 position = Vector2( 198.06, 74.748 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
-
-[node name="Lâmpadas" type="Node" parent="."]
-
-[node name="lampada1" type="Light2D" parent="Lâmpadas"]
-position = Vector2( -1503.98, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada2" type="Light2D" parent="Lâmpadas"]
-position = Vector2( -1119.71, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada3" type="Light2D" parent="Lâmpadas"]
-position = Vector2( -735.832, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada4" type="Light2D" parent="Lâmpadas"]
-position = Vector2( -351.777, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada5" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 32.1049, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada6" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 416.153, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada7" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 800.229, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada8" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 1183.96, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada9" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 1568.31, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada10" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 1952.06, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada11" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 2335.92, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada12" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 2720.84, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada13" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 3104.88, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada14" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 3488.07, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada15" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 3872.38, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada16" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 4256.25, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada17" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 4641.16, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada18" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 5025.21, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada19" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 6176.31, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada20" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 6560.17, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada21" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 6944.13, -42 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.854902, 0.780392, 0.160784, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada22" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 7136.11, 1815.87 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 0.776471, 0.878431, 0.976471, 1 )
-energy = 2.0
-shadow_enabled = true
-
-[node name="lampada23" type="Light2D" parent="Lâmpadas"]
-position = Vector2( 6432.53, 1816.13 )
-texture = ExtResource( 10 )
-texture_scale = 1.74
-color = Color( 1, 0.372549, 0.341176, 1 )
-energy = 2.0
-shadow_enabled = true
 
 [node name="Plataformas" type="Node" parent="."]
 
