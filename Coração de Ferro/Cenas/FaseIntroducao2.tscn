@@ -245,6 +245,12 @@ script = ExtResource( 5 )
 spawnScene = ExtResource( 7 )
 count = "1"
 
+[node name="Camera2D" type="Camera2D" parent="SpawnarPlayer"]
+position = Vector2( -10.8924, -17.7467 )
+scale = Vector2( 3.33333, 3.33333 )
+current = true
+zoom = Vector2( 1.3, 1.3 )
+
 [node name="Oficina" type="Sprite" parent="."]
 position = Vector2( 517.159, 307.713 )
 scale = Vector2( 1, 0.7 )

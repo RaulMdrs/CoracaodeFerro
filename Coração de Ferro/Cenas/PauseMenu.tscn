@@ -19,7 +19,7 @@
 [ext_resource path="res://Assets/Fontes/AGoblinAppears-o2aV.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Scripts/Pause.gd" type="Script" id=18]
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 17 )
 
@@ -174,7 +174,7 @@ margin_top = 93.1646
 margin_right = 321.489
 margin_bottom = 255.165
 rect_rotation = -1.9
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.74902, 0.611765, 0.192157, 1 )
 text = "Tem certeza que
 deseja sair?

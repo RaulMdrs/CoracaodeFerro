@@ -74,7 +74,7 @@ func _physics_process(delta):
 			$AnimatedSprite.play("fall")
 		
 	
-	if Input.is_action_just_pressed("ui_focus_next") && is_attacking == false && vivo:
+	if Input.is_action_just_pressed("atirar") && is_attacking == false && vivo:
 		if energia >= 10:
 			#energia -= 10
 			if is_on_floor():
