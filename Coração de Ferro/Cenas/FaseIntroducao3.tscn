@@ -261,10 +261,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 250.655, 514.873 )
-current = true
-
 [node name="SpawnarPlayer" type="Position2D" parent="."]
 position = Vector2( 253.301, 524.461 )
 scale = Vector2( 0.3, 0.3 )

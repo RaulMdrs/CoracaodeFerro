@@ -132,7 +132,7 @@ func _physics_process(delta):
 	#if velocidade.x != 0:
 		#energia -= 0.01
 	
-	$Control.get_child(0).text ="Energia: " + str(energia)
+	#$Control.get_child(0).text ="Energia: " + str(energia)
 	
 	velocidade.x = lerp(velocidade.x,0,1.0)
 	

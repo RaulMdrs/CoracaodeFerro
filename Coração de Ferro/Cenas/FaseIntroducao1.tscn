@@ -274,10 +274,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 247.201, 507.918 )
-current = true
-
 [node name="Oficina" type="Sprite" parent="."]
 position = Vector2( 517.159, 307.713 )
 scale = Vector2( 1, 0.7 )
