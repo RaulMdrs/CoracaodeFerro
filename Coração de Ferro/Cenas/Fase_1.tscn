@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scripts/Som2D.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/Som.gd" type="Script" id=23]
 [ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/Objects/Cano_Acido_2.png" type="Texture" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.3628, 46.6274 )
@@ -49,6 +50,16 @@ tile_data = PoolIntArray( -327701, 17, 0, -327700, 17, 0, -327699, 17, 0, -26216
 position = Vector2( -108.353, 246.944 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 11 )
+
+[node name="Cano_Acido_2" type="Sprite" parent="."]
+position = Vector2( 1218.1, 488.395 )
+scale = Vector2( 0.717661, 0.741684 )
+texture = ExtResource( 25 )
+
+[node name="Cano_Acido_3" type="Sprite" parent="."]
+position = Vector2( 1090.84, 489.025 )
+scale = Vector2( 0.717661, 0.741684 )
+texture = ExtResource( 25 )
 
 [node name="gerenciador_fase" type="Control" parent="."]
 margin_left = 35.2734
