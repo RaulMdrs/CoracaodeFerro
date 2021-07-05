@@ -14,7 +14,6 @@
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Cenas/Porta.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/GerenFaseIntro1.gd" type="Script" id=14]
-[ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=18]
@@ -44,9 +43,15 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 50
-font_data = ExtResource( 15 )
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 71.5909, 134 )
 
 [node name="FaseIntroducao2" type="Node2D"]
 
@@ -431,26 +436,14 @@ move_to = Vector2( 1850, 0 )
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
 script = ExtResource( 14 )
 
-[node name="tutorialPular" type="Label" parent="gerenciadorFaseIntro1"]
-margin_left = 670.125
-margin_top = 181.932
-margin_right = 1350.12
-margin_bottom = 251.932
-custom_fonts/font = SubResource( 4 )
-text = "Aperte \"Espaço\" para pular"
-percent_visible = 0.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="tutorialAndar" type="Label" parent="gerenciadorFaseIntro1"]
-margin_left = -173.422
-margin_top = 204.407
-margin_right = 665.578
-margin_bottom = 274.407
-custom_fonts/font = SubResource( 4 )
-text = "Aperte \"A\" e \"D\" para se movimentar"
-percent_visible = 0.0
+[node name="textoSala" type="Label" parent="gerenciadorFaseIntro1"]
+margin_left = 56.0677
+margin_top = 618.5
+margin_right = 452.068
+margin_bottom = 695.5
+custom_fonts/font = SubResource( 6 )
+text = "Esse horario ela deve estar
+na sala de descanso..."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -497,4 +490,14 @@ energia = 2
 [node name="Pilha3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 666.627, -1343.27 )
 energia = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 251, 532 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 9, -91 )
+scale = Vector2( 2.64, 1 )
+shape = SubResource( 5 )
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
+[connection signal="body_shape_entered" from="Area2D" to="gerenciadorFaseIntro1" method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area2D" to="gerenciadorFaseIntro1" method="_on_Area2D_body_shape_exited"]
