@@ -69,7 +69,6 @@ margin_right = 316.349
 margin_bottom = -73.8477
 custom_fonts/font = SubResource( 2 )
 text = "Aperte \"E\" para continuar"
-percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
