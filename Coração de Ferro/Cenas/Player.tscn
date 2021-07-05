@@ -33,10 +33,10 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "fall",
-"speed": 5.0
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "acido",
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
@@ -48,10 +48,10 @@ animations = [ {
 "name": "tiro",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 20 ) ],
-"loop": false,
-"name": "acido",
-"speed": 6.0
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
@@ -64,6 +64,7 @@ radius = 27.6982
 height = 11.9326
 
 [node name="Player" type="KinematicBody2D"]
+light_mask = 2
 z_index = 1
 script = ExtResource( 5 )
 __meta__ = {
@@ -109,7 +110,8 @@ script = ExtResource( 25 )
 position = Vector2( 7.11694, 25.4712 )
 
 [node name="Control" type="Control" parent="."]
-visible = false
+process_priority = 1
+light_mask = 2
 margin_left = -509.0
 margin_top = -295.0
 margin_right = 515.0
@@ -119,12 +121,16 @@ __meta__ = {
 }
 
 [node name="TextureProgress" type="TextureProgress" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-value = 50.0
+margin_left = -130.255
+margin_top = -77.3977
+margin_right = -2.2547
+margin_bottom = -13.3977
+max_value = 100.0
+value = 100.0
 texture_under = ExtResource( 24 )
 texture_over = ExtResource( 23 )
 texture_progress = ExtResource( 21 )
+tint_progress = Color( 0, 1, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
