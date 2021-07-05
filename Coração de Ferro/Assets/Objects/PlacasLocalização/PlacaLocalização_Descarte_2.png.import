@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cano_Acido.png-cf5af2a88393c47ac74271e34543e31c.stex"
+path="res://.import/PlacaLocalização_Descarte_2.png-8867fdff17958155543c72727fff83e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/Cano_Acido.png"
-dest_files=[ "res://.import/Cano_Acido.png-cf5af2a88393c47ac74271e34543e31c.stex" ]
+source_file="res://Assets/Objects/PlacasLocalização/PlacaLocalização_Descarte_2.png"
+dest_files=[ "res://.import/PlacaLocalização_Descarte_2.png-8867fdff17958155543c72727fff83e8.stex" ]
 
 [params]
 

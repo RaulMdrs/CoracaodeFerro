@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placa.png-2226454df67363ba34d16729e755d94a.stex"
+path="res://.import/PlacaLocalização_Descanso_3.png-777a3f4fcaf6568ba86f499152586468.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/placa.png"
-dest_files=[ "res://.import/placa.png-2226454df67363ba34d16729e755d94a.stex" ]
+source_file="res://Assets/Objects/PlacasLocalização/PlacaLocalização_Descanso_3.png"
+dest_files=[ "res://.import/PlacaLocalização_Descanso_3.png-777a3f4fcaf6568ba86f499152586468.stex" ]
 
 [params]
 

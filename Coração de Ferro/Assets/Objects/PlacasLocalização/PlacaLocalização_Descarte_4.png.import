@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlacaLocalização_Oficina_1.png-4e5fa8ff71349ef8adcffcfbecc573ad.stex"
+path="res://.import/PlacaLocalização_Descarte_4.png-a928efd03306b76355931e703249a191.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/PlacaLocalização_Oficina_1.png"
-dest_files=[ "res://.import/PlacaLocalização_Oficina_1.png-4e5fa8ff71349ef8adcffcfbecc573ad.stex" ]
+source_file="res://Assets/Objects/PlacasLocalização/PlacaLocalização_Descarte_4.png"
+dest_files=[ "res://.import/PlacaLocalização_Descarte_4.png-a928efd03306b76355931e703249a191.stex" ]
 
 [params]
 

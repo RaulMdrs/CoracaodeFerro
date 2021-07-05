@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placa de Direção.png-f57e8fd3b587b6be48c4fd92b0e5feb2.stex"
+path="res://.import/PlacaLocalização_Descanso_9.png-21c4a21c26eae6c1d3423f925417f1e4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/placa de Direção.png"
-dest_files=[ "res://.import/placa de Direção.png-f57e8fd3b587b6be48c4fd92b0e5feb2.stex" ]
+source_file="res://Assets/Objects/PlacasLocalização/PlacaLocalização_Descanso_9.png"
+dest_files=[ "res://.import/PlacaLocalização_Descanso_9.png-21c4a21c26eae6c1d3423f925417f1e4.stex" ]
 
 [params]
 
