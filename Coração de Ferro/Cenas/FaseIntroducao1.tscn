@@ -1,7 +1,5 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=5]
@@ -18,25 +16,14 @@
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=16]
 [ext_resource path="res://Scripts/Som.gd" type="Script" id=17]
 [ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/PlacaLocalização_1.png" type="Texture" id=19]
+[ext_resource path="res://Cenas/Placa_Oficina_Animada.tscn" type="PackedScene" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 90
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = 5
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 100
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 337.029, 361.52 )
@@ -284,82 +271,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Oficina" type="Sprite" parent="."]
-position = Vector2( 517.159, 307.713 )
-scale = Vector2( 1, 0.7 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoOficina" type="Sprite" parent="Oficina"]
-position = Vector2( 223.492, 148.538 )
-scale = Vector2( 0.5, 0.7 )
-texture = ExtResource( 2 )
-
-[node name="textoOficina" type="Label" parent="Oficina"]
-margin_left = -107.394
-margin_top = -30.9501
-margin_right = 214.606
-margin_bottom = 95.0499
-custom_fonts/font = SubResource( 2 )
-text = "Oficina"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Zona de descarte" type="Sprite" parent="."]
-position = Vector2( -859.344, 353.65 )
-scale = Vector2( 1.5, 0.7 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoDescarte" type="Sprite" parent="Zona de descarte"]
-position = Vector2( -52.2626, 104.848 )
-rotation = 1.5708
-scale = Vector2( 0.5, 0.3 )
-texture = ExtResource( 2 )
-
-[node name="textoDescarte" type="Label" parent="Zona de descarte"]
-margin_left = -124.72
-margin_top = -31.1836
-margin_right = 527.28
-margin_bottom = 94.8164
-rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Zona de descarte"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sala de Descanso" type="Sprite" parent="."]
-position = Vector2( -958.573, -73.4231 )
-scale = Vector2( 2, 0.8 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoDescanso" type="Sprite" parent="Sala de Descanso"]
-position = Vector2( 88.4604, -83.5595 )
-rotation = -1.5708
-scale = Vector2( 0.5, 0.3 )
-texture = ExtResource( 2 )
-
-[node name="textoDescanso" type="Label" parent="Sala de Descanso"]
-margin_left = -125.31
-margin_top = -32.1004
-margin_right = 532.69
-margin_bottom = 67.8996
-rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Sala de descanso"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="MovePlatform" parent="Plataformas" instance=ExtResource( 10 )]
@@ -416,6 +327,16 @@ speed = 2.0
 position = Vector2( -1325, -700 )
 move_to = Vector2( 850, 0 )
 speed = 2.0
+
+[node name="PlacaLocalização_1" type="Sprite" parent="."]
+position = Vector2( -219.824, 88.8478 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 19 )
+
+[node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 20 )]
+position = Vector2( 529.856, 311.633 )
+scale = Vector2( 1.5, 1.5 )
+frame = 2
 
 [node name="TutorialPulo" type="Area2D" parent="."]
 position = Vector2( 1525, 215 )
