@@ -16,8 +16,8 @@ func _on_AreaDeMorteImediata_body_entered(body):
 				print_debug("morreu no acido")
 				body.MorrerAcido()
 			1:
-				body.MorrerEspinho()
+				body.MorrerAcido()
 			2:
-				body.MorrerAbismo()
+				body.MorrerAcido()
 
 	

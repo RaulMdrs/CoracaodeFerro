@@ -57,4 +57,4 @@ func _on_Timer_timeout():
 
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
-		body.Morrer()
+		body.MorrerAcido()

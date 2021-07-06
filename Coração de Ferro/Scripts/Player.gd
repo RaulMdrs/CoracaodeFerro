@@ -92,7 +92,8 @@ func _physics_process(delta):
 			get_parent().add_child(tiro)
 			tiro.position = $Position2D.global_position
 	
-	
+	if !vivo and velocidade.y < 0:
+		velocidade.y = 0
 	
 	if vivo:
 		velocidade.y = velocidade.y + gravidade
