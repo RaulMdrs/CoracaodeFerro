@@ -1,12 +1,12 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Cutscene/Oficina_3.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Cutscene/sala de descanso.jpg" type="Texture" id=1]
 [ext_resource path="res://Cenas/gerenciadorCustscene.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cutscene"
-length = 16.7
+length = 18.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:self_modulate")
 tracks/0/interp = 1
@@ -14,7 +14,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 1.6, 15, 15.8, 16.6 ),
+"times": PoolRealArray( 0, 0.8, 1.6, 16.6, 17.4, 18.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ) ]
@@ -38,46 +38,52 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.6, 15 ),
+"times": PoolRealArray( 0, 1.6, 16.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Panel/Label:visible_characters")
+tracks/3/path = NodePath("Panel/Label:text")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.6, 1.7, 1.8, 1.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 1.6, 4.8, 4.9, 12, 12.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3 ]
+"values": [ "Bô 637:", "Bô 637:", "Ro:", "Ro:", "Bô 637:" ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Panel/Label:visible")
+tracks/4/path = NodePath("Panel/Label:percent_visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"times": PoolRealArray( 0, 1.6, 1.8, 4.8, 4.9, 5.1, 12, 12.1, 12.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Panel/Label2:visible")
+tracks/5/path = NodePath("Panel/Label2:text")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 1.8, 5.1, 10.1, 10.2, 12.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ "Como é o mundo fora da Petrobôs, Ro ?", "Hm... Acho que minha parte preferida são as 
+lanchonetes e restaurantes, mas minha
+comida favorita é churrasco.", "Hm... Acho que minha parte preferida são as 
+lanchonetes e restaurantes, mas minha
+comida favorita é churrasco.", "Você sente gosto, Bô ?", "Não consigo sentir gosto. Mas espero que 
+algum Dia criem um sensor de paladar, para
+que eu possa provar churrasco um dia." ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Panel/Label2:percent_visible")
@@ -86,79 +92,39 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 2, 3, 4, 4.1, 5.6, 6.6, 6.9, 8.9, 9.9, 10.2, 13.2, 15 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.8, 3.8, 4.8, 5.1, 9.1, 10.1, 10.2, 11.2, 12, 12.3, 15.4, 16.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Panel/Label2:text")
+tracks/7/path = NodePath(".:fase")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 2, 4.1, 6.9, 10.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ "Você de novo por aqui ?", "O que foi que quebrou dessa vez ?", "Minha bateria esta descarregando mais rápido
-que o normal.", "Vou fazer o que posso, porém enquanto não 
-consigo consertar complementamente, caso
-encontre pilhas por ai, use-as para 
-recarregar." ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Panel/Label:text")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 1.6, 6.7, 10 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ "Ro:", "Bô 637:", "Ro:" ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Panel/Label:percent_visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 6.7, 6.9, 9.9, 10, 10.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0, 1.0, 0.0, 1.0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath(".:fase")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 16.6 ),
+"times": PoolRealArray( 18.2 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "faseIntroducao2" ]
+"values": [ "faseIntroducao3" ]
 }
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
-outline_size = 1
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 30
-outline_size = 1
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 4 )
 
-[node name="custscene1" type="Node2D"]
+[node name="cutscene2" type="Node2D"]
 script = ExtResource( 2 )
-fase = "faseIntroducao2"
+fase = "faseIntroducao3"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -182,11 +148,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel"]
+margin_left = 5.0
 margin_top = 10.0
-margin_right = 106.0
-margin_bottom = 50.0
+margin_right = 119.0
+margin_bottom = 37.0
 custom_fonts/font = SubResource( 2 )
-text = "Ro:"
+text = "Bô 637:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -194,13 +161,12 @@ __meta__ = {
 [node name="Label2" type="Label" parent="Panel"]
 margin_left = 110.0
 margin_top = 10.0
-margin_right = 801.0
-margin_bottom = 127.0
+margin_right = 798.0
+margin_bottom = 150.0
 custom_fonts/font = SubResource( 3 )
-text = "Vou fazer o que posso, porém enquanto não 
-consigo consertar complementamente, caso
-encontre pilhas por ai, use-as para 
-recarregar."
+text = "Não consigo sentir gosto. Mas espero que 
+algum Dia criem um sensor de paladar, para
+que eu possa provar churrasco um dia."
 __meta__ = {
 "_edit_use_anchors_": false
 }
