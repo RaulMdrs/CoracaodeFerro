@@ -421,7 +421,7 @@ texture = ExtResource( 2 )
 
 [node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
 position = Vector2( 519.734, 285.125 )
-frame = 5
+frame = 6
 
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 25 )]
 position = Vector2( -715.73, 82.686 )

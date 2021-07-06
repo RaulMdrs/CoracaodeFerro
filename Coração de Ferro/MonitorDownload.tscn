@@ -19,5 +19,5 @@ animations = [ {
 
 [node name="MonitorDownload" type="AnimatedSprite"]
 frames = SubResource( 1 )
-frame = 10
+frame = 1
 speed_scale = 0.5
