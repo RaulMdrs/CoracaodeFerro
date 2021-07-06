@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/Objects/Mesa_ComCafé.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/PlacasLocalização/PlacaLocalizaçãoVazia.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Assets/Fontes/karma/ot/karma future.otf" type="DynamicFontData" id=24]
 [ext_resource path="res://Scripts/MonitorDownload.gd" type="Script" id=25]
 [ext_resource path="res://Assets/Objects/Armario_1.png" type="Texture" id=26]
+[ext_resource path="res://Cenas/PlacaSaídaAnimada.tscn" type="PackedScene" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -445,10 +446,9 @@ position = Vector2( -703.325, 97.1012 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
-[node name="PlacaLocalizaçãoVazia4" type="Sprite" parent="."]
-position = Vector2( -214.744, 98.5913 )
+[node name="PlacaSaídaAnimada" parent="." instance=ExtResource( 27 )]
+position = Vector2( -223.63, 150.278 )
 scale = Vector2( 3, 3 )
-texture = ExtResource( 2 )
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra2" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
