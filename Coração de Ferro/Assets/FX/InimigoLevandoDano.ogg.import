@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/InimigoLevandoDano.ogg-d711606f2a494777872633fde8453c29.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/InimigoLevandoDano.ogg"
+dest_files=[ "res://.import/InimigoLevandoDano.ogg-d711606f2a494777872633fde8453c29.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

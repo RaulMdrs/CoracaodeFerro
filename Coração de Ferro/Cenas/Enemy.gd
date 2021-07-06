@@ -18,6 +18,7 @@ func _ready():
 	pass 
 
 func dead():
+	$Morrendo.play()
 	is_dead = true
 	velocity = Vector2(0, 0)
 	$Area2D.queue_free()
@@ -40,6 +41,7 @@ func _physics_process(delta):
 		velocity.y += GRAVITY
 		
 		velocity = move_and_slide(velocity, FLOOR)
+		$Caminhando.play()
 	
 	
 	if is_on_wall() && parede:

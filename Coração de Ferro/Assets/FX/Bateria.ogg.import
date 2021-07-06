@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bateria.ogg-e9dabaa2cd06572a42aceabb68011b6f.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/Bateria.ogg"
+dest_files=[ "res://.import/Bateria.ogg-e9dabaa2cd06572a42aceabb68011b6f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

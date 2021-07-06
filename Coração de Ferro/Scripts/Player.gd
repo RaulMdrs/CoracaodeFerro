@@ -91,6 +91,7 @@ func _physics_process(delta):
 				tiro.set_tiro_direction(-1)
 			get_parent().add_child(tiro)
 			tiro.position = $Position2D.global_position
+			$Atirando.play()
 	
 	if !vivo and velocidade.y < 0:
 		velocidade.y = 0
