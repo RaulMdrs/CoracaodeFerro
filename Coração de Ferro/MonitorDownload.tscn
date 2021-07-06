@@ -6,13 +6,13 @@
 [ext_resource path="res://Assets/Objects/Pc_Download_1.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Objects/Pc_Download_4.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Objects/Pc_Download_5.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Objects/Pc_SemNada.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Objects/Pc_Download_completo.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Objects/Pc_Download_6.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ) ],
-"loop": true,
+"loop": false,
 "name": "default",
 "speed": 5.0
 } ]
