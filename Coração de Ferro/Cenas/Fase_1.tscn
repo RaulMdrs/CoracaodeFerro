@@ -436,7 +436,11 @@ texture = ExtResource( 8 )
 [node name="Cano_Acido" parent="." instance=ExtResource( 25 )]
 position = Vector2( 549.963, 2258.32 )
 scale = Vector2( 0.7, 0.7 )
+<<<<<<< Updated upstream
 offset = Vector2( 863.407, -2529.39 )
+=======
+frame = 1
+>>>>>>> Stashed changes
 
 [node name="Pilha2" parent="." instance=ExtResource( 21 )]
 position = Vector2( 2117.34, 473.78 )
@@ -464,8 +468,12 @@ offset = Vector2( 863.407, -2529.39 )
 [node name="Cano_Acido6" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2843.24, 2320 )
 scale = Vector2( 0.7, 0.7 )
+<<<<<<< Updated upstream
 frame = 5
 offset = Vector2( 1030.18, -2523.99 )
+=======
+frame = 1
+>>>>>>> Stashed changes
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 14 )]
 position = Vector2( 7302.06, 2043.63 )
