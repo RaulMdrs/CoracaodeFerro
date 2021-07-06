@@ -1,12 +1,7 @@
 [gd_scene load_steps=26 format=2]
 
-<<<<<<< HEAD
-[ext_resource path="res://Cenas/Placa_Descanso_Animada.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Cenas/Placa_Descarte_Animada.tscn" type="PackedScene" id=2]
-=======
-[ext_resource path="res://Assets/Objects/placa.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Objects/placa de Direção.png" type="Texture" id=2]
->>>>>>> 25d9fe0ac414984d9a561bb2dbfdbf07cefb41ab
+[ext_resource path="res://Assets/Objects/PlacasLocalização/placa.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Objects/PlacasLocalização/placa de Direção.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=5]
@@ -24,15 +19,15 @@
 [ext_resource path="res://Scripts/Som.gd" type="Script" id=17]
 [ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=18]
 
+
+
+
 [sub_resource type="DynamicFont" id=1]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-<<<<<<< HEAD
-[sub_resource type="RectangleShape2D" id=2]
-=======
 [sub_resource type="DynamicFont" id=2]
 size = 90
 outline_size = 4
@@ -47,17 +42,16 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=4]
->>>>>>> 25d9fe0ac414984d9a561bb2dbfdbf07cefb41ab
 extents = Vector2( 337.029, 361.52 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 233.643, 240.912 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 15 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -426,29 +420,6 @@ position = Vector2( -1325, -700 )
 move_to = Vector2( 850, 0 )
 speed = 2.0
 
-<<<<<<< HEAD
-[node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 20 )]
-position = Vector2( 514.335, 293.751 )
-scale = Vector2( 1.5, 1.5 )
-frame = 1
-
-[node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 2 )]
-position = Vector2( -699.241, 102.357 )
-scale = Vector2( 2, 2 )
-frame = 11
-
-[node name="Placa_Descanso_Animada" parent="." instance=ExtResource( 1 )]
-position = Vector2( -701.503, -36.598 )
-scale = Vector2( 2, 2 )
-frame = 1
-
-[node name="PlacaLocalização_1" type="Sprite" parent="."]
-position = Vector2( -228.816, 99.2151 )
-scale = Vector2( 3, 3 )
-texture = ExtResource( 19 )
-
-=======
->>>>>>> 25d9fe0ac414984d9a561bb2dbfdbf07cefb41ab
 [node name="TutorialPulo" type="Area2D" parent="."]
 position = Vector2( 1525, 215 )
 __meta__ = {
@@ -457,7 +428,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialPulo"]
 position = Vector2( -519.915, -2.71313 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TutorialAndar" type="Area2D" parent="."]
 position = Vector2( 729.495, 86.1455 )
@@ -467,7 +438,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialAndar"]
 position = Vector2( -490, 250 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
 script = ExtResource( 14 )
@@ -477,7 +448,7 @@ margin_left = 670.125
 margin_top = 181.932
 margin_right = 1350.12
 margin_bottom = 251.932
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Aperte \"W\" para pular"
 percent_visible = 0.0
 __meta__ = {
@@ -489,7 +460,7 @@ margin_left = -173.422
 margin_top = 204.407
 margin_right = 665.578
 margin_bottom = 274.407
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Aperte \"A\" e \"D\" para se movimentar"
 percent_visible = 0.0
 __meta__ = {
@@ -501,7 +472,7 @@ margin_left = 30.6596
 margin_top = 621.892
 margin_right = 461.66
 margin_bottom = 672.892
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "Preciso ir na Oficina"
 percent_visible = 0.0
 __meta__ = {
