@@ -11,5 +11,5 @@ dest_files=[ "res://.import/InimigoDerrotado.ogg-f29f1b291940f3994ff3b72012d9c28
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

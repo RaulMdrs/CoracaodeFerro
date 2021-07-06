@@ -18,7 +18,7 @@
 [ext_resource path="res://Assets/Inimigo/inimigo_morrendo11.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Inimigo/inimigo_morrendo10.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Inimigo/inimigo_morrendo9.png" type="Texture" id=18]
-[ext_resource path="res://Assets/FX/InimigoAndando.ogg" type="AudioStream" id=19]
+[ext_resource path="res://Assets/FX/InimigoAndandoMono.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Scripts/Som2D.gd" type="Script" id=20]
 [ext_resource path="res://Assets/FX/InimigoDerrotado.ogg" type="AudioStream" id=22]
 

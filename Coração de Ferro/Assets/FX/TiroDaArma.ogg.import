@@ -11,5 +11,5 @@ dest_files=[ "res://.import/TiroDaArma.ogg-cedb170077279373f68fca6b70baa837.oggs
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

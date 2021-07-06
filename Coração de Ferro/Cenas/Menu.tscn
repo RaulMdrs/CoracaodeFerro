@@ -350,6 +350,7 @@ anims/animVoltar2 = SubResource( 6 )
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = -20.0
 autoplay = true
 [connection signal="pressed" from="MenuInicial/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="MenuInicial/Credito" to="." method="_on_Credito_pressed"]

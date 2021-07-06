@@ -20,4 +20,5 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		body.Checkpoint(position)
+		$CheckpointSom.play()
 		queue_free()

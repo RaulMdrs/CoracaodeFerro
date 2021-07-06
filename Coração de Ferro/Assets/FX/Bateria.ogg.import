@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Bateria.ogg-e9dabaa2cd06572a42aceabb68011b6f.oggstr"
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
