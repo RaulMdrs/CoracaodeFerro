@@ -31,13 +31,13 @@ outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 5
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 95
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -52,7 +52,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -22 ), Vector2( 0, 600 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -67,16 +67,55 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 600 ), Vector2( 0, -22 ) ]
 }
 
+<<<<<<< Updated upstream
 [sub_resource type="DynamicFont" id=7]
 size = 100
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=8]
+=======
+[sub_resource type="DynamicFont" id=4]
+>>>>>>> Stashed changes
 size = 60
 outline_size = 6
 outline_color = Color( 0.141176, 0.00392157, 0.00392157, 1 )
 font_data = ExtResource( 8 )
 
+<<<<<<< Updated upstream
+=======
+[sub_resource type="Animation" id=5]
+resource_name = "animVoltar"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -123.373, 194.801 ), Vector2( -123.373, 800.614 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "animVoltar2"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -123.373, 800.614 ), Vector2( -123.373, 194.801 ) ]
+}
+
+>>>>>>> Stashed changes
 [node name="Menu" type="Node2D"]
 position = Vector2( 512.827, -300 )
 
@@ -141,11 +180,19 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MenuInicial"]
+<<<<<<< Updated upstream
 margin_left = -608.97
 margin_top = -308.663
 margin_right = 613.03
 margin_bottom = -117.663
 custom_fonts/font = SubResource( 4 )
+=======
+margin_left = -609.0
+margin_top = -309.0
+margin_right = 17.0
+margin_bottom = -208.0
+custom_fonts/font = SubResource( 1 )
+>>>>>>> Stashed changes
 custom_colors/font_color = Color( 0.74902, 0.113725, 0.113725, 1 )
 text = "coração de ferro"
 __meta__ = {
@@ -157,9 +204,15 @@ position = Vector2( 0, -22 )
 scale = Vector2( 0.685408, 0.710469 )
 texture = ExtResource( 5 )
 
+<<<<<<< Updated upstream
 [node name="AnimaçãoCreditos" type="AnimationPlayer" parent="MenuCredito"]
 anims/AnimacaoDescida = SubResource( 5 )
 anims/AnimacaoSubida = SubResource( 6 )
+=======
+[node name="AnimacaoCreditos" type="AnimationPlayer" parent="MenuCredito"]
+anims/AnimacaoDescida = SubResource( 2 )
+anims/AnimacaoSubida = SubResource( 3 )
+>>>>>>> Stashed changes
 
 [node name="Voltar" type="Button" parent="MenuCredito"]
 margin_left = -200.0
@@ -188,7 +241,7 @@ margin_left = -650.0
 margin_top = -400.0
 margin_right = -250.0
 margin_bottom = -330.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Programadores"
 align = 1
@@ -201,7 +254,7 @@ margin_left = -30.0
 margin_top = 65.0
 margin_right = 420.0
 margin_bottom = 265.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 text = "Erick hasse
 Raul Medeiros
@@ -216,7 +269,7 @@ margin_left = -720.0
 margin_top = -125.0
 margin_right = -120.0
 margin_bottom = -55.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 text = "level design plataforma"
 align = 1
 __meta__ = {
@@ -228,7 +281,7 @@ margin_left = 40.0
 margin_top = 65.0
 margin_right = 490.0
 margin_bottom = 215.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.529412, 0.529412, 0.529412, 1 )
 text = "Raul Medeiros
 Rodrigo Monteiro"
@@ -242,7 +295,7 @@ margin_left = -680.0
 margin_top = 90.0
 margin_right = -180.0
 margin_bottom = 165.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 text = "level design puzzles"
 align = 1
 __meta__ = {
@@ -254,7 +307,7 @@ margin_left = 20.0
 margin_top = 65.0
 margin_right = 420.0
 margin_bottom = 140.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "erick hasse"
 align = 1
@@ -267,7 +320,7 @@ margin_left = 784.127
 margin_top = 46.5587
 margin_right = 1184.13
 margin_bottom = 121.559
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "erick hasse"
 align = 1
@@ -280,7 +333,7 @@ margin_left = 100.0
 margin_top = -400.0
 margin_right = 500.0
 margin_bottom = -330.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 text = "Equipe de som"
 align = 1
 __meta__ = {
@@ -292,7 +345,7 @@ margin_left = -75.0
 margin_top = 65.0
 margin_right = 475.0
 margin_bottom = 265.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "john souza
 frederico neutzliing
@@ -307,7 +360,7 @@ margin_left = 100.0
 margin_top = -130.0
 margin_right = 500.0
 margin_bottom = -55.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 text = "Game tester"
 align = 1
 __meta__ = {
@@ -319,7 +372,7 @@ margin_left = -70.0
 margin_top = 65.0
 margin_right = 480.0
 margin_bottom = 210.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "henrique souza
 larissa medeiros"
@@ -333,7 +386,7 @@ margin_left = 98.6157
 margin_top = 75.0
 margin_right = 498.616
 margin_bottom = 150.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 text = "arte "
 align = 1
 __meta__ = {
@@ -345,7 +398,7 @@ margin_left = -74.153
 margin_top = 122.126
 margin_right = 475.847
 margin_bottom = 197.126
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.53125, 0.53125, 0.53125, 1 )
 text = "gabriela alkimin"
 align = 1
@@ -353,6 +406,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+<<<<<<< Updated upstream
+=======
+[node name="Voltar" type="TextureButton" parent="."]
+margin_left = -123.373
+margin_top = 194.801
+margin_right = 379.627
+margin_bottom = 337.801
+rect_scale = Vector2( 0.374288, 0.385603 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Voltar"]
+anims/animVoltar = SubResource( 5 )
+anims/animVoltar2 = SubResource( 6 )
+
+>>>>>>> Stashed changes
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
