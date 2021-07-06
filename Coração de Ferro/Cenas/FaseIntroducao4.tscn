@@ -456,9 +456,8 @@ __meta__ = {
 }
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 16 )]
-position = Vector2( -6154.33, -392.653 )
-scale = Vector2( -1, 1 )
-fase2 = "testeInteligencia-2.tsc"
+position = Vector2( -6106.33, -394.653 )
+fase2 = "testeInteligencia-2"
 
 [node name="MonitorDownload" parent="." instance=ExtResource( 22 )]
 position = Vector2( -2045, 175.63 )
