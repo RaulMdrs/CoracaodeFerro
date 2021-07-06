@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Assets/Objects/PlacasLocalização/placa.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Objects/PlacasLocalização/placa de Direção.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Placa_Oficina_Animada.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/PlacaLocalização_1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Objects/DoorLocked.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/loud_and_clear_2/LOUD AND CLEAR PERSONAL USE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Cenas/SpawnarPlayer.tscn" type="PackedScene" id=5]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scripts/Som.gd" type="Script" id=17]
 [ext_resource path="res://Cenas/PauseMenu.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Cenas/Pilha.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Objects/PlacasLocalização/PlacaLocalizaçãoVazia.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -26,30 +27,17 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 90
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = 5
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 100
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
-
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 337.029, 361.52 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 233.643, 240.912 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 50
 font_data = ExtResource( 15 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
@@ -285,82 +273,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Oficina" type="Sprite" parent="."]
-position = Vector2( 517.159, 307.713 )
-scale = Vector2( 1, 0.7 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoOficina" type="Sprite" parent="Oficina"]
-position = Vector2( 223.492, 148.538 )
-scale = Vector2( 0.5, 0.7 )
-texture = ExtResource( 2 )
-
-[node name="textoOficina" type="Label" parent="Oficina"]
-margin_left = -107.394
-margin_top = -30.9501
-margin_right = 214.606
-margin_bottom = 95.0499
-custom_fonts/font = SubResource( 2 )
-text = "Oficina"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Zona de descarte" type="Sprite" parent="."]
-position = Vector2( -859.344, 353.65 )
-scale = Vector2( 1.5, 0.7 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoDescarte" type="Sprite" parent="Zona de descarte"]
-position = Vector2( -52.2626, 104.848 )
-rotation = 1.5708
-scale = Vector2( 0.5, 0.3 )
-texture = ExtResource( 2 )
-
-[node name="textoDescarte" type="Label" parent="Zona de descarte"]
-margin_left = -124.72
-margin_top = -31.1836
-margin_right = 527.28
-margin_bottom = 94.8164
-rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Zona de descarte"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sala de Descanso" type="Sprite" parent="."]
-position = Vector2( -958.573, -73.4231 )
-scale = Vector2( 2, 0.8 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="direcaoDescanso" type="Sprite" parent="Sala de Descanso"]
-position = Vector2( 88.4604, -83.5595 )
-rotation = -1.5708
-scale = Vector2( 0.5, 0.3 )
-texture = ExtResource( 2 )
-
-[node name="textoDescanso" type="Label" parent="Sala de Descanso"]
-margin_left = -125.31
-margin_top = -32.1004
-margin_right = 532.69
-margin_bottom = 67.8996
-rect_scale = Vector2( 0.46, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Sala de descanso"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="MovePlatform" parent="Plataformas" instance=ExtResource( 10 )]
@@ -426,7 +338,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialPulo"]
 position = Vector2( -519.915, -2.71313 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="TutorialAndar" type="Area2D" parent="."]
 position = Vector2( 729.495, 86.1455 )
@@ -436,7 +348,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialAndar"]
 position = Vector2( -490, 250 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
 script = ExtResource( 14 )
@@ -446,7 +358,7 @@ margin_left = 670.125
 margin_top = 181.932
 margin_right = 1350.12
 margin_bottom = 251.932
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Aperte \"W\" para pular"
 percent_visible = 0.0
 __meta__ = {
@@ -458,7 +370,7 @@ margin_left = -173.422
 margin_top = 204.407
 margin_right = 665.578
 margin_bottom = 274.407
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Aperte \"A\" e \"D\" para se movimentar"
 percent_visible = 0.0
 __meta__ = {
@@ -470,7 +382,7 @@ margin_left = 30.6596
 margin_top = 621.892
 margin_right = 461.66
 margin_bottom = 672.892
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 text = "Preciso ir na Oficina"
 percent_visible = 0.0
 __meta__ = {
@@ -486,6 +398,26 @@ energia = 20
 [node name="Pilha2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 4359.55, 529.911 )
 energia = 10
+
+[node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
+position = Vector2( 670.113, 335.559 )
+scale = Vector2( 1.5, 1.5 )
+frame = 5
+
+[node name="PlacaLocalização_1" type="Sprite" parent="."]
+position = Vector2( -220.706, 94.8781 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="PlacaLocalizaçãoVazia" type="Sprite" parent="."]
+position = Vector2( -674.366, -40.7141 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 20 )
+
+[node name="PlacaLocalizaçãoVazia2" type="Sprite" parent="."]
+position = Vector2( -674.366, 56.999 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 20 )
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
 [connection signal="body_shape_entered" from="TutorialPulo" to="gerenciadorFaseIntro1" method="_on_TutorialPulo_body_shape_entered"]
 [connection signal="body_shape_exited" from="TutorialPulo" to="gerenciadorFaseIntro1" method="_on_TutorialPulo_body_shape_exited"]
