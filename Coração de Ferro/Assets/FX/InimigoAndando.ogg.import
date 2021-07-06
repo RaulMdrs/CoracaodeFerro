@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/InimigoAndando.ogg-57f98df2bb518c9184947b9b136a6bd8.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/InimigoAndando.ogg"
+dest_files=[ "res://.import/InimigoAndando.ogg-57f98df2bb518c9184947b9b136a6bd8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

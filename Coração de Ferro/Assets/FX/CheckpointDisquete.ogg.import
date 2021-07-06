@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CheckpointDisquete.ogg-fb1b74dbbe79c25fe943c58b1c35b402.oggstr"
+
+[deps]
+
+source_file="res://Assets/FX/CheckpointDisquete.ogg"
+dest_files=[ "res://.import/CheckpointDisquete.ogg-fb1b74dbbe79c25fe943c58b1c35b402.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
