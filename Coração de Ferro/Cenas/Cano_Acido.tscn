@@ -17,6 +17,5 @@ animations = [ {
 [node name="Cano_Acido" type="AnimatedSprite"]
 frames = SubResource( 1 )
 animation = "Animação"
-frame = 4
 speed_scale = 0.5
 playing = true
