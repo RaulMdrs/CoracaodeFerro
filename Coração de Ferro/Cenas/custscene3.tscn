@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/Cutscene/sala de descanso.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Cutscene/demitida.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/gerenciadorCustscene.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Cutscene/CENA 4.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cutscene"
-length = 18.3
+length = 16.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:self_modulate")
 tracks/0/interp = 1
@@ -14,10 +15,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 1.6, 16.6, 17.4, 18.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.6, 10.1, 10.6, 11.1, 11.6, 12.1, 15.4, 15.9, 16.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Camera2D:zoom")
@@ -38,7 +39,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.6, 16.6 ),
+"times": PoolRealArray( 0, 1.6, 15.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -50,10 +51,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.6, 4.8, 4.9, 12, 12.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1.6, 4.2, 4.4, 6.6, 6.7, 10, 10.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "Bô 637:", "Bô 637:", "Ro:", "Ro:", "Bô 637:" ]
+"values": [ "Chefe:", "Chefe:", "Ro:", "Ro:", "Chefe:", "Chefe:", "Bô 637:" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Panel/Label:percent_visible")
@@ -62,10 +63,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1.6, 1.8, 4.8, 4.9, 5.1, 12, 12.1, 12.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.6, 1.8, 4.2, 4.4, 4.6, 6.6, 6.7, 6.9, 10, 10.1, 10.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Panel/Label2:text")
@@ -74,16 +75,14 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 1.8, 5.1, 10.1, 10.2, 12.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1.8, 4.2, 4.6, 6.6, 6.9, 10, 10.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "Como é o mundo fora da Petrobôs, Ro ?", "Hm... Acho que minha parte preferida são as 
-lanchonetes e restaurantes, mas minha
-comida favorita é churrasco.", "Hm... Acho que minha parte preferida são as 
-lanchonetes e restaurantes, mas minha
-comida favorita é churrasco.", "Você sente gosto, Bô ?", "Não consigo sentir gosto. Mas espero que 
-algum Dia criem um sensor de paladar, para
-que eu possa provar churrasco um dia." ]
+"values": [ "Infelizmente vamos ter que demiti-la, Ro. ", "Infelizmente vamos ter que demiti-la, Ro. ", "Mas por que ?", "Mas por que ?", "Estamos precisando fazer corte de gastos na 
+empresa. ", "Estamos precisando fazer corte de gastos na 
+empresa. ", "Não acredito que estão demitindo ela...
+Como conseguirei ficar aqui sem ela... ?
+Irei encontrá-la, custe o que custar!" ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Panel/Label2:percent_visible")
@@ -92,22 +91,34 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 1.8, 3.8, 4.8, 5.1, 9.1, 10.1, 10.2, 11.2, 12, 12.3, 15.4, 16.4 ),
+"times": PoolRealArray( 0, 1.8, 3.6, 4.2, 4.6, 5.6, 6.6, 6.9, 8.9, 10, 10.3, 14.3, 15.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
+"values": [ 6.62274e-08, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath(".:fase")
+tracks/7/path = NodePath("Sprite:texture")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 18.2 ),
+"times": PoolRealArray( 0, 11.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath(".:fase")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 16.4 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "faseIntroducao3" ]
+"values": [ "faseIntroducao4" ]
 }
 
 [sub_resource type="DynamicFont" id=2]
@@ -122,9 +133,9 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
-[node name="cutscene2" type="Node2D"]
+[node name="cutscene3" type="Node2D"]
 script = ExtResource( 2 )
-fase = "faseIntroducao3"
+fase = "faseIntroducao4"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -134,7 +145,8 @@ anims/cutscene = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-texture = ExtResource( 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -164,9 +176,9 @@ margin_top = 10.0
 margin_right = 798.0
 margin_bottom = 150.0
 custom_fonts/font = SubResource( 3 )
-text = "Não consigo sentir gosto. Mas espero que 
-algum Dia criem um sensor de paladar, para
-que eu possa provar churrasco um dia."
+text = "Não acredito que estão demitindo ela...
+Como conseguirei ficar aqui sem ela... ?
+Irei encontrá-la, custe o que custar!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
