@@ -202,7 +202,7 @@ position = Vector2( -608.926, 1723.44 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -376.34, 1615.23 )
+position = Vector2( -607.567, 1696.05 )
 
 [node name="Porta" type="StaticBody2D" parent="."]
 position = Vector2( 5282, 447 )
@@ -493,8 +493,7 @@ position = Vector2( 3752.62, 459.457 )
 [node name="PauseMenu" parent="." instance=ExtResource( 22 )]
 
 [node name="Pilha2" parent="." instance=ExtResource( 23 )]
-position = Vector2( 3829.79, 525.702 )
-energia = 20
+position = Vector2( 3723.44, 566.974 )
 
 [node name="Pilha" parent="." instance=ExtResource( 23 )]
 position = Vector2( -890.892, 337.144 )
