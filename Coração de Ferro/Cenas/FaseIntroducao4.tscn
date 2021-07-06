@@ -65,7 +65,6 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 24 )
 
 [node name="FaseIntroducao4" type="Node2D"]
-position = Vector2( -15.1362, -21.8633 )
 
 [node name="SetSpawn" parent="." instance=ExtResource( 19 )]
 position = Vector2( 253.301, 524.461 )
@@ -449,6 +448,7 @@ texture = ExtResource( 2 )
 [node name="PlacaSaídaAnimada" parent="." instance=ExtResource( 27 )]
 position = Vector2( -223.63, 150.278 )
 scale = Vector2( 3, 3 )
+frame = 1
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra2" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
