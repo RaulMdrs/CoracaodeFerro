@@ -153,7 +153,6 @@ func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		playerEntered = true
 
-
 func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		playerEntered = false
@@ -168,8 +167,6 @@ func MorrerAcido():
 	vivo = false
 	$CollisionShape2D.queue_free()
 	$AnimatedSprite.play("acido")
-
-
 
 func _on_AnimatedSprite_animation_finished():
 	is_attacking = false
