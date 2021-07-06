@@ -72,9 +72,9 @@ func _physics_process(delta):
 			get_child(3).stop()
 		else:
 			$AnimatedSprite.play("fall")
-		
 	
-	if Input.is_action_just_pressed("atirar") && is_attacking == false && vivo:
+	
+	if Input.is_action_just_pressed("atirar") && is_attacking == false && Globals.podeAtirar && vivo:
 		if energia >= 10:
 			energia -= 10
 			if is_on_floor():

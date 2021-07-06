@@ -436,7 +436,6 @@ texture = ExtResource( 8 )
 [node name="Cano_Acido" parent="." instance=ExtResource( 25 )]
 position = Vector2( 549.963, 2258.32 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
 offset = Vector2( 863.407, -2529.39 )
 
 [node name="Pilha2" parent="." instance=ExtResource( 21 )]
@@ -447,25 +446,25 @@ energia = 2
 [node name="Cano_Acido3" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2257.95, 2320 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 5
 offset = Vector2( 863.407, -2529.39 )
 
 [node name="Cano_Acido4" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2324.67, 2320 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 5
 offset = Vector2( 1030.18, -2523.99 )
 
 [node name="Cano_Acido5" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2776.53, 2320 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 5
 offset = Vector2( 863.407, -2529.39 )
 
 [node name="Cano_Acido6" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2843.24, 2320 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 5
 offset = Vector2( 1030.18, -2523.99 )
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 14 )]

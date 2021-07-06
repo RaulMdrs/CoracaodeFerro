@@ -4,7 +4,7 @@ extends Node
 var checkpointPosition = Vector2(0,0)
 
 var dificuldade = 2 # 1 = normal, 2 = fácil
-
+var podeAtirar = false
 var telacheia = false
 var som = true
 
