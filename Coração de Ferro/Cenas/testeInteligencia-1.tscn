@@ -16,8 +16,9 @@
 default_font = ExtResource( 7 )
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 1.00752, 1 )
 script = ExtResource( 6 )
-cont = "FaseIntroducao3"
+cont = "custscene3"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

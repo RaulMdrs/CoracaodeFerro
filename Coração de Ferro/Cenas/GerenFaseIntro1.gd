@@ -33,8 +33,19 @@ func _on_movimentoSerra_ready():
 func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		$textoSala.set_percent_visible(1)
+		
 
 
 func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
 	if(body.name == "Player"):
 		$textoSala.set_percent_visible(0)
+
+
+func _on_cuidadoCamera_body_shape_entered(body_id, body, body_shape, area_shape):
+	if(body.name == "Player"):
+		$Label.set_percent_visible(1)
+
+
+func _on_cuidadoCamera_body_shape_exited(body_id, body, body_shape, area_shape):
+	if(body.name == "Player"):
+		$Label.set_percent_visible(0)

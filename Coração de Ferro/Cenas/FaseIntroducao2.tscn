@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Cenas/Placa_Oficina_Animada.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Objects/PlacasLocalização/PlacaLocalização_1.png" type="Texture" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://Cenas/Background.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Cenas/Porta.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/GerenFaseIntro1.gd" type="Script" id=14]
-[ext_resource path="res://Assets/Fontes/karma/tt/karma future.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Assets/Fontes/karma/ot/karma future.otf" type="DynamicFontData" id=15]
 [ext_resource path="res://Cenas/suporte_camera.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=18]
@@ -33,8 +33,10 @@ outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 50
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 15 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -42,6 +44,8 @@ size = 100
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=5]
 
 [node name="FaseIntroducao2" type="Node2D"]
 
@@ -350,25 +354,14 @@ move_to = Vector2( 1850, 0 )
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
 script = ExtResource( 14 )
 
-[node name="tutorialPular" type="Label" parent="gerenciadorFaseIntro1"]
-margin_left = 670.125
-margin_top = 181.932
-margin_right = 1350.12
-margin_bottom = 251.932
-custom_fonts/font = SubResource( 2 )
-text = "Aperte \"Espaço\" para pular"
-percent_visible = 0.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="tutorialAndar" type="Label" parent="gerenciadorFaseIntro1"]
-margin_left = -173.422
-margin_top = 204.407
-margin_right = 665.578
-margin_bottom = 274.407
-custom_fonts/font = SubResource( 2 )
-text = "Aperte \"A\" e \"D\" para se movimentar"
+[node name="Label" type="Label" parent="gerenciadorFaseIntro1"]
+margin_left = 650.932
+margin_top = -2461.2
+margin_right = 1176.93
+margin_bottom = -2336.2
+custom_fonts/font = SubResource( 4 )
+text = "Tenho que ter cuidado
+com a camera"
 percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -385,7 +378,7 @@ animar = true
 [node name="PortaFimFase" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1404.25, -2117.9 )
 animacao = NodePath("../../FaseIntroducao2/PortaFimFase/AnimationPlayer")
-fase2 = "testeInteligencia-1"
+fase2 = "custscene2"
 
 [node name="textoDescanso2" type="Label" parent="PortaFimFase"]
 margin_left = -212.151
@@ -417,6 +410,10 @@ energia = 2
 position = Vector2( 666.627, -1343.27 )
 energia = 2
 
+[node name="Pilha4" parent="." instance=ExtResource( 24 )]
+position = Vector2( -2352.14, -1141.68 )
+energia = 2
+
 [node name="PlacaLocalização_1" type="Sprite" parent="."]
 position = Vector2( -178.633, 55.724 )
 scale = Vector2( 4, 4 )
@@ -424,20 +421,29 @@ texture = ExtResource( 2 )
 
 [node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
 position = Vector2( 519.734, 285.125 )
-frame = 7
+frame = 5
 
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 25 )]
 position = Vector2( -715.73, 82.686 )
 scale = Vector2( 2, 2 )
-frame = 3
+frame = 0
 
 [node name="Placa_Descanso_Animada" parent="." instance=ExtResource( 26 )]
 position = Vector2( -717.676, -49.9164 )
 scale = Vector2( 2, 2 )
-frame = 6
+frame = 3
 
 [node name="Placa_Descanso_Animada2" parent="." instance=ExtResource( 26 )]
 position = Vector2( -511.725, -1177.96 )
 scale = Vector2( 3, 3 )
-frame = 9
+frame = 6
+
+[node name="cuidadoCamera" type="Area2D" parent="."]
+position = Vector2( 959.766, -2294.81 )
+scale = Vector2( 38.3984, 24.8685 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cuidadoCamera"]
+shape = SubResource( 5 )
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
+[connection signal="body_shape_entered" from="cuidadoCamera" to="gerenciadorFaseIntro1" method="_on_cuidadoCamera_body_shape_entered"]
+[connection signal="body_shape_exited" from="cuidadoCamera" to="gerenciadorFaseIntro1" method="_on_cuidadoCamera_body_shape_exited"]
