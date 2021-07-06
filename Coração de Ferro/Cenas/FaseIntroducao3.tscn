@@ -424,7 +424,7 @@ texture = ExtResource( 23 )
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 2 )]
 position = Vector2( -704, 88 )
 scale = Vector2( 2, 2 )
-frame = 11
+frame = 1
 
 [node name="PlacaLocalizaçãoVazia2" type="Sprite" parent="."]
 position = Vector2( -704, -32 )
