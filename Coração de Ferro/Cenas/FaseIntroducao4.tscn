@@ -25,7 +25,7 @@
 [ext_resource path="res://Assets/Objects/Pc_SemNada.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Fontes/karma/ot/karma future.otf" type="DynamicFontData" id=24]
 [ext_resource path="res://Scripts/MonitorDownload.gd" type="Script" id=25]
-[ext_resource path="res://Cenas/Checkpoint.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Assets/Objects/Armario_1.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -70,6 +70,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 24 )
 
 [node name="FaseIntroducao4" type="Node2D"]
+position = Vector2( -15.1362, -21.8633 )
 
 [node name="SetSpawn" parent="." instance=ExtResource( 19 )]
 position = Vector2( 253.301, 524.461 )
@@ -455,12 +456,11 @@ __meta__ = {
 }
 
 [node name="PortaFimFase" parent="." instance=ExtResource( 16 )]
-position = Vector2( -6154.33, -392.653 )
-scale = Vector2( -1, 1 )
-fase2 = "testeInteligencia-2.tsc"
+position = Vector2( -6106.33, -394.653 )
+fase2 = "testeInteligencia-2"
 
 [node name="MonitorDownload" parent="." instance=ExtResource( 22 )]
-position = Vector2( -2045, 175 )
+position = Vector2( -2045, 175.63 )
 frame = 3
 script = ExtResource( 25 )
 
@@ -489,10 +489,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Checkpoint" parent="." instance=ExtResource( 26 )]
-position = Vector2( -2716.76, 23.6285 )
+[node name="Label2" type="Label" parent="MonitorDownload"]
+margin_left = -219.946
+margin_top = -104.434
+margin_right = 272.054
+margin_bottom = -67.4345
+custom_fonts/font = SubResource( 8 )
+text = "Aperte \"Espaço\" para atirar"
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armario_1" type="Sprite" parent="."]
+position = Vector2( -2130, 225 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="Armario_2" type="Sprite" parent="."]
+position = Vector2( -2130, 171 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra2" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]
+[connection signal="animation_finished" from="MonitorDownload" to="MonitorDownload" method="_on_MonitorDownload_animation_finished"]
 [connection signal="body_shape_entered" from="MonitorDownload/Area2D" to="MonitorDownload" method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="MonitorDownload/Area2D" to="MonitorDownload" method="_on_Area2D_body_shape_exited"]

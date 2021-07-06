@@ -421,22 +421,22 @@ texture = ExtResource( 2 )
 
 [node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
 position = Vector2( 519.734, 285.125 )
-frame = 6
+frame = 0
 
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 25 )]
 position = Vector2( -715.73, 82.686 )
 scale = Vector2( 2, 2 )
-frame = 0
+frame = 1
 
 [node name="Placa_Descanso_Animada" parent="." instance=ExtResource( 26 )]
 position = Vector2( -717.676, -49.9164 )
 scale = Vector2( 2, 2 )
-frame = 3
+frame = 4
 
 [node name="Placa_Descanso_Animada2" parent="." instance=ExtResource( 26 )]
 position = Vector2( -511.725, -1177.96 )
 scale = Vector2( 3, 3 )
-frame = 6
+frame = 7
 
 [node name="cuidadoCamera" type="Area2D" parent="."]
 position = Vector2( 959.766, -2294.81 )
