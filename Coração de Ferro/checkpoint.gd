@@ -21,4 +21,9 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		body.Checkpoint(position)
 		$CheckpointSom.play()
+		$Sprite.queue_free()
+		$CollisionShape2D.queue_free()
+
+
+func _on_CheckpointSom_finished():
 		queue_free()

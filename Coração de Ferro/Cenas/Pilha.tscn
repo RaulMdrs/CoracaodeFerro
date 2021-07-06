@@ -24,14 +24,14 @@ animations = [ {
 "name": "1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -54,3 +54,4 @@ animation = "5"
 stream = ExtResource( 7 )
 script = ExtResource( 8 )
 [connection signal="body_entered" from="." to="." method="_on_Pilha_body_entered"]
+[connection signal="finished" from="PilhaSom" to="." method="_on_PilhaSom_finished"]
