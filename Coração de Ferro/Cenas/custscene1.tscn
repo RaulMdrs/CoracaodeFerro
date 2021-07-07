@@ -198,22 +198,21 @@ margin_top = 10.0
 margin_right = 106.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.811765, 0.0666667, 0.501961, 1 )
-text = "Ro:"
-percent_visible = 0.333333
+custom_colors/font_color = Color( 0.0352941, 0.792157, 0.439216, 1 )
+text = "Bô 637:"
+percent_visible = 2.38418e-06
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="Panel"]
-visible = false
 margin_left = 110.0
 margin_top = 10.0
 margin_right = 801.0
 margin_bottom = 127.0
 custom_fonts/font = SubResource( 3 )
 text = "O que foi que quebrou dessa vez ?"
-percent_visible = 0.533333
+percent_visible = 0.666666
 __meta__ = {
 "_edit_use_anchors_": false
 }

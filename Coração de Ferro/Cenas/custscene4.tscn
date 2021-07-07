@@ -1,0 +1,278 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cenas/gerenciadorCustscene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Cutscene/CENA 5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Cutscene/Cena 8.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Cutscene/CENA 6.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Cutscene/Cena 7.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "cutscene"
+length = 68.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6, 7, 7.5, 8, 8.5, 9, 12.7, 13.2, 13.7, 14.2, 14.7, 56, 56.3, 56.6, 65.8, 66.8, 68.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.3, 0.3 ), Vector2( 0.6, 0.6 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.6, 7, 9, 12.7, 14.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Panel/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.6, 7, 8.9, 9, 12.7, 14.6, 14.7, 19.1, 19.2, 23.1, 23.2, 27.5, 27.6, 32.5, 32.6, 38, 38.1, 46, 46.1, 51, 56, 66.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Bô:", "Bô:", "", "Bô:", "Bô:", "", "Ro:", "Ro:", "Bô:", "Bô:", "Ro: ", "Ro: ", "Bô:", "Bô:", "Ro:", "Ro:", "Bô:", "Bô:", "Ro:", "Ro:", "Ro:", "FIM" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Panel/Label:percent_visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8, 7, 8.8, 9, 9.2, 12.7, 12.9, 14.6, 14.7, 14.9, 19.1, 19.2, 19.4, 23.1, 23.2, 23.4, 27.5, 27.6, 27.8, 32.5, 32.6, 32.8, 38, 38.1, 38.3, 46, 46.1, 46.3, 51, 56, 57.1, 65.8, 66.5, 66.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel/Label2:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.8, 7, 9.1, 9.2, 12.7, 14.8, 14.9, 19.1, 19.4, 23.1, 23.4, 27.5, 27.8, 32.5, 32.8, 38, 38.3, 46, 46.3, 51, 51.1, 56, 57.1, 65.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Finalmente consegui sair, agora vou ao
+encontro da ro.", "Finalmente consegui sair, agora vou ao
+encontro da ro.", "", "Consegui encontrar a localização dela.
+", "Consegui encontrar a localização dela.
+", "
+", "Bô! O que você está fazendo aqui?", "Bô! O que você está fazendo aqui?", " Eu fugi quando você foi demitida.", " Eu fugi quando você foi demitida.", "Mas porque? Eu fui demitida, não poderei 
+voltar para lá.", "Mas porque? Eu fui demitida, não poderei 
+voltar para lá.", "Então vamos ficar aqui fora da fábrica!", "Então vamos ficar aqui fora da fábrica!", "Não podemos viver juntos, eles devem 
+estar te procurando.", "Não podemos viver juntos, eles devem 
+estar te procurando.", "Eu preciso ficar com você Ro, meus 
+circuitos internos se aquecem quando 
+estou junto com você, não sei que 
+sensação é essa, mas não é um defeito!", "Eu preciso ficar com você Ro, meus 
+circuitos internos se aquecem quando 
+estou junto com você, não sei que 
+sensação é essa, mas não é um defeito!", "Meus circuitos internos também 
+se aquecem perto de você Bô!", "Meus circuitos internos também 
+se aquecem perto de você Bô!", "Então vamos! Vou lhe mostrar o mundo!", "Então vamos! Vou lhe mostrar o mundo!", "Após 30 dias da fuga de Bô 637, as buscas foram canceladas e a 
+Petrobôs considerou o robô perdido.
+Fora das paredes de metal da fábrica Rô e Bô vivem viajando,
+conhecendo juntos o Brasil!
+", "Após 30 dias da fuga de Bô 637, as buscas foram canceladas e a 
+Petrobôs considerou o robô perdido.
+Fora das paredes de metal da fábrica Rô e Bô vivem viajando,
+conhecendo juntos o Brasil!
+" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel/Label2:percent_visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.8, 4.8, 7, 7.1, 9, 9.2, 10.7, 12.7, 12.9, 14.8, 14.9, 17.2, 19.1, 19.4, 21.6, 23.1, 23.4, 25.6, 27.5, 27.8, 30, 32.5, 32.8, 35.5, 38, 38.3, 42.5, 46, 46.3, 49, 51, 51.1, 54.1, 56, 56.1, 57, 57.1, 65.8, 65.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 6.62274e-08, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 8, 13.7, 65.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath(".:fase")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 68.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Menu" ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Panel/Label:custom_colors/font_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1.6, 7, 9, 12.7, 14.7, 19.1, 19.2, 23.1, 23.2, 27.5, 27.6, 32.5, 32.6, 38, 38.1, 46, 46.1, 51, 56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.0352941, 0.792157, 0.439216, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ), Color( 0.811765, 0.0666667, 0.501961, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 56, 57.1, 65.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -404.114, 147.458 ), Vector2( -404.114, 147.458 ), Vector2( -349.467, -60.3102 ), Vector2( -349.467, -60.3102 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel/Label:rect_position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 56, 66.6, 67 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 10 ), Vector2( 5, 10 ), Vector2( 318.596, 182.834 ), Vector2( 270.488, -7.81799 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel/Label2:rect_position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 56, 56.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 110, 10 ), Vector2( 110, 10 ), Vector2( -107.579, -7.35294 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 56, 56.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel/Label:custom_fonts/font:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 66.5, 66.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 30, 50 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="cutscene3" type="Node2D"]
+script = ExtResource( 1 )
+fase = "Menu"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/cutscene = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.498039 )
+margin_left = -404.114
+margin_top = 147.458
+margin_right = 395.886
+margin_bottom = 297.458
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 119.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0352941, 0.792157, 0.439216, 1 )
+text = "Bô:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 110.0
+margin_top = 10.0
+margin_right = 1607.0
+margin_bottom = 157.0
+custom_fonts/font = SubResource( 3 )
+text = " Eu fugi quando você foi demitida."
+percent_visible = 0.318182
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

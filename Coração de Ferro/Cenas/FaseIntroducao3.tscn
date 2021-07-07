@@ -321,7 +321,7 @@ speed = 2.0
 
 [node name="MovePlatform13" parent="Plataformas" instance=ExtResource( 10 )]
 position = Vector2( -4085, 1313 )
-move_to = Vector2( -600, 0 )
+move_to = Vector2( -550, 0 )
 speed = 2.0
 
 [node name="gerenciadorFaseIntro1" type="Node2D" parent="."]
@@ -424,7 +424,7 @@ texture = ExtResource( 23 )
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 2 )]
 position = Vector2( -704, 88 )
 scale = Vector2( 2, 2 )
-frame = 1
+frame = 4
 
 [node name="PlacaLocalizaçãoVazia2" type="Sprite" parent="."]
 position = Vector2( -704, -32 )
