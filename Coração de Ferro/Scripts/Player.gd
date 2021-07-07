@@ -111,6 +111,9 @@ func _physics_process(delta):
 			1: contpulos = 1
 			2: contpulos = 2
 	
+	if(energia < 1 && vivo):
+		MorrerAcido()
+	
 	
 	if Input.is_action_just_pressed("pular") and vivo and contpulos > 0:
 		contpulos = contpulos - 1
@@ -127,6 +130,7 @@ func _physics_process(delta):
 	
 	if (Input.is_action_pressed("selecionar") && get_PlayerEntered()):
 		passarFase()
+	
 	
 	
 	
