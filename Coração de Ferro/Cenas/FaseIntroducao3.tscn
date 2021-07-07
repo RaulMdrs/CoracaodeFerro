@@ -409,7 +409,7 @@ scale = Vector2( 35.9505, 1.90275 )
 
 [node name="Pilha" parent="." instance=ExtResource( 1 )]
 position = Vector2( -4213.54, 722.775 )
-energia = 20
+energia = 2
 
 [node name="PlacaLocalizaçãoVazia" type="Sprite" parent="."]
 position = Vector2( 680, 352 )
@@ -424,7 +424,7 @@ texture = ExtResource( 23 )
 [node name="Placa_Descarte_Animada" parent="." instance=ExtResource( 2 )]
 position = Vector2( -704, 88 )
 scale = Vector2( 2, 2 )
-frame = 4
+frame = 12
 
 [node name="PlacaLocalizaçãoVazia2" type="Sprite" parent="."]
 position = Vector2( -704, -32 )

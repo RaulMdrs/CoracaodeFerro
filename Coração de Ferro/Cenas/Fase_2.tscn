@@ -502,4 +502,8 @@ speed = 120
 position = Vector2( 3758.88, 598.785 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 23 )]
+
+[node name="Pilha2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 6746.41, 1365.63 )
+energia = 1
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]

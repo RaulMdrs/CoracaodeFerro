@@ -493,9 +493,10 @@ position = Vector2( 3752.62, 459.457 )
 [node name="PauseMenu" parent="." instance=ExtResource( 22 )]
 
 [node name="Pilha2" parent="." instance=ExtResource( 23 )]
-position = Vector2( 3723.44, 566.974 )
+position = Vector2( 5022.77, 533.918 )
+energia = 2
 
 [node name="Pilha" parent="." instance=ExtResource( 23 )]
-position = Vector2( -890.892, 337.144 )
-energia = 20
+position = Vector2( -817.237, 329.214 )
+energia = 2
 [connection signal="body_shape_entered" from="botao" to="Porta" method="_on_botao_body_shape_entered"]

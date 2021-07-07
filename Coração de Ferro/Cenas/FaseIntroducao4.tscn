@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Assets/Objects/Mesa_ComCafé.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Objects/PlacasLocalização/PlacaLocalizaçãoVazia.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Scripts/MonitorDownload.gd" type="Script" id=25]
 [ext_resource path="res://Assets/Objects/Armario_1.png" type="Texture" id=26]
 [ext_resource path="res://Cenas/PlacaSaídaAnimada.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Cenas/Pilha.tscn" type="PackedScene" id=28]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -449,6 +450,14 @@ texture = ExtResource( 2 )
 position = Vector2( -223.63, 150.278 )
 scale = Vector2( 3, 3 )
 frame = 1
+
+[node name="Pilha" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2033.86, 520.183 )
+energia = 5
+
+[node name="Pilha" parent="Pilha" instance=ExtResource( 28 )]
+position = Vector2( -6351.31, -895.004 )
+energia = 2
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="ready" from="gerenciadorFaseIntro1/movimentoSerra2" to="gerenciadorFaseIntro1" method="_on_movimentoSerra_ready"]
 [connection signal="animation_finished" from="PortaAnimada" to="SpawnarPlayer" method="_on_PortaAnimada_animation_finished"]

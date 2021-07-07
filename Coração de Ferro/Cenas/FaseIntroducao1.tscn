@@ -393,16 +393,20 @@ __meta__ = {
 
 [node name="Pilha" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2383.99, 21.3417 )
-energia = 20
+energia = 2
 
 [node name="Pilha2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 4359.55, 529.911 )
-energia = 10
+energia = 1
+
+[node name="Pilha" parent="Pilha2" instance=ExtResource( 19 )]
+position = Vector2( -5744.89, -7.99268 )
+energia = 5
 
 [node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
 position = Vector2( 670.113, 335.559 )
 scale = Vector2( 1.5, 1.5 )
-frame = 5
+frame = 7
 
 [node name="PlacaLocalização_1" type="Sprite" parent="."]
 position = Vector2( -220.706, 94.8781 )
