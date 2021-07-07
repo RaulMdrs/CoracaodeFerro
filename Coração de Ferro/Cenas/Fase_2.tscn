@@ -496,6 +496,7 @@ energia = 2
 
 [node name="Enemy" parent="." instance=ExtResource( 18 )]
 position = Vector2( 5881.08, 385.349 )
+speed = 120
 
 [node name="Checkpoint" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3758.88, 598.785 )
