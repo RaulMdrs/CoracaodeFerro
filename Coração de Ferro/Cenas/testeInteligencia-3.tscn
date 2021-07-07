@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Cenas/Puzzle_Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Cenas/Puzzle_Spot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Puzzle_Spot.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=8]
+[ext_resource path="res://Cenas/VD.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/FX/MapaFinalizadoV2.ogg" type="AudioStream" id=10]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -248,9 +250,19 @@ stream = ExtResource( 4 )
 volume_db = -19.285
 pitch_scale = 0.9
 autoplay = true
+
+[node name="VD" parent="." instance=ExtResource( 9 )]
+margin_left = -33.3745
+margin_top = 220.05
+margin_right = -33.3745
+margin_bottom = 220.05
+
+[node name="AudioVitoria" type="AudioStreamPlayer" parent="VD"]
+stream = ExtResource( 10 )
 [connection signal="body_entered" from="Spots/Spot3" to="Spots/Spot3" method="_on_Spot_body_entered"]
 [connection signal="body_exited" from="Spots/Spot3" to="Spots/Spot3" method="_on_Spot_body_exited"]
 [connection signal="body_entered" from="Spots/Spot4" to="Spots/Spot4" method="_on_Spot_body_entered"]
 [connection signal="body_exited" from="Spots/Spot4" to="Spots/Spot4" method="_on_Spot_body_exited"]
 [connection signal="confirmed" from="Ui/WinDialog" to="." method="_on_WinDialog_confirmed"]
 [connection signal="confirmed" from="Ui/LoseDialog" to="." method="_on_LoseDialog_confirmed"]
+[connection signal="finished" from="VD/AudioVitoria" to="." method="_on_AudioVitoria_finished"]

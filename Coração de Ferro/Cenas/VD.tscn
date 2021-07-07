@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/fonte_1.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.411765, 0.411765, 0.411765, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.133333, 0.815686, 0.12549, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 9
+
+[node name="VD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 237.598
+margin_top = 205.367
+margin_right = 237.598
+margin_bottom = 205.367
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vitoria" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Vitoria"]
+margin_left = 118.0
+margin_top = 14.0
+margin_right = 358.0
+margin_bottom = 185.0
+rect_scale = Vector2( 0.875458, 0.831852 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vitoria2" type="Label" parent="Vitoria"]
+margin_right = 419.0
+margin_bottom = 123.0
+rect_scale = Vector2( 1.052, 1.426 )
+custom_fonts/font = ExtResource( 2 )
+text = "PASSAGEM
+LIBERADA"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Derrota" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Derrota"]
+margin_left = -16.2567
+margin_top = -13.8591
+margin_right = 461.743
+margin_bottom = 202.141
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Derrota" type="Label" parent="Derrota"]
+margin_right = 419.0
+margin_bottom = 123.0
+rect_scale = Vector2( 1.052, 1.426 )
+custom_fonts/font = ExtResource( 2 )
+text = "Sem movimentos restantes
+Tente novamente !
+\"R\" para recomeçar"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

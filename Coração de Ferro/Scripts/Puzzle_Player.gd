@@ -32,10 +32,10 @@ func move(dir):
 		Tween.TRANS_SINE, 
 		Tween.EASE_IN_OUT
 	)
-	if !ray.is_colliding():
+	if !ray.is_colliding() and game.moves > 0:
 		$Tween.start()
 		game.moves -= 1
-	else:
+	elif game.moves > 0:
 		var collider = ray.get_collider()
 		if collider.is_in_group('box_type_1'):
 			if collider.move(dir):

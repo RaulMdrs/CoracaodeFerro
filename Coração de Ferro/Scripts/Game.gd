@@ -20,13 +20,14 @@ func check_end(): #verifica quando o player termina de se movimentar
 			if i.occupied:
 				spots -= 1
 		if moves < 0:
-			$Ui/LoseDialog.popup_centered() #ativa a box de derrota
+			$VD/Derrota.visible = true
 			game_end = true
 		elif spots < 1:
-			$Ui/WinDialog.popup_centered() #ativa a box de vitoria
+			$VD/Vitoria.visible = true
+			$VD/AudioVitoria.play()
 			game_end = true
 		elif moves == 0:
-			$Ui/LoseDialog.popup_centered() #ativa a box de derrota
+			$VD/Derrota.visible = true
 			game_end = true
 
 
@@ -39,3 +40,8 @@ func _on_WinDialog_confirmed():  #acontece quanto da ok na caixa de vitoria
 
 func _on_LoseDialog_confirmed(): #acontece quanto da ok na caixa de derrota
 	get_tree().reload_current_scene()
+
+
+func _on_AudioVitoria_finished():
+	Globals.checkpointPosition = Vector2(0,0)
+	get_tree().change_scene("res://Cenas/" + cont + ".tscn")
