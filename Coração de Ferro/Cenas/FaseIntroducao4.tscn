@@ -449,7 +449,6 @@ texture = ExtResource( 2 )
 [node name="PlacaSaídaAnimada" parent="." instance=ExtResource( 27 )]
 position = Vector2( -223.63, 150.278 )
 scale = Vector2( 3, 3 )
-frame = 1
 
 [node name="Pilha" parent="." instance=ExtResource( 28 )]
 position = Vector2( 2033.86, 520.183 )

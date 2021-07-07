@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Cutscene/Cena 7.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scripts/Som2D.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Som.gd" type="Script" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cutscene"
