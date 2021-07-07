@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Cenas/gerenciadorCustscene.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Cutscene/CENA 5.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Cutscene/CENA 6.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Cutscene/Cena 7.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Musicas/CdF_Versão_Emmanuel.ogg" type="AudioStream" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cutscene"
@@ -275,4 +276,9 @@ percent_visible = 0.318182
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 0.711
+autoplay = true
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
