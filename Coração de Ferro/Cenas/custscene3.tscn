@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Cutscene/demitida.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/gerenciadorCustscene.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Cutscene/CENA 4.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fontes/ghostclan/ghostclancond.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/Musicas/CdF_Fase_radiação(1).ogg" type="AudioStream" id=5]
+[ext_resource path="res://Scripts/Som2D.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "cutscene"
@@ -200,4 +201,5 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
+script = ExtResource( 6 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
