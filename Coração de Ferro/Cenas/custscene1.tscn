@@ -172,7 +172,7 @@ font_data = ExtResource( 3 )
 
 [node name="custscene1" type="Node2D"]
 script = ExtResource( 2 )
-fase = "faseIntroducao2"
+fase = "FaseIntroducao2"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

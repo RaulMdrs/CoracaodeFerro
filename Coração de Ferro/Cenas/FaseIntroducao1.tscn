@@ -406,7 +406,7 @@ energia = 5
 [node name="Placa_Oficina_Animada" parent="." instance=ExtResource( 1 )]
 position = Vector2( 670.113, 335.559 )
 scale = Vector2( 1.5, 1.5 )
-frame = 7
+frame = 5
 
 [node name="PlacaLocalização_1" type="Sprite" parent="."]
 position = Vector2( -220.706, 94.8781 )
